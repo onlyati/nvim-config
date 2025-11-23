@@ -1,6 +1,7 @@
 vim.pack.add({
     { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
     { src = "https://github.com/stevearc/conform.nvim" },
+    { src = "https://github.com/mfussenegger/nvim-lint" },
 })
 
 require("conform").setup({
@@ -33,6 +34,16 @@ require("conform").setup({
         ["go"] = { "goimports", "gofumpt" },
         ["json"] = { "jq" },
     },
+})
+
+require("lint").linters_by_ft = {
+    go = { "golangcilint" },
+    markdown = { "markdownlint-cli2" },
+}
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    callback = function()
+        require("lint").try_lint()
+    end,
 })
 
 require("render-markdown").setup({
