@@ -8,6 +8,10 @@
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
     },
+    "conform.nvim": {
+      "rev": "afce105eb47b0869dfafdac90d82f02ef2419d61",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "emoji.nvim": {
       "rev": "ce016d6c3e62644d1b9509d6e381073cb44e79a1",
       "src": "https://github.com/Allaman/emoji.nvim"
@@ -120,6 +124,10 @@
     "quadlet-lsp.nvim": {
       "rev": "44c07b79d6f06342e98d3fd077817ca010deefb8",
       "src": "/home/ati/work/quadlet-lsp.nvim"
+    },
+    "render-markdown.nvim": {
+      "rev": "6e0e8902dac70fecbdd8ce557d142062a621ec38",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "snacks.nvim": {
       "rev": "fe7cfe9800a182274d0f868a74b7263b8c0c020b",

@@ -2,6 +2,7 @@ require("options")
 require("lsp")
 require("testing")
 require("plugins")
+require("formatter")
 require("keymap")
 
 vim.pack.add({
