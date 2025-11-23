@@ -1,0 +1,54 @@
+vim.pack.add({
+    { src = "https://github.com/folke/which-key.nvim" },
+    { src = "https://github.com/folke/snacks.nvim" },
+    { src = "https://github.com/nvim-mini/mini.icons" },
+    { src = "https://github.com/akinsho/bufferline.nvim" },
+    { src = "https://github.com/nvim-mini/mini.surround" },
+    { src = "https://github.com/smjonas/inc-rename.nvim" },
+    { src = "https://github.com/nvim-mini/mini.pairs" },
+    { src = "https://github.com/windwp/nvim-ts-autotag" },
+    { src = "https://github.com/nvim-mini/mini.hipatterns" },
+    { src = "https://github.com/nvim-tree/nvim-web-devicons" }, -- dependecy of lualine
+    { src = "https://github.com/nvim-lualine/lualine.nvim" },
+    { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+    { src = "https://github.com/folke/persistence.nvim" },
+})
+
+require("mini.icons").setup({})
+require("snacks").setup({
+    opts = {
+        picker = { enabled = true },
+    }
+})
+require("bufferline").setup({})
+require("mini.surround").setup({})
+require("mini.hipatterns").setup({})
+require("inc_rename").setup({})
+require("mini.pairs").setup({})
+require("nvim-ts-autotag").setup({})
+require("lualine").setup({})
+require("ibl").setup({
+    indent = {
+        char = "│",
+        tab_char = "│",
+    },
+    scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+        highlight = "Comment",
+    },
+})
+require("persistence").setup()
+
+-- vim.pack.add({
+--     { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
+-- })
+-- require("quadlet-lsp").setup()
+
+vim.pack.add({
+    { src = "/home/ati/work/quadlet-lsp.nvim" },
+})
+require("quadlet-lsp").setup({
+    cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
+})
