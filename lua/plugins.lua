@@ -16,9 +16,20 @@ vim.pack.add({
 
 require("mini.icons").setup({})
 require("snacks").setup({
-    opts = {
-        picker = { enabled = true },
-    }
+    picker = {
+        enabled = true,
+        sources = {
+            explorer = {},
+        },
+    },
+    indent = {
+        enabled = true,
+        animate = {
+            enabled = false,
+        },
+    },
+    notifier = { enabled = true },
+    explorer = { enabled = true },
 })
 require("bufferline").setup({})
 require("mini.surround").setup({})
@@ -27,18 +38,6 @@ require("inc_rename").setup({})
 require("mini.pairs").setup({})
 require("nvim-ts-autotag").setup({})
 require("lualine").setup({})
-require("ibl").setup({
-    indent = {
-        char = "│",
-        tab_char = "│",
-    },
-    scope = {
-        enabled = true,
-        show_start = false,
-        show_end = false,
-        highlight = "Comment",
-    },
-})
 require("persistence").setup()
 
 -- vim.pack.add({
