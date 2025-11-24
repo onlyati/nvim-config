@@ -17,7 +17,6 @@ vim.pack.add({
     { src = "https://github.com/windwp/nvim-ts-autotag" },
 })
 
-require("mini.icons").setup({})
 require("snacks").setup({
     picker = {
         enabled = true,
@@ -38,6 +37,7 @@ require("bufferline").setup({})
 require("mini.surround").setup({})
 require("mini.hipatterns").setup({})
 require("mini.pairs").setup({})
+require("mini.icons").setup({})
 require("mini.snippets").setup({})
 require("mini.completion").setup({})
 require("inc_rename").setup({})
