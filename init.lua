@@ -1,7 +1,7 @@
 require("options")
+require("plugins")
 require("lsp")
 require("testing")
-require("plugins")
 require("formatter")
 require("keymap")
 

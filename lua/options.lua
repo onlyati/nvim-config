@@ -24,3 +24,4 @@ vim.o.list = true
 vim.o.completeopt = "fuzzy,menuone,noselect"
 vim.o.autocomplete = true
 vim.o.pumheight = 7
+vim.o.winborder = "rounded"
