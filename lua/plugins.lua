@@ -5,6 +5,7 @@ vim.pack.add({
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
     { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+    { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/nvim-lualine/lualine.nvim" },
     { src = "https://github.com/nvim-mini/mini.completion" },
     { src = "https://github.com/nvim-mini/mini.hipatterns" },
@@ -20,9 +21,6 @@ vim.pack.add({
 require("snacks").setup({
     picker = {
         enabled = true,
-        sources = {
-            explorer = {},
-        },
     },
     indent = {
         enabled = true,
@@ -31,7 +29,6 @@ require("snacks").setup({
         },
     },
     notifier = { enabled = true },
-    explorer = { enabled = true },
 })
 require("bufferline").setup({})
 require("mini.surround").setup({})
@@ -45,6 +42,11 @@ require("nvim-ts-autotag").setup({})
 require("lualine").setup({})
 require("persistence").setup()
 require("gitsigns").setup()
+require("oil").setup({
+    view_options = {
+        show_hidden = true,
+    },
+})
 
 -- vim.pack.add({
 --     { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
