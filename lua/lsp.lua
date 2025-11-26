@@ -50,27 +50,28 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
         local bufnr = args.buf
 
-        if client.name == "gopls" then
-            require("workspace-diagnostics").setup({
-                workspace_files = function()
-                    local gitPath = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
-                    local workspace_files = vim.fn.split(vim.fn.system("git ls-files " .. gitPath), "\n")
-                    local filtered = {}
-                    for _, file in ipairs(workspace_files) do
-                        if not file:match("^vendor/") then
-                            table.insert(filtered, file)
-                        end
+        require("workspace-diagnostics").setup({
+            workspace_files = function()
+                local gitPath = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+                local workspace_files = vim.fn.split(vim.fn.system("git ls-files " .. gitPath), "\n")
+                local filtered = {}
+                for _, file in ipairs(workspace_files) do
+                    if not file:match("^vendor/") and not file:match("^node_modules/") then
+                        table.insert(filtered, file)
                     end
+                end
 
-                    return filtered
-                end,
-            })
-        else
-            require("workspace-diagnostics").setup()
-        end
+                return filtered
+            end,
+        })
+        require("workspace-diagnostics").setup()
         require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
     end,
 })
+
+-- vim.lsp.config("jsonls", {
+--
+-- })
 
 -- Setup LSP configs
 vim.lsp.enable({
@@ -78,4 +79,5 @@ vim.lsp.enable({
     "gopls",
     "marksman",
     "yamlls",
+    "jsonls",
 })
