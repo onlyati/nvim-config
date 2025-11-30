@@ -1,8 +1,13 @@
 vim.pack.add {
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/mason-org/mason.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter",    version = "main" },
+    {
+        src = "https://github.com/nvim-treesitter/nvim-treesitter",
+        version = "main",
+    },
     { src = "https://github.com/artemave/workspace-diagnostics.nvim" },
+    { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+    { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
 }
 
 -- Treesitter config
@@ -12,7 +17,9 @@ require("nvim-treesitter").install({
     "c",
     "diff",
     "html",
+    "css",
     "javascript", "jsdoc", "json", "jsonc",
+    "vue",
     "lua", "luadoc", "luap",
     "markdown", "markdown_inline",
     "printf",
@@ -25,19 +32,47 @@ require("nvim-treesitter").install({
     "vim", "vimdoc",
     "xml",
     "yaml",
+    "ninja",
+    "rst",
 })
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'go' },
     callback = function() vim.treesitter.start() end,
 })
 
--- Install language servers
-require("mason").setup({
-    auto_install = true,
+-- Install languager servers, modules, utilies, etc.
+require("mason").setup()
+
+-- This install the required server plus enable LSP config
+require("mason-lspconfig").setup({
     ensure_installed = {
-        "gofumt", "gopls", "goimports", "delve", "gotestsum", "gomodifytags", "impl", "golangci-lint",
-        "markdown-toc", "markdownlint-cli2",
-        "lua-language-server",
+        "lua_ls",
+        "gopls",
+        "marksman",
+        "yamlls",
+        "jsonls",
+        "ruff",
+        "basedpyright",
+        "vtsls",
+        "vue_ls",
+    },
+})
+
+-- Install other tools like linter, formatter, DAP, etc.
+require('mason-tool-installer').setup({
+    ensure_installed = {
+        "cspell",
+        "delve",
+        "gofumpt",
+        "goimports",
+        "golangci-lint",
+        "gomodifytags",
+        "gotestsum",
+        "impl",
+        "markdown-toc",
+        "markdownlint-cli2",
+        "pyright",
+        "tree-sitter-cli",
     },
 })
 
@@ -67,17 +102,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
         require("workspace-diagnostics").setup()
         require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
     end,
-})
-
--- vim.lsp.config("jsonls", {
---
--- })
-
--- Setup LSP configs
-vim.lsp.enable({
-    "lua_ls",
-    "gopls",
-    "marksman",
-    "yamlls",
-    "jsonls",
 })
