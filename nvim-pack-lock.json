@@ -17,7 +17,7 @@
       "src": "https://github.com/Allaman/emoji.nvim"
     },
     "gitsigns.nvim": {
-      "rev": "cdafc320f03f2572c40ab93a4eecb733d4016d07",
+      "rev": "684270f22364bd248fcedd51598b6433266fdc47",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "inc-rename.nvim": {
@@ -105,7 +105,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
-      "rev": "30a2b191bccf541ce1797946324c9329e90ec448",
+      "rev": "07f4e93de92e8d4ea7ab99602e3a8c9ac0fb778a",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -113,7 +113,7 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "3bbae7b32e0cc417438e54ec77eb7083e5f38c0f",
+      "rev": "17885756e63df73ed90db62e4630f744ceda6514",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
@@ -138,7 +138,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "quadlet-lsp.nvim": {
-      "rev": "44c07b79d6f06342e98d3fd077817ca010deefb8",
+      "rev": "0fc4e4c1d9580121a8beb1f152914e1c861fa7da",
       "src": "/home/ati/work/quadlet-lsp.nvim"
     },
     "render-markdown.nvim": {
@@ -150,7 +150,7 @@
       "src": "https://github.com/folke/snacks.nvim"
     },
     "telescope.nvim": {
-      "rev": "83a3a713d6b2d2a408491a1b959e55a7fa8678e8",
+      "rev": "f0caedf064aa8c926325d7fe64c141d29b8e7853",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "which-key.nvim": {
