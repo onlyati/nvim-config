@@ -34,6 +34,7 @@ require("nvim-treesitter").install({
     "yaml",
     "ninja",
     "rst",
+    "dockerfile",
 })
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'go' },
@@ -46,33 +47,42 @@ require("mason").setup()
 -- This install the required server plus enable LSP config
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "lua_ls",
-        "gopls",
-        "marksman",
-        "yamlls",
-        "jsonls",
+        "lua_ls",   -- For Lua
+        "gopls",    -- For Go
+        "marksman", -- For markdown
+        "yamlls",   -- For YAML
+        "jsonls",   -- For JSON
+
+        -- For python
         "ruff",
         "basedpyright",
+
+        -- For Vuejs
         "vtsls",
         "vue_ls",
+
+        -- For Containerfiles and docker-compose
+        "dockerls",
+        "docker_compose_language_service",
     },
 })
 
 -- Install other tools like linter, formatter, DAP, etc.
 require('mason-tool-installer').setup({
     ensure_installed = {
-        "cspell",
-        "delve",
-        "gofumpt",
-        "goimports",
-        "golangci-lint",
-        "gomodifytags",
-        "gotestsum",
-        "impl",
-        "markdown-toc",
-        "markdownlint-cli2",
-        "pyright",
-        "tree-sitter-cli",
+        "tree-sitter-cli",   -- Tree sitter for highlights
+        "cspell",            -- Spell check
+        "delve",             -- Go DAP
+        "gofumpt",           -- Go format
+        "goimports",         -- Go format
+        "golangci-lint",     -- Go lint
+        "gomodifytags",      -- Go lint
+        "gotestsum",         -- Go test
+        "impl",              -- Go DAP
+        "markdown-toc",      -- Markdown table of content generator
+        "markdownlint-cli2", -- Markdown linter
+        "pyright",           -- Python linter
+        "hadolint",          -- Linter for Containerfiles
     },
 })
 
@@ -84,6 +94,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
             return
         end
         local bufnr = args.buf
+
+        -- If ts_ls just stop
+        if client.name == "ts_ls" then
+            client:stop()
+            return
+        end
 
         require("workspace-diagnostics").setup({
             workspace_files = function()
