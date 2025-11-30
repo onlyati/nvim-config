@@ -1,3 +1,5 @@
+local start_time = vim.uv.hrtime()
+
 require("options")
 require("plugins")
 require("lsp")
@@ -18,3 +20,7 @@ require("nightfox").setup({
 })
 
 vim.cmd("colorscheme carbonfox")
+
+-- Display startup time in milliseconds
+local elapsed = (vim.uv.hrtime() - start_time) / 1e6
+vim.notify("Neovim is ready to use under " .. elapsed .. "ms", vim.log.levels.INFO)
