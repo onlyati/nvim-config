@@ -5,6 +5,7 @@ vim.pack.add {
         src = "https://github.com/nvim-treesitter/nvim-treesitter",
         version = "main",
     },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
     { src = "https://github.com/artemave/workspace-diagnostics.nvim" },
     { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
     { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -40,6 +41,8 @@ vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'go' },
     callback = function() vim.treesitter.start() end,
 })
+
+require('treesitter-context').setup()
 
 -- Install languager servers, modules, utilies, etc.
 require("mason").setup()
