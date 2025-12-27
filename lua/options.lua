@@ -26,4 +26,3 @@ vim.o.completeopt = "fuzzy,menuone,noselect"
 vim.o.pumheight = 7
 vim.o.winborder = "rounded"
 vim.o.spelllang = "hu,en"
-vim.o.spell = true
