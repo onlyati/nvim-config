@@ -10,7 +10,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-mini/mini.completion" },
     { src = "https://github.com/nvim-mini/mini.hipatterns" },
     { src = "https://github.com/nvim-mini/mini.icons" },
-    { src = "https://github.com/nvim-mini/mini.pairs" },
+    -- { src = "https://github.com/nvim-mini/mini.pairs" },
     { src = "https://github.com/nvim-mini/mini.snippets" },
     { src = "https://github.com/nvim-mini/mini.surround" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
@@ -33,7 +33,7 @@ require("snacks").setup({
 require("bufferline").setup({})
 require("mini.surround").setup({})
 require("mini.hipatterns").setup({})
-require("mini.pairs").setup({})
+-- require("mini.pairs").setup({})
 require("mini.icons").setup({})
 require("mini.snippets").setup({})
 require("mini.completion").setup({})

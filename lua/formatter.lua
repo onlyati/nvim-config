@@ -36,9 +36,10 @@ require("conform").setup({
 })
 
 require("lint").linters_by_ft = {
-    go = { "golangcilint" },
+    -- go = { "golangcilint" },
     markdown = { "markdownlint-cli2" },
     dockerfile = { "hadolint" },
+    sql = { "sqruff" },
 }
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     callback = function()

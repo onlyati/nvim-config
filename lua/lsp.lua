@@ -36,6 +36,7 @@ require("nvim-treesitter").install({
     "ninja",
     "rst",
     "dockerfile",
+    "sql",
 })
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'go' },
@@ -55,6 +56,7 @@ require("mason-lspconfig").setup({
         "marksman", -- For markdown
         "yamlls",   -- For YAML
         "jsonls",   -- For JSON
+        "sqruff",   -- For SQL
 
         -- For python
         "ruff",

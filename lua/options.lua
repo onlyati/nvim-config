@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
+vim.g.omni_sql_default_compl_type = "syntax"
 vim.o.termguicolors = true
 vim.o.clipboard = 'unnamedplus'
 vim.diagnostic.config({ virtual_text = true })
