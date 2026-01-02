@@ -7,19 +7,8 @@ require("testing")
 require("formatter")
 require("keymap")
 
-vim.pack.add({
-    { src = "https://github.com/EdenEast/nightfox.nvim" },
-})
-
-require("nightfox").setup({
-    palettes = {
-        all = {
-            comment = "#029105",
-        },
-    },
-})
-
-vim.cmd("colorscheme carbonfox")
+-- vim.cmd("colorscheme carbonfox")
+vim.cmd("colorscheme ati_dark")
 
 -- Display startup time in milliseconds
 local elapsed = (vim.uv.hrtime() - start_time) / 1e6

@@ -51,12 +51,13 @@ require("mason").setup()
 -- This install the required server plus enable LSP config
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "lua_ls",   -- For Lua
-        "gopls",    -- For Go
-        "marksman", -- For markdown
-        "yamlls",   -- For YAML
-        "jsonls",   -- For JSON
-        "sqruff",   -- For SQL
+        "lua_ls",    -- For Lua
+        "gopls",     -- For Go
+        "marksman",  -- For markdown
+        "yamlls",    -- For YAML
+        "jsonls",    -- For JSON
+        "sqruff",    -- For SQL
+        "ltex_plus", -- Latex
 
         -- For python
         "ruff",
