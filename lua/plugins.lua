@@ -1,59 +1,67 @@
-vim.pack.add({
-    { src = "https://github.com/akinsho/bufferline.nvim" },
-    { src = "https://github.com/folke/persistence.nvim" },
-    { src = "https://github.com/folke/snacks.nvim" },
-    { src = "https://github.com/folke/which-key.nvim" },
-    { src = "https://github.com/lewis6991/gitsigns.nvim" },
-    { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
-    { src = "https://github.com/stevearc/oil.nvim" },
-    { src = "https://github.com/nvim-lualine/lualine.nvim" },
-    { src = "https://github.com/nvim-mini/mini.completion" },
-    { src = "https://github.com/nvim-mini/mini.hipatterns" },
-    { src = "https://github.com/nvim-mini/mini.icons" },
-    { src = "https://github.com/nvim-mini/mini.snippets" },
-    { src = "https://github.com/nvim-mini/mini.surround" },
-    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
-    { src = "https://github.com/smjonas/inc-rename.nvim" },
-    { src = "https://github.com/windwp/nvim-ts-autotag" },
-})
+local M = {}
 
-require("snacks").setup({
-    picker = {
-        enabled = true,
-    },
-    indent = {
-        enabled = true,
-        animate = {
-            enabled = false,
+function M.install_plugins()
+    vim.pack.add({
+        { src = "https://github.com/akinsho/bufferline.nvim" },
+        { src = "https://github.com/folke/persistence.nvim" },
+        { src = "https://github.com/folke/snacks.nvim" },
+        { src = "https://github.com/folke/which-key.nvim" },
+        { src = "https://github.com/lewis6991/gitsigns.nvim" },
+        { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+        { src = "https://github.com/stevearc/oil.nvim" },
+        { src = "https://github.com/nvim-lualine/lualine.nvim" },
+        { src = "https://github.com/nvim-mini/mini.completion" },
+        { src = "https://github.com/nvim-mini/mini.hipatterns" },
+        { src = "https://github.com/nvim-mini/mini.icons" },
+        { src = "https://github.com/nvim-mini/mini.snippets" },
+        { src = "https://github.com/nvim-mini/mini.surround" },
+        { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+        { src = "https://github.com/smjonas/inc-rename.nvim" },
+        { src = "https://github.com/windwp/nvim-ts-autotag" },
+    })
+end
+
+function M.setup()
+    require("snacks").setup({
+        picker = {
+            enabled = true,
         },
-    },
-    notifier = { enabled = true },
-})
-require("bufferline").setup({})
-require("mini.surround").setup({})
-require("mini.hipatterns").setup({})
-require("mini.icons").setup({})
-require("mini.snippets").setup({})
-require("mini.completion").setup({})
-require("inc_rename").setup({})
-require("nvim-ts-autotag").setup({})
-require("lualine").setup({})
-require("persistence").setup()
-require("gitsigns").setup()
-require("oil").setup({
-    view_options = {
-        show_hidden = true,
-    },
-})
+        indent = {
+            enabled = true,
+            animate = {
+                enabled = false,
+            },
+        },
+        notifier = { enabled = true },
+    })
+    require("bufferline").setup({})
+    require("mini.surround").setup({})
+    require("mini.hipatterns").setup({})
+    require("mini.icons").setup({})
+    require("mini.snippets").setup({})
+    require("mini.completion").setup({})
+    require("inc_rename").setup({})
+    require("nvim-ts-autotag").setup({})
+    require("lualine").setup({})
+    require("persistence").setup()
+    require("gitsigns").setup()
+    require("oil").setup({
+        view_options = {
+            show_hidden = true,
+        },
+    })
 
--- vim.pack.add({
---     { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
--- })
--- require("quadlet-lsp").setup()
+    -- vim.pack.add({
+    --     { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
+    -- })
+    -- require("quadlet-lsp").setup()
 
-vim.pack.add({
-    { src = "/home/ati/work/quadlet-lsp.nvim" },
-})
-require("quadlet-lsp").setup({
-    cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
-})
+    vim.pack.add({
+        { src = "/home/ati/work/quadlet-lsp.nvim" },
+    })
+    require("quadlet-lsp").setup({
+        cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
+    })
+end
+
+return M
