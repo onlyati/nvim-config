@@ -24,7 +24,7 @@ function M.setup()
         "diff",
         "html",
         "css",
-        "javascript", "jsdoc", "json", "jsonc",
+        "javascript", "jsdoc", "json",
         "vue",
         "lua", "luadoc", "luap",
         "markdown", "markdown_inline",
