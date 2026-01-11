@@ -20,7 +20,7 @@ end
 require("options")
 require("keymap")
 
-vim.cmd("colorscheme ati_dark")
+vim.cmd("colorscheme ati_light")
 
 -- Display startup time in milliseconds
 local elapsed = (vim.uv.hrtime() - start_time) / 1e6

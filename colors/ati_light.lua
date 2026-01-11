@@ -1,17 +1,9 @@
--- ~/.config/nvim/colors/ati_paper.lua
--- Paper-like light theme: warm background, soft contrast, crisp punctuation.
-
 local c = {
-    -- Warm paper backgrounds (no #ffffff)
-    bg0           = "#fbf3e6", -- paper
-    bg1           = "#f3eadb", -- panels / cursorline / floats
-    bg2           = "#e3d7c4", -- borders / separators / selection
-
-    -- "Ink"
-    fg0           = "#1f2328", -- main text (slightly darker than GH for clarity)
-    fg1           = "#6a625a", -- comments / secondary (warm gray)
-
-    -- Muted accents (still readable on warm bg)
+    bg0           = "#fbf3e6",
+    bg1           = "#f3eadb",
+    bg2           = "#e3d7c4",
+    fg0           = "#1f2328",
+    fg1           = "#6a625a",
     red           = "#b42318",
     orange        = "#9a4d00",
     yellow        = "#7a5c00",
@@ -19,8 +11,6 @@ local c = {
     cyan          = "#0b4f79",
     blue          = "#1e4e8c",
     purple        = "#6f42c1",
-
-    -- Search backgrounds (warm highlights)
     search_yellow = "#ffe8a3",
     search_orange = "#ffd1a6",
 }
@@ -33,6 +23,9 @@ vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end
 vim.o.termguicolors = true
 vim.g.colors_name = "ati_paper"
+
+-- Oil.nvim
+hi("OilDir", { fg = c.blue })
 
 -- UI
 hi("Normal", { fg = c.fg0, bg = c.bg0 })
