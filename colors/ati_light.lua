@@ -22,10 +22,18 @@ end
 vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end
 vim.o.termguicolors = true
-vim.g.colors_name = "ati_paper"
+vim.g.colors_name = "ati_light"
 
--- Oil.nvim
+-- Plugin related
 hi("OilDir", { fg = c.blue })
+hi("tomlTable", { fg = c.cyan })
+hi("markdownH1", { fg = c.cyan })
+hi("markdownH2", { link = "markdownH1" })
+hi("markdownH3", { link = "markdownH1" })
+hi("markdownH4", { link = "markdownH1" })
+hi("markdownH5", { link = "markdownH1" })
+hi("markdownH6", { link = "markdownH1" })
+hi("@markup.heading", { link = "markdownH1" })
 
 -- UI
 hi("Normal", { fg = c.fg0, bg = c.bg0 })
