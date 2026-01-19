@@ -18,8 +18,6 @@ local function hi(group, opts)
     vim.api.nvim_set_hl(0, group, opts)
 end
 
-vim.cmd("highlight clear")
-if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end
 vim.o.termguicolors = true
 vim.g.colors_name = "ati_dark"
 

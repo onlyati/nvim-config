@@ -43,9 +43,18 @@ function M.setup()
         "dockerfile",
         "sql",
     })
-    vim.api.nvim_create_autocmd('FileType', {
-        pattern = { 'go' },
-        callback = function() vim.treesitter.start() end,
+    vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "go", "markdown" },
+        callback = function(args)
+            -- Run only once, register when treesitter started for buffer
+            if vim.b[args.buf].ts_started then return end
+            vim.b[args.buf].ts_started = true
+
+            -- Schedule to avoid text lock
+            vim.schedule(function()
+                pcall(vim.treesitter.start, args.buf)
+            end)
+        end,
     })
 
     require('treesitter-context').setup()
@@ -93,6 +102,7 @@ function M.setup()
             "markdownlint-cli2", -- Markdown linter
             "pyright",           -- Python linter
             "hadolint",          -- Linter for Containerfiles
+            "prettier",          -- Formatter
         },
     })
 

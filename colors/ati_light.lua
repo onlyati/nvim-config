@@ -19,8 +19,6 @@ local function hi(group, opts)
     vim.api.nvim_set_hl(0, group, opts)
 end
 
-vim.cmd("highlight clear")
-if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end
 vim.o.termguicolors = true
 vim.g.colors_name = "ati_light"
 
@@ -34,6 +32,15 @@ hi("markdownH4", { link = "markdownH1" })
 hi("markdownH5", { link = "markdownH1" })
 hi("markdownH6", { link = "markdownH1" })
 hi("@markup.heading", { link = "markdownH1" })
+hi("NeotestPassed", { fg = c.green })
+hi("NeotestRunning", { fg = c.yellow })
+hi("NeotestFile", { fg = c.cyan })
+hi("NeotestDir", { link = "NeotestFile" })
+hi("Added", { fg = c.green })
+hi("MiniTablineCurrent", { fg = c.fg0, bold = true })
+hi("MiniTablineHidden", { bg = c.bg2 })
+hi("MiniTablineModifiedCurrent", { fg = c.fg0, bold = true })
+hi("MiniTablineFill", { bg = c.fg0 })
 
 -- UI
 hi("Normal", { fg = c.fg0, bg = c.bg0 })
