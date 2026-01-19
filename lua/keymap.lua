@@ -1,15 +1,3 @@
--- Categories
-local wk = require("which-key")
-wk.add({
-    { "<leader>c", group = "Code" },
-    { "<leader>s", group = "Search" },
-    { "<leader>b", group = "Buffer" },
-    { "<leader>g", group = "Go to" },
-    { "<leader>d", group = "Debug" },
-    { "<leader>t", group = "Testing" },
-    { "<leader>q", group = "Session" },
-})
-
 -- Code keymaps
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code" })
 vim.keymap.set("n", "<leader>cq", vim.diagnostic.setloclist, { desc = "Open Quickfix" })
@@ -38,18 +26,18 @@ vim.keymap.set("n", "<leader>bo", function()
 end, { desc = "Close other buffers" })
 
 -- Go to keys
-vim.keymap.set("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Go to definition" })
-vim.keymap.set("n", "gr", function() Snacks.picker.lsp_references() end, { desc = "Go to references" })
+vim.keymap.set("n", "<leader>gd", ":Pick lsp scope='definition'<CR>", { desc = "Go to definition" })
+vim.keymap.set("n", "<leader>gr", ":Pick lsp scope='references'<CR>", { desc = "Go to references" })
+vim.keymap.set("n", "<leader>gi", ":Pick lsp scope='implementation'<CR>", { desc = "Go to implementation" })
 
 -- Search functions
-vim.keymap.set("n", "<leader><space>", function() Snacks.picker.files() end, { desc = "Files search" })
-vim.keymap.set("n", "<leader>sf", function() Snacks.picker.files() end, { desc = "Files search" })
-vim.keymap.set("n", "<leader>sb", function() Snacks.picker.buffers() end, { desc = "Buffer search" })
-vim.keymap.set("n", "<leader>sg", function() Snacks.picker.grep() end, { desc = "Grep search" })
-vim.keymap.set("n", "<leader>s\"", function() Snacks.picker.registers() end, { desc = "Register search" })
-vim.keymap.set("n", "<leader>sa", function() Snacks.picker.autocmds() end, { desc = "Auto commands search" })
-vim.keymap.set("n", "<leader>sd", function() Snacks.picker.diagnostics() end, { desc = "Diagnostics search" })
-vim.keymap.set("n", "<leader>si", function() Snacks.picker.icons() end, { desc = "Icon search" })
+vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Files search" })
+vim.keymap.set("n", "<leader>sf", ":Pick files<CR>", { desc = "Files search" })
+vim.keymap.set("n", "<leader>sb", ":Pick buffers<CR>", { desc = "Buffer search" })
+vim.keymap.set("n", "<leader>sg", ":Pick grep_live<CR>", { desc = "Grep search" })
+vim.keymap.set("n", "<leader>s\"", ":Pick registers<CR>", { desc = "Register search" })
+vim.keymap.set("n", "<leader>sa", ":Pick commands<CR>", { desc = "Auto commands search" })
+vim.keymap.set("n", "<leader>sd", ":Pick diagnostics<CR>", { desc = "Diagnostics search" })
 
 -- Neotest
 vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end, { desc = "Attach to Test (Neotest)" })
