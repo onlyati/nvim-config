@@ -102,6 +102,11 @@ hi("DiagnosticWarn", { fg = c.yellow })
 hi("DiagnosticInfo", { fg = c.blue })
 hi("DiagnosticHint", { fg = c.cyan })
 
+hi("ErrorMsg", { fg = c.red })
+hi("WarningMsg", { fg = c.yellow })
+hi("Question", { fg = c.blue })
+hi("MoreMsg", { fg = c.cyan })
+
 hi("DiagnosticUnderlineError", { undercurl = true, sp = c.red })
 hi("DiagnosticUnderlineWarn", { undercurl = true, sp = c.yellow })
 hi("DiagnosticUnderlineInfo", { undercurl = true, sp = c.blue })
