@@ -37,7 +37,7 @@ vim.keymap.set("n", "<leader>sb", ":Pick buffers<CR>", { desc = "Buffer search" 
 vim.keymap.set("n", "<leader>sg", ":Pick grep_live<CR>", { desc = "Grep search" })
 vim.keymap.set("n", "<leader>s\"", ":Pick registers<CR>", { desc = "Register search" })
 vim.keymap.set("n", "<leader>sa", ":Pick commands<CR>", { desc = "Auto commands search" })
-vim.keymap.set("n", "<leader>sd", ":Pick diagnostics<CR>", { desc = "Diagnostics search" })
+vim.keymap.set("n", "<leader>sd", ":Pick diagnostic<CR>", { desc = "Diagnostics search" })
 
 -- Neotest
 vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end, { desc = "Attach to Test (Neotest)" })

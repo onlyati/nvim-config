@@ -55,7 +55,7 @@ hi("Normal", { fg = c.fg0, bg = c.bg0 })
 hi("NormalFloat", { fg = c.fg0, bg = c.bg1 })
 hi("FloatBorder", { fg = c.bg2, bg = c.bg1 })
 
-hi("CursorLine", { bg = c.bg1 })
+hi("CursorLine", { bg = c.search_orange })
 hi("CursorColumn", { bg = c.bg1 })
 hi("ColorColumn", { bg = c.bg1 })
 
