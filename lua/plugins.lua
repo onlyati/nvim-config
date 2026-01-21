@@ -2,8 +2,7 @@ local M = {}
 
 function M.install_plugins()
     vim.pack.add({
-        { src = "https://github.com/folke/persistence.nvim" },
-        { src = "https://github.com/folke/snacks.nvim" },
+        { src = "https://github.com/goolord/alpha-nvim" },
         { src = "https://github.com/lewis6991/gitsigns.nvim" },
         { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
         { src = "https://github.com/stevearc/oil.nvim" },
@@ -14,6 +13,8 @@ function M.install_plugins()
         { src = "https://github.com/nvim-mini/mini.pick" },
         { src = "https://github.com/nvim-mini/mini.hipatterns" },
         { src = "https://github.com/nvim-mini/mini.icons" },
+        { src = "https://github.com/nvim-mini/mini.notify" },
+        { src = "https://github.com/nvim-mini/mini.sessions" },
         { src = "https://github.com/nvim-mini/mini.snippets" },
         { src = "https://github.com/nvim-mini/mini.statusline" },
         { src = "https://github.com/nvim-mini/mini.surround" },
@@ -21,35 +22,35 @@ function M.install_plugins()
         { src = "https://github.com/nvim-tree/nvim-web-devicons" },
         { src = "https://github.com/smjonas/inc-rename.nvim" },
         { src = "https://github.com/windwp/nvim-ts-autotag" },
+        { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
     })
 end
 
 function M.setup()
-    require("snacks").setup({
-        picker = {
-            enabled = true,
-        },
-        indent = {
-            enabled = true,
-            animate = {
-                enabled = false,
-            },
-        },
-        notifier = { enabled = true },
-    })
+    require("quadlet-lsp").setup({})
+    -- require("quadlet-lsp").setup({
+    --     cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
+    -- })
     require("mini.cmdline").setup({})
     require("mini.surround").setup({})
     require("mini.hipatterns").setup({})
     require("mini.pick").setup({})
     require("mini.extra").setup({})
     require("mini.icons").setup({})
+    require("mini.notify").setup({})
+    require("mini.sessions").setup({})
     require("mini.snippets").setup({})
     require("mini.statusline").setup({})
     require("mini.completion").setup({})
     require("mini.tabline").setup({})
+    require("ibl").setup({
+        indent = {
+            char = "|",
+            tab_char = "|",
+        },
+    })
     require("inc_rename").setup({})
     require("nvim-ts-autotag").setup({})
-    require("persistence").setup()
     require("gitsigns").setup()
     require("oil").setup({
         view_options = {
@@ -94,17 +95,28 @@ function M.setup()
         },
     })
 
-    vim.pack.add({
-        { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
-    })
-    require("quadlet-lsp").setup()
+    local alpha = require("alpha")
+    local dashboard = require("alpha.themes.dashboard")
+    dashboard.section.header.val = {
+        " ██████╗ ███╗   ██╗██╗  ██╗   ██╗ █████╗ ████████╗██╗",
+        "██╔═══██╗████╗  ██║██║  ╚██╗ ██╔╝██╔══██╗╚══██╔══╝██║",
+        "██║   ██║██╔██╗ ██║██║   ╚████╔╝ ███████║   ██║   ██║",
+        "██║   ██║██║╚██╗██║██║    ╚██╔╝  ██╔══██║   ██║   ██║",
+        "╚██████╔╝██║ ╚████║███████╗██║   ██║  ██║   ██║   ██║",
+        " ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚═╝",
+        "                                                     ",
+    }
 
-    -- vim.pack.add({
-    --     { src = "/home/ati/work/quadlet-lsp.nvim" },
-    -- })
-    -- require("quadlet-lsp").setup({
-    --     cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
-    -- })
+    dashboard.section.buttons.val = {
+        dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
+        dashboard.button("f", "  > Find", ":Pick files<CR>"),
+        dashboard.button("s", "  > Session", function()
+            local session_name = vim.fn.getcwd():gsub("/", "-")
+            MiniSessions.read(session_name)
+        end),
+        dashboard.button("q", "󰈆  > Quit", ":qa<CR>"),
+    }
+    alpha.setup(dashboard.opts)
 end
 
 return M

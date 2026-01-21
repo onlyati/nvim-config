@@ -13,6 +13,7 @@ local c = {
     purple        = "#6f42c1",
     search_yellow = "#ffe8a3",
     search_orange = "#ffd1a6",
+    cursor_line   = "#e5f1ff",
 }
 
 local function hi(group, opts)
@@ -49,13 +50,21 @@ hi("MiniClueDescGroup", { fg = c.fg0 })
 hi("MiniPickBorder", { link = "MiniClueBorder" })
 hi("MiniPickBorderText", { link = "MiniClueTitle" })
 hi("MiniPickMatchCurrent", { fg = c.blue, bg = c.bg2, reverse = true })
+hi("MiniNotifyTitle", { link = "MiniClueTitle" })
+hi("MiniNotifyBorder", { link = "MiniClueBorder" })
+hi("MiniIndentscopeSymbol", { fg = c.red })
+hi("MiniIndentscopeSymbolOff", { fg = c.green })
+hi("IblIndent", { fg = c.bg2 })
+hi("MiniStarterHeader", { link = "MiniClueTitle" })
+hi("MiniStarterFooter", { fg = c.fg1 })
+hi("MiniStarterItemBuller", { fg = c.red })
 
 -- UI
 hi("Normal", { fg = c.fg0, bg = c.bg0 })
 hi("NormalFloat", { fg = c.fg0, bg = c.bg1 })
 hi("FloatBorder", { fg = c.bg2, bg = c.bg1 })
 
-hi("CursorLine", { bg = c.search_orange })
+hi("CursorLine", { bg = c.cursor_line })
 hi("CursorColumn", { bg = c.bg1 })
 hi("ColorColumn", { bg = c.bg1 })
 
