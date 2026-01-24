@@ -2,7 +2,6 @@ local M = {}
 
 function M.install_plugins()
     vim.pack.add({
-        { src = "https://github.com/goolord/alpha-nvim" },
         { src = "https://github.com/lewis6991/gitsigns.nvim" },
         { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
         { src = "https://github.com/stevearc/oil.nvim" },
@@ -94,29 +93,6 @@ function M.setup()
             delay = 100,
         },
     })
-
-    local alpha = require("alpha")
-    local dashboard = require("alpha.themes.dashboard")
-    dashboard.section.header.val = {
-        " ██████╗ ███╗   ██╗██╗  ██╗   ██╗ █████╗ ████████╗██╗",
-        "██╔═══██╗████╗  ██║██║  ╚██╗ ██╔╝██╔══██╗╚══██╔══╝██║",
-        "██║   ██║██╔██╗ ██║██║   ╚████╔╝ ███████║   ██║   ██║",
-        "██║   ██║██║╚██╗██║██║    ╚██╔╝  ██╔══██║   ██║   ██║",
-        "╚██████╔╝██║ ╚████║███████╗██║   ██║  ██║   ██║   ██║",
-        " ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚═╝",
-        "                                                     ",
-    }
-
-    dashboard.section.buttons.val = {
-        dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
-        dashboard.button("f", "  > Find", ":Pick files<CR>"),
-        dashboard.button("s", "  > Session", function()
-            local session_name = vim.fn.getcwd():gsub("/", "-")
-            MiniSessions.read(session_name)
-        end),
-        dashboard.button("q", "󰈆  > Quit", ":qa<CR>"),
-    }
-    alpha.setup(dashboard.opts)
 end
 
 return M
