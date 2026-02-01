@@ -105,40 +105,6 @@ function M.setup()
             "prettier",          -- Formatter
         },
     })
-
-    -- Send all workspace data to the languager server
-    vim.api.nvim_create_autocmd("LspAttach", {
-        callback = function(args)
-            local client = vim.lsp.get_client_by_id(args.data.client_id)
-            if not client then
-                return
-            end
-            local bufnr = args.buf
-
-            -- If ts_ls just stop
-            if client.name == "ts_ls" then
-                client:stop()
-                return
-            end
-
-            require("workspace-diagnostics").setup({
-                workspace_files = function()
-                    local gitPath = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
-                    local workspace_files = vim.fn.split(vim.fn.system("git ls-files " .. gitPath), "\n")
-                    local filtered = {}
-                    for _, file in ipairs(workspace_files) do
-                        if not file:match("^vendor/") and not file:match("^node_modules/") then
-                            table.insert(filtered, file)
-                        end
-                    end
-
-                    return filtered
-                end,
-            })
-            require("workspace-diagnostics").setup()
-            require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
-        end,
-    })
 end
 
 return M
