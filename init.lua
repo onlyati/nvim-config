@@ -25,3 +25,9 @@ vim.cmd("colorscheme ati_light")
 -- Display startup time in milliseconds
 local elapsed = (vim.uv.hrtime() - start_time) / 1e6
 vim.notify("Neovim is ready to use under " .. elapsed .. "ms", vim.log.levels.INFO)
+
+-- Try to load the project automatically
+vim.schedule(function()
+    local session_name = vim.fn.getcwd():gsub("/", "-")
+    pcall(MiniSessions.read, session_name)
+end)
