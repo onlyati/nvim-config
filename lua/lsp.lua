@@ -95,7 +95,7 @@ function M.setup()
             "delve",             -- Go DAP
             "gofumpt",           -- Go format
             "goimports",         -- Go format
-            "golangci_lint",     -- For Go lint
+            "golangci-lint",     -- For Go lint
             "golangci_lint_ls",  -- For Go lint
             "gomodifytags",      -- Go lint
             "gotestsum",         -- Go test
