@@ -65,12 +65,13 @@ function M.setup()
     -- This install the required server plus enable LSP config
     require("mason-lspconfig").setup({
         ensure_installed = {
-            "lua_ls",   -- For Lua
-            "gopls",    -- For Go
-            "marksman", -- For markdown
-            "yamlls",   -- For YAML
-            "jsonls",   -- For JSON
-            "sqruff",   -- For SQL
+            "lua_ls",           -- For Lua
+            "gopls",            -- For Go
+            "golangci_lint_ls", -- For Go lint
+            "marksman",         -- For markdown
+            "yamlls",           -- For YAML
+            "jsonls",           -- For JSON
+            "sqruff",           -- For SQL
 
             -- For python
             "ruff",
@@ -94,7 +95,8 @@ function M.setup()
             "delve",             -- Go DAP
             "gofumpt",           -- Go format
             "goimports",         -- Go format
-            "golangci-lint",     -- Go lint
+            "golangci_lint",     -- For Go lint
+            "golangci_lint_ls",  -- For Go lint
             "gomodifytags",      -- Go lint
             "gotestsum",         -- Go test
             "impl",              -- Go DAP

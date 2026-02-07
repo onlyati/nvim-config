@@ -5,8 +5,13 @@ function M.close_other_buffers()
     local buffers = vim.api.nvim_list_bufs()
 
     for _, buf in ipairs(buffers) do
-        if vim.api.nvim_buf_is_loaded(buf) and buf ~= current then
-            vim.api.nvim_buf_delete(buf, { force = true })
+        if buf ~= current and vim.api.nvim_buf_is_valid(buf) then
+            local bt = vim.bo[buf].buftype
+            local listed = vim.bo[buf].buflisted
+
+            if listed and bt == "" then
+                pcall(vim.api.nvim_buf_delete, buf, { force = true })
+            end
         end
     end
 end
