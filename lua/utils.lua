@@ -46,10 +46,10 @@ function M.pick_diagnostics()
             end_col  = (d.end_col or d.col or 0) + 1,
 
             text     = string.format(
-                "%s %s %s(%d:%d-%d:%d)",
+                " %s %s: %s (%d:%d-%d:%d)",
                 icon,
-                d.message,
                 src,
+                d.message,
                 start_l,
                 start_c,
                 end_l,
