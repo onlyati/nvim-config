@@ -26,6 +26,7 @@ vim.g.colors_name = "ati_light"
 -- Plugin related
 hi("OilDir", { fg = c.blue })
 hi("tomlTable", { fg = c.cyan })
+hi("tomlTableArray", { link = "tomlTable" })
 hi("markdownH1", { fg = c.cyan })
 hi("markdownH2", { link = "markdownH1" })
 hi("markdownH3", { link = "markdownH1" })

@@ -56,6 +56,34 @@ function M.setup()
             end)
         end,
     })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.go",
+        callback = function()
+            local params = vim.lsp.util.make_range_params(0, "utf-16")
+            local req_params = {
+                textDocument = params.textDocument,
+                range = params.range,
+                context = { only = { "source.organizeImports" } }
+            }
+
+            local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", req_params, 1000)
+
+            for client_id, res in pairs(result or {}) do
+                for _, r in pairs(res.result or {}) do
+                    if r.edit then
+                        local enc = (vim.lsp.get_client_by_id(client_id) or {}).offset_encoding or "utf-16"
+                        vim.lsp.util.apply_workspace_edit(r.edit, enc)
+                    else
+                        local client = vim.lsp.get_client_by_id(client_id)
+                        if client then
+                            client:request("workspace/executeCommand", r.command, function() end)
+                        end
+                    end
+                end
+            end
+            vim.lsp.buf.format({ async = false })
+        end,
+    })
 
     require('treesitter-context').setup()
 
