@@ -28,6 +28,8 @@ vim.notify("Neovim is ready to use under " .. elapsed .. "ms", vim.log.levels.IN
 
 -- Try to load the project automatically
 vim.schedule(function()
-    local session_name = vim.fn.getcwd():gsub("/", "-")
-    pcall(MiniSessions.read, session_name)
+    if vim.fn.argc() == 0 then
+        local session_name = vim.fn.getcwd():gsub("/", "-")
+        pcall(MiniSessions.read, session_name)
+    end
 end)
