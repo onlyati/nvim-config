@@ -115,6 +115,7 @@ hi("Type", { fg = c.yellow })
 hi("Special", { fg = c.orange })
 hi("Macro", { fg = c.orange })
 hi("ModeMsg", { fg = c.orange, bold = true })
+hi("Folded", { bg = c.bg2 })
 
 -- Diagnostics
 hi("DiagnosticError", { fg = c.red })

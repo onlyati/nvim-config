@@ -37,6 +37,13 @@ vim.o.list = true
 vim.o.complete = ".,o,w,b,u"
 vim.o.completeopt = "fuzzy,menuone,noselect"
 -- vim.o.autocomplete = true
-vim.o.pumheight = 7
+vim.o.pumheight = 9
 vim.o.winborder = "rounded"
 vim.o.spelllang = "hu,en"
+
+-- Fold settings
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldmethod = 'expr'
+vim.o.foldenable = true
+vim.o.foldlevel = 99
+vim.o.foldtext = ""
