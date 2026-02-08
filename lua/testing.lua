@@ -42,6 +42,7 @@ function M.setup()
         adapters = {
             require("neotest-golang")({
                 testify_enabled = true,
+                runner = "gotestsum",
             })
         },
         status = { virtual_text = true },
