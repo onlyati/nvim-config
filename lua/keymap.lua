@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>cr", function()
     end,
     { expr = true, desc = "Rename" }
 )
+vim.keymap.set("n", "<leader>cd", function() require("utils").toogleDiagLines() end, { desc = "Toggle diag lines" })
 
 -- Remap end
 vim.keymap.set("n", "é", "$")

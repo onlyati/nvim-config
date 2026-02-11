@@ -1,5 +1,40 @@
 local M = {}
 
+local severity_icon = {
+    [vim.diagnostic.severity.ERROR] = "", -- nf-fa-times_circle
+    [vim.diagnostic.severity.WARN]  = "", -- nf-fa-warning
+    [vim.diagnostic.severity.INFO]  = "", -- nf-fa-info_circle
+    [vim.diagnostic.severity.HINT]  = "", -- nf-fa-lightbulb_o
+}
+
+---Diagnostic error format
+---@param diag vim.Diagnostic
+---@return string??
+local function diag_format(diag)
+    local template = severity_icon[diag.severity] .. " " .. diag.source .. ": " .. diag.message
+    return template
+end
+
+function M.toogleDiagLines()
+    if vim.g.diag_lines then
+        vim.diagnostic.config({
+            virtual_text = false,
+            virtual_lines = {
+                format = diag_format
+            },
+        })
+        vim.g.diag_lines = false
+    else
+        vim.diagnostic.config({
+            virtual_lines = false,
+            virtual_text = {
+                format = diag_format
+            },
+        })
+        vim.g.diag_lines = true
+    end
+end
+
 function M.close_other_buffers()
     local current = vim.api.nvim_get_current_buf()
     local buffers = vim.api.nvim_list_bufs()
@@ -15,15 +50,6 @@ function M.close_other_buffers()
         end
     end
 end
-
-local severity_icon = {
-    [vim.diagnostic.severity.ERROR] = "", -- nf-fa-times_circle
-    [vim.diagnostic.severity.WARN]  = "", -- nf-fa-warning
-    [vim.diagnostic.severity.INFO]  = "", -- nf-fa-info_circle
-    [vim.diagnostic.severity.HINT]  = "", -- nf-fa-lightbulb_o
-}
-
-local pick = require("mini.pick")
 
 function M.pick_diagnostics()
     local diags = vim.diagnostic.get(0)
@@ -60,6 +86,7 @@ function M.pick_diagnostics()
         }
     end, diags)
 
+    local pick = require("mini.pick")
     pick.start({
         source = {
             name = "Diagnostics",
