@@ -4,11 +4,11 @@ function M.install_plugins()
     vim.pack.add({
         { src = "https://github.com/lewis6991/gitsigns.nvim" },
         { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
-        { src = "https://github.com/stevearc/oil.nvim" },
         { src = "https://github.com/nvim-mini/mini.cmdline" },
         { src = "https://github.com/nvim-mini/mini.completion" },
         { src = "https://github.com/nvim-mini/mini.clue" },
         { src = "https://github.com/nvim-mini/mini.extra" },
+        { src = "https://github.com/nvim-mini/mini.files" },
         { src = "https://github.com/nvim-mini/mini.pick" },
         { src = "https://github.com/nvim-mini/mini.hipatterns" },
         { src = "https://github.com/nvim-mini/mini.icons" },
@@ -35,6 +35,7 @@ function M.setup()
     require("mini.hipatterns").setup({})
     require("mini.pick").setup({})
     require("mini.extra").setup({})
+    require("mini.files").setup({})
     require("mini.icons").setup({})
     require("mini.notify").setup({})
     require("mini.sessions").setup({})
@@ -51,11 +52,6 @@ function M.setup()
     require("inc_rename").setup({})
     require("nvim-ts-autotag").setup({})
     require("gitsigns").setup()
-    require("oil").setup({
-        view_options = {
-            show_hidden = true,
-        },
-    })
     local miniclue = require("mini.clue")
     miniclue.setup({
         triggers = {

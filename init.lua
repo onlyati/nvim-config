@@ -31,5 +31,16 @@ vim.schedule(function()
     if vim.fn.argc() == 0 then
         local session_name = vim.fn.getcwd():gsub("/", "-")
         pcall(MiniSessions.read, session_name)
+        return
+    end
+    if vim.fn.argc() > 0 then
+        local stat, err, rsn = vim.loop.fs_stat(vim.fn.argv(0))
+        if err ~= nil then
+            vim.notify("failed to check arg[1]: " .. err .. " " .. rsn, vim.log.levels.ERROR)
+            return
+        end
+        if stat ~= nil and stat.type == "directory" then
+            MiniFiles.open()
+        end
     end
 end)
