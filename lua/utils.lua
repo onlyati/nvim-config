@@ -11,7 +11,10 @@ local severity_icon = {
 ---@param diag vim.Diagnostic
 ---@return string??
 local function diag_format(diag)
-    local template = severity_icon[diag.severity] .. " " .. diag.source .. ": " .. diag.message
+    local template = severity_icon[diag.severity] .. " " .. diag.message
+    if diag.source ~= nil then
+        template = severity_icon[diag.severity] .. " " .. diag.source .. ": " .. diag.message
+    end
     return template
 end
 

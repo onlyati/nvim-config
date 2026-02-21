@@ -1,2 +1,3 @@
 vim.opt_local.colorcolumn = "80"
-vim.o.spell = true
+vim.opt_local.spell = true
+vim.opt_local.spelllang = "hu,en"
