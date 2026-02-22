@@ -55,10 +55,10 @@ function M.close_other_buffers()
 end
 
 function M.pick_diagnostics()
-    local diags = vim.diagnostic.get(0)
+    local diags = vim.diagnostic.get(nil)
 
     local items = vim.tbl_map(function(d)
-        local src     = d.source or "unknown"
+        local src     = d.source or ""
         local icon    = severity_icon[d.severity] or "?"
         local lnum    = (d.lnum or 0) + 1
         local col     = (d.col or 0) + 1

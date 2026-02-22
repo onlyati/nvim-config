@@ -21,7 +21,7 @@ vim.keymap.set("n", "<S-h>", "<cmd>bprev<CR>")
 vim.keymap.set("n", "<leader>bb", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bd", "<cmd>b#<CR>:bd#<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bo", function()
     U = require("utils"); U.close_other_buffers()
 end, { desc = "Close other buffers" })
@@ -39,7 +39,8 @@ vim.keymap.set("n", "<leader>sb", ":Pick buffers<CR>", { desc = "Buffer search" 
 vim.keymap.set("n", "<leader>sg", ":Pick grep_live<CR>", { desc = "Grep search" })
 vim.keymap.set("n", "<leader>s\"", ":Pick registers<CR>", { desc = "Register search" })
 vim.keymap.set("n", "<leader>sa", ":Pick commands<CR>", { desc = "Auto commands search" })
-vim.keymap.set("n", "<leader>sd", function() require("utils").pick_diagnostics() end, { desc = "Diagnostics search" })
+vim.keymap.set("n", "<leader>sd", ":Pick diagnostic<CR>", { desc = "Diagnostics search" })
+-- vim.keymap.set("n", "<leader>sd", function() require("utils").pick_diagnostics() end, { desc = "Diagnostics search" })
 
 -- Neotest
 vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end, { desc = "Attach to Test (Neotest)" })
