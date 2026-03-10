@@ -157,7 +157,7 @@ hi("@variable.builtin", { fg = c.cyan })
 hi("@function.builtin", { fg = c.blue })
 hi("@type.builtin", { fg = c.yellow })
 hi("@parameter", { fg = c.blue })
-hi("@property", { fg = c.fg0 })
+hi("@property", { fg = c.blue })
 hi("@namespace", { fg = c.orange })
 
 -- GitSigns

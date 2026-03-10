@@ -9,12 +9,6 @@ vim.keymap.set("n", "<leader>cr", function()
 )
 vim.keymap.set("n", "<leader>cd", function() require("utils").toogleDiagLines() end, { desc = "Toggle diag lines" })
 
--- Remap end
-vim.keymap.set("n", "é", "$")
-vim.keymap.set("n", "vé", "v$")
-vim.keymap.set("n", "cé", "c$")
-vim.keymap.set("n", "dé", "d$")
-
 -- Buffer related
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<S-h>", "<cmd>bprev<CR>")
