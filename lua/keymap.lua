@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>cr", function()
     { expr = true, desc = "Rename" }
 )
 vim.keymap.set("n", "<leader>cd", function() require("utils").toogleDiagLines() end, { desc = "Toggle diag lines" })
+vim.keymap.set("n", "<leader>cgt", function() vim.cmd("!templ generate") end, { desc = "Generate with templ" })
 
 -- Buffer related
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>")
