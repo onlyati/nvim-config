@@ -18,7 +18,7 @@ end
 function M.setup()
     -- Treesitter config
     require("nvim-treesitter").install({
-        "go", "gomod", "gowork", "gosum",
+        "go", "gomod", "gowork", "gosum", "templ",
         "bash",
         "c",
         "diff",
@@ -44,7 +44,7 @@ function M.setup()
         "sql",
     })
     vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "go", "markdown" },
+        pattern = { "go", "markdown", "templ" },
         callback = function(args)
             -- Run only once, register when treesitter started for buffer
             if vim.b[args.buf].ts_started then return end
@@ -96,6 +96,7 @@ function M.setup()
             "lua_ls",           -- For Lua
             "gopls",            -- For Go
             "golangci_lint_ls", -- For Go lint
+            "templ",            -- For Go template
             "marksman",         -- For markdown
             "yamlls",           -- For YAML
             "jsonls",           -- For JSON
