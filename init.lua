@@ -19,6 +19,7 @@ end
 -- Regular settings
 require("options")
 require("keymap")
+require("commands")
 
 vim.cmd("colorscheme ati_light")
 
