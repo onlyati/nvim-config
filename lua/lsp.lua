@@ -1,6 +1,17 @@
 local M = {}
 
 function M.install_plugins()
+    -- If treesitter updated, execute TSUpdate
+    vim.api.nvim_create_autocmd('PackChanged', {
+        callback = function(ev)
+            local name, kind = ev.data.spec.name, ev.data.kind
+            if name == 'nvim-treesitter' and kind == 'update' then
+                if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
+                vim.cmd('TSUpdate')
+            end
+        end
+    })
+
     vim.pack.add {
         { src = "https://github.com/neovim/nvim-lspconfig" },
         { src = "https://github.com/mason-org/mason.nvim" },
@@ -57,17 +68,6 @@ function M.setup()
                 pcall(vim.treesitter.start, args.buf)
             end)
         end,
-    })
-
-    -- If treesitter updated, execute TSUpdate
-    vim.api.nvim_create_autocmd('PackChanged', {
-        callback = function(ev)
-            local name, kind = ev.data.spec.name, ev.data.kind
-            if name == 'nvim-treesitter' and kind == 'update' then
-                if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
-                vim.cmd('TSUpdate')
-            end
-        end
     })
 
     -- Format on save and fetch modules
