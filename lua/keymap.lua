@@ -7,8 +7,31 @@ vim.keymap.set("n", "<leader>cr", function()
     end,
     { expr = true, desc = "Rename" }
 )
+vim.keymap.set("n", "<leader>ccc", function()
+    if vim.g.coverage_show == nil then
+        vim.cmd(":CoverageLoad")
+    end
+    if vim.g.coverage_show == true then
+        vim.cmd(":CoverageHide")
+        vim.g.coverage_show = false
+    else
+        vim.cmd(":CoverageShow")
+        vim.g.coverage_show = true
+    end
+end, { desc = "Toggle coverage" })
+vim.keymap.set("n", "<leader>ccs", function()
+    if vim.g.coverage_show == nil then
+        vim.cmd(":CoverageLoad")
+        vim.g.coverage_show = false
+    end
+    vim.cmd(":CoverageSummary")
+end, { desc = "Coverage summary" })
 vim.keymap.set("n", "<leader>cd", function() require("utils").toogleDiagLines() end, { desc = "Toggle diag lines" })
-vim.keymap.set("n", "<leader>cgt", function() vim.cmd("!templ generate") end, { desc = "Generate with templ" })
+vim.keymap.set("n", "<leader>cgt", function() vim.cmd(":W !templ generate") end, { desc = "Generate with templ" })
+vim.keymap.set("n", "<leader>cgl",
+    function() vim.cmd(":W !golangci-lint run --max-same-issues 0 --max-issues-per-linter  0") end,
+    { desc = "Run golangci-lint" })
+
 
 -- Buffer related
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>")

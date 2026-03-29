@@ -43,6 +43,8 @@ function M.setup()
         "dockerfile",
         "sql",
     })
+
+    -- For some language tree sitter must be started
     vim.api.nvim_create_autocmd("FileType", {
         pattern = { "go", "markdown", "templ" },
         callback = function(args)
@@ -56,6 +58,19 @@ function M.setup()
             end)
         end,
     })
+
+    -- If treesitter updated, execute TSUpdate
+    vim.api.nvim_create_autocmd('PackChanged', {
+        callback = function(ev)
+            local name, kind = ev.data.spec.name, ev.data.kind
+            if name == 'nvim-treesitter' and kind == 'update' then
+                if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
+                vim.cmd('TSUpdate')
+            end
+        end
+    })
+
+    -- Format on save and fetch modules
     vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.go",
         callback = function()

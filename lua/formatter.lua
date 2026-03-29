@@ -65,6 +65,12 @@ function M.setup()
         checkbox = {
             enabled = false,
         },
+        bullet = {
+            enabled = false,
+        },
+        latex = {
+            enabled = false
+        },
     })
 end
 
