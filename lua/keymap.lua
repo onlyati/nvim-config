@@ -1,3 +1,6 @@
+-- Terminal remap
+vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
+
 -- Code keymaps
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code" })
 vim.keymap.set("n", "<leader>cq", function() require("utils").pick_diagnostics() end, { desc = "Open Quickfix" })
