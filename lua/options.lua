@@ -35,6 +35,7 @@ vim.o.complete = ".,o,w,b,u"
 vim.o.completeopt = "fuzzy,menuone,noselect"
 -- vim.o.autocomplete = true
 vim.o.pumheight = 9
+vim.o.pumborder = "rounded"
 vim.o.winborder = "rounded"
 vim.o.shell = "/bin/env zsh"
 
