@@ -44,7 +44,11 @@ function M.setup()
     require("mini.notify").setup({})
     require("mini.snippets").setup({})
     require("mini.statusline").setup({})
-    require("mini.completion").setup({})
+    require("mini.completion").setup({
+        lsp_completion = {
+            source_func = 'omnifunc',
+        },
+    })
     require("ibl").setup({
         indent = {
             char = "|",
