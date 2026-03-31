@@ -22,6 +22,14 @@ function M.install_plugins()
         { src = "https://github.com/smjonas/inc-rename.nvim" },
         { src = "https://github.com/windwp/nvim-ts-autotag" },
         { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
+
+
+        -- Harpoon and depdendencies
+        { src = "https://github.com/nvim-lua/plenary.nvim" },
+        {
+            src = "https://github.com/ThePrimeagen/harpoon",
+            version = "harpoon2"
+        },
     })
 end
 
@@ -30,6 +38,7 @@ function M.setup()
     -- require("quadlet-lsp").setup({
     --     cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
     -- })
+    require("harpoon").setup({})
     require("mini.cmdline").setup({})
     require("mini.surround").setup({})
     require("mini.hipatterns").setup({})

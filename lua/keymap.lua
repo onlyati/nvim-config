@@ -1,6 +1,39 @@
 -- Terminal remap
 vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 
+local harpoon = require("harpoon")
+
+-- Harpoon keymaps
+vim.keymap.set("n", "<leader>ho", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggle UI" })
+vim.keymap.set("n", "<leader>ha", function()
+    local buf_name = vim.api.nvim_buf_get_name(0)
+    local buf_type = vim.bo.buftype
+
+    if buf_name == "" or buf_type == "terminal" or buf_type == "nofile" then
+        vim.notify("Cannot add terminal or special buffers to Harpoon!", vim.log.levels.WARN)
+        return
+    end
+
+    harpoon:list():add()
+    vim.notify("File added to Harpoon pool!", vim.log.levels.INFO)
+end, { desc = "Add buffer" })
+vim.keymap.set("n", "<leader>hm", function()
+    harpoon:list():remove()
+    vim.notify("File removed from Harpoon pool!", vim.log.levels.INFO)
+end, { desc = "Remove buffer" })
+vim.keymap.set("n", "<leader>ht", function()
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buftype == "terminal" then
+            vim.cmd("buffer " .. buf)
+            vim.cmd("startinsert")
+            return
+        end
+    end
+
+    vim.cmd(":te")
+    vim.cmd("startinsert")
+end, { desc = "Open terminal" })
+
 -- Code keymaps
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code" })
 vim.keymap.set("n", "<leader>cq", function() require("utils").pick_diagnostics() end, { desc = "Open Quickfix" })
@@ -100,7 +133,7 @@ vim.keymap.set("n", "<C-w>|", "<cmd>vsplit<CR>", { desc = "Split vertically" })
 vim.keymap.set("n", "<leader>|", "<cmd>vsplit | wincmd p<CR>", { desc = "Split vertically" })
 vim.keymap.set("n", "<leader>-", "<cmd>split | wincmd p<CR>", { desc = "Split horizontally" })
 vim.keymap.set("n", "<leader>e", function() MiniFiles.open() end, { desc = "Open Explorer " })
-vim.keymap.set("n", "<leader>h", function() MiniNotify.show_history() end, { desc = "Open history " })
+vim.keymap.set("n", "<leader>H", function() MiniNotify.show_history() end, { desc = "Open history " })
 vim.keymap.set("v", "<s-J>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<s-K>", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-j>", "i<CR><Esc>")

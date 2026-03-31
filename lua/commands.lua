@@ -25,3 +25,50 @@ vim.api.nvim_create_user_command('W', function(ctx)
     -- Close the float with 'q'
     vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = buf, silent = true })
 end, { nargs = '+', complete = 'command' })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    desc = "Close terminal and unnamed buffers on startup",
+    callback = function()
+        -- Try to load the project automatically
+        vim.schedule(function()
+            if vim.fn.argc() == 0 then
+                local session_name = vim.fn.getcwd():gsub("/", "-")
+
+                pcall(MiniSessions.read, session_name)
+                for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                    if vim.api.nvim_buf_is_valid(buf) then
+                        local bo = vim.bo[buf]
+                        local buf_name = vim.api.nvim_buf_get_name(buf)
+
+                        -- When minisession restore the terminal for some reason it
+                        -- drops the terminal type but name of the buffer still
+                        -- starts with term://
+                        local is_terminal = bo.buftype == "terminal"
+                            or string.match(buf_name, "^term://") ~= nil
+                        local is_empty_unnamed = buf_name == ""
+                            and bo.buftype == ""
+                            and bo.filetype == ""
+                            and not bo.modified
+
+
+                        if is_terminal or is_empty_unnamed then
+                            pcall(vim.api.nvim_buf_delete, buf, { force = true })
+                        end
+                    end
+                end
+                return
+            end
+
+            if vim.fn.argc() > 0 then
+                local stat, err, rsn = vim.uv.fs_stat(vim.fn.argv(0))
+                if err ~= nil then
+                    vim.notify("failed to check arg[1]: " .. err .. " " .. rsn, vim.log.levels.ERROR)
+                    return
+                end
+                if stat ~= nil and stat.type == "directory" then
+                    MiniFiles.open()
+                end
+            end
+        end)
+    end,
+})
