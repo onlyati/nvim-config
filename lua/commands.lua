@@ -40,3 +40,15 @@ vim.api.nvim_create_autocmd("FileType", {
         })
     end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    desc = "Open harpoon if no file specified as parameter",
+    callback = function()
+        vim.schedule(function()
+            if vim.fn.argc() == 0 then
+                local harpoon = require("harpoon")
+                harpoon.ui:toggle_quick_menu(harpoon:list())
+            end
+        end)
+    end
+})
