@@ -26,6 +26,9 @@ vim.api.nvim_create_user_command('W', function(ctx)
     vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = buf, silent = true })
 end, { nargs = '+', complete = 'command' })
 
+vim.api.nvim_create_user_command("LspInfo", function() vim.cmd(":checkhealth vim.lsp") end, {})
+vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
+
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "harpoon",
     callback = function(opts)
