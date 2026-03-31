@@ -39,30 +39,41 @@ hi("NeotestRunning", { fg = c.yellow })
 hi("NeotestFile", { fg = c.cyan })
 hi("NeotestDir", { link = "NeotestFile" })
 hi("Added", { fg = c.green })
+
 hi("MiniTablineCurrent", { fg = c.cyan, bold = true, reverse = true })
 hi("MiniTablineHidden", { bg = c.bg2 })
 hi("MiniTablineModifiedCurrent", { link = "MiniTablineCurrent" })
 hi("MiniTablineFill", { bg = c.fg0 })
+
+hi("MiniClueNormal", { bg = c.bg0 })
 hi("MiniClueBorder", { fg = c.fg1 })
 hi("MiniClueSeparator", { fg = c.fg1 })
 hi("MiniClueTitle", { fg = c.cyan, bold = true })
 hi("MiniClueDescSingle", { fg = c.fg0 })
 hi("MiniClueDescGroup", { fg = c.fg0 })
+
+hi("MiniPickNormal", { link = "MiniPickNormal" })
 hi("MiniPickBorder", { link = "MiniClueBorder" })
 hi("MiniPickBorderText", { link = "MiniClueTitle" })
 hi("MiniPickMatchCurrent", { fg = c.blue, bg = c.bg2, reverse = true })
+
 hi("MiniNotifyTitle", { link = "MiniClueTitle" })
 hi("MiniNotifyBorder", { link = "MiniClueBorder" })
+
+hi("MiniFilesNormal", { link = "MiniPickNormal" })
 hi("MiniFilesBorder", { link = "MiniClueBorder" })
 hi("MiniFilesDirectory", { fg = c.cyan })
 hi("MiniFilesTitle", { fg = c.fg1 })
 hi("MiniFilesTitleFocused", { link = "MiniClueTitle" })
+
+hi("MiniCompletionInfo", { link = "MiniPickNormal" })
+hi("MiniCompletionInfoBorder", { link = "MiniClueBorder" })
+
 hi("MiniIndentscopeSymbol", { fg = c.red })
 hi("MiniIndentscopeSymbolOff", { fg = c.green })
+
 hi("IblIndent", { fg = c.bg2 })
-hi("MiniStarterHeader", { link = "MiniClueTitle" })
-hi("MiniStarterFooter", { fg = c.fg1 })
-hi("MiniStarterItemBuller", { fg = c.red })
+
 hi("MiniIconsAzure", { fg = c.cyan })
 hi("MiniIconsBlue", { fg = c.blue })
 hi("MiniIconsCyan", { fg = c.cyan })
@@ -75,8 +86,8 @@ hi("MiniIconsYellow", { fg = c.yellow })
 
 -- UI
 hi("Normal", { fg = c.fg0, bg = c.bg0 })
-hi("NormalFloat", { fg = c.fg0, bg = c.bg1 })
-hi("FloatBorder", { fg = c.bg2, bg = c.bg1 })
+hi("NormalFloat", { fg = c.fg0, bg = c.bg0 })
+hi("FloatBorder", { fg = c.fg2, bg = c.bg0 })
 
 hi("CursorLine", { bg = c.cursor_line })
 hi("CursorColumn", { bg = c.bg1 })
@@ -89,11 +100,12 @@ hi("Visual", { bg = c.bg2 })
 hi("Search", { fg = c.fg0, bg = c.search_yellow })
 hi("IncSearch", { fg = c.fg0, bg = c.search_orange })
 
-hi("Pmenu", { fg = c.fg0, bg = c.bg1 })
+hi("Pmenu", { fg = c.fg0, bg = c.bg0 })
 hi("PmenuSel", { fg = c.purple, bg = c.bg2 })
 hi("PmenuSbar", { bg = c.bg2 })
 hi("PmenuThumb", { bg = c.fg1 })
 hi("PmenuExtra", { fg = c.green })
+hi("PmenuBorder", { fg = c.fg0 })
 
 hi("StatusLine", { fg = c.fg0, bg = c.bg1 })
 hi("StatusLineNC", { fg = c.fg1, bg = c.bg1 })

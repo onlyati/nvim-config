@@ -47,7 +47,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
         vim.schedule(function()
             if vim.fn.argc() == 0 then
                 local harpoon = require("harpoon")
-                harpoon.ui:toggle_quick_menu(harpoon:list())
+                harpoon.ui:toggle_quick_menu(harpoon:list(), {
+                    border = "rounded",
+                    title = "",
+                })
             end
         end)
     end

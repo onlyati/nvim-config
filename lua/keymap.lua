@@ -4,7 +4,13 @@ vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 local harpoon = require("harpoon")
 
 -- Harpoon keymaps
-vim.keymap.set("n", "<leader>ho", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggle UI" })
+vim.keymap.set("n", "<leader>ho", function()
+    harpoon.ui:toggle_quick_menu(harpoon:list(), {
+        border = "rounded",
+        title = "",
+    })
+end, { desc = "Toggle UI" })
+
 vim.keymap.set("n", "<leader>ha", function()
     local buf_name = vim.api.nvim_buf_get_name(0)
     local buf_type = vim.bo.buftype
