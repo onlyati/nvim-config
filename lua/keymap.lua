@@ -17,10 +17,7 @@ vim.keymap.set("n", "<leader>ha", function()
     harpoon:list():add()
     vim.notify("File added to Harpoon pool!", vim.log.levels.INFO)
 end, { desc = "Add buffer" })
-vim.keymap.set("n", "<leader>hm", function()
-    harpoon:list():remove()
-    vim.notify("File removed from Harpoon pool!", vim.log.levels.INFO)
-end, { desc = "Remove buffer" })
+
 vim.keymap.set("n", "<leader>ht", function()
     for _, buf in ipairs(vim.api.nvim_list_bufs()) do
         if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buftype == "terminal" then
@@ -94,7 +91,6 @@ vim.keymap.set("n", "<leader>sg", ":Pick grep_live<CR>", { desc = "Grep search" 
 vim.keymap.set("n", "<leader>s\"", ":Pick registers<CR>", { desc = "Register search" })
 vim.keymap.set("n", "<leader>sa", ":Pick commands<CR>", { desc = "Auto commands search" })
 vim.keymap.set("n", "<leader>sd", ":Pick diagnostic<CR>", { desc = "Diagnostics search" })
--- vim.keymap.set("n", "<leader>sd", function() require("utils").pick_diagnostics() end, { desc = "Diagnostics search" })
 
 -- Neotest
 vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end, { desc = "Attach to Test (Neotest)" })
@@ -138,11 +134,3 @@ vim.keymap.set("v", "<s-J>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<s-K>", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-j>", "i<CR><Esc>")
 vim.keymap.set("v", "<leader>cr", ":s/\t/    /g<CR>", { desc = "Replace tab with space" })
-vim.keymap.set("n", "<leader>qw", function()
-    local session_name = vim.fn.getcwd():gsub("/", "-")
-    MiniSessions.write(session_name)
-end, { desc = "Write session" })
-vim.keymap.set("n", "<leader>ql", function()
-    local session_name = vim.fn.getcwd():gsub("/", "-")
-    MiniSessions.read(session_name)
-end, { desc = "Load session" })

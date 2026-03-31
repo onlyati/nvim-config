@@ -16,6 +16,8 @@ for _, p in ipairs(plugins) do
     p.setup()
 end
 
+pcall(require, "local_dev")
+
 -- Regular settings
 require("options")
 require("keymap")

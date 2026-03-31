@@ -13,16 +13,13 @@ function M.install_plugins()
         { src = "https://github.com/nvim-mini/mini.hipatterns" },
         { src = "https://github.com/nvim-mini/mini.icons" },
         { src = "https://github.com/nvim-mini/mini.notify" },
-        { src = "https://github.com/nvim-mini/mini.sessions" },
         { src = "https://github.com/nvim-mini/mini.snippets" },
         { src = "https://github.com/nvim-mini/mini.statusline" },
         { src = "https://github.com/nvim-mini/mini.surround" },
-        { src = "https://github.com/nvim-mini/mini.tabline" },
         { src = "https://github.com/nvim-tree/nvim-web-devicons" },
         { src = "https://github.com/smjonas/inc-rename.nvim" },
         { src = "https://github.com/windwp/nvim-ts-autotag" },
         { src = "https://github.com/onlyati/quadlet-lsp.nvim" },
-
 
         -- Harpoon and depdendencies
         { src = "https://github.com/nvim-lua/plenary.nvim" },
@@ -35,9 +32,6 @@ end
 
 function M.setup()
     require("quadlet-lsp").setup({})
-    -- require("quadlet-lsp").setup({
-    --     cmd = "/home/ati/work/quadlet-lsp/bin/quadlet-lsp",
-    -- })
     require("harpoon").setup({})
     require("mini.cmdline").setup({})
     require("mini.surround").setup({})
@@ -47,11 +41,9 @@ function M.setup()
     require("mini.files").setup({})
     require("mini.icons").setup({})
     require("mini.notify").setup({})
-    require("mini.sessions").setup({})
     require("mini.snippets").setup({})
     require("mini.statusline").setup({})
     require("mini.completion").setup({})
-    require("mini.tabline").setup({})
     require("ibl").setup({
         indent = {
             char = "|",
@@ -86,12 +78,13 @@ function M.setup()
             miniclue.gen_clues.windows(),
             miniclue.gen_clues.z(),
             { mode = "n", keys = "<leader>c",  desc = "+Code" },
+            { mode = "n", keys = "<leader>b",  desc = "+Buffer" },
             { mode = "n", keys = "<leader>cg", desc = "+Go" },
             { mode = "n", keys = "<leader>cc", desc = "+Coverage" },
-            { mode = "n", keys = "<leader>s",  desc = "+Search" },
-            { mode = "n", keys = "<leader>b",  desc = "+Buffer" },
-            { mode = "n", keys = "<leader>g",  desc = "+Go to" },
             { mode = "n", keys = "<leader>d",  desc = "+Debug" },
+            { mode = "n", keys = "<leader>f",  desc = "+Finders" },
+            { mode = "n", keys = "<leader>g",  desc = "+Go to" },
+            { mode = "n", keys = "<leader>s",  desc = "+Search" },
             { mode = "n", keys = "<leader>t",  desc = "+Testing" },
             { mode = "n", keys = "<leader>q",  desc = "+Session" },
         },
