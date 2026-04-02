@@ -28,7 +28,7 @@ end
 
 function M.setup()
     -- Treesitter config
-    require("nvim-treesitter").install({
+    local langs = {
         "go", "gomod", "gowork", "gosum", "templ",
         "bash",
         "c",
@@ -53,11 +53,12 @@ function M.setup()
         "rst",
         "dockerfile",
         "sql",
-    })
+    }
+    require("nvim-treesitter").install(langs)
 
     -- For some language tree sitter must be started
     vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "go", "markdown", "templ" },
+        pattern = langs,
         callback = function(args)
             -- Run only once, register when treesitter started for buffer
             if vim.b[args.buf].ts_started then return end

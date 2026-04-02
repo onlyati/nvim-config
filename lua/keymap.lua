@@ -4,6 +4,10 @@ vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 local harpoon = require("harpoon")
 
 -- Harpoon keymaps
+vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Select Pin #1" })
+vim.keymap.set("n", "<leader>h2", function() harpoon:list():select(2) end, { desc = "Select Pin #2" })
+vim.keymap.set("n", "<leader>h3", function() harpoon:list():select(3) end, { desc = "Select Pin #3" })
+vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end, { desc = "Select Pin #4" })
 vim.keymap.set("n", "<leader>ho", function()
     harpoon.ui:toggle_quick_menu(harpoon:list(), {
         border = "rounded",
@@ -26,14 +30,19 @@ end, { desc = "Add buffer" })
 
 vim.keymap.set("n", "<leader>ht", function()
     for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-        if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buftype == "terminal" then
-            vim.cmd("buffer " .. buf)
+        if vim.api.nvim_buf_is_valid(buf) and vim.bo[buf].buftype == "terminal" and vim.b[buf].editor_terminal then
+            vim.api.nvim_set_current_buf(buf)
             vim.cmd("startinsert")
             return
         end
     end
 
-    vim.cmd(":te")
+    vim.cmd("terminal")
+    local new_buffer = vim.api.nvim_get_current_buf()
+    vim.b[new_buffer].editor_terminal = true
+
+    pcall(vim.api.nvim_buf_set_name, new_buffer, "MainTerminal")
+
     vim.cmd("startinsert")
 end, { desc = "Open terminal" })
 
@@ -102,7 +111,13 @@ vim.keymap.set("n", "<leader>sd", ":Pick diagnostic<CR>", { desc = "Diagnostics 
 vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end, { desc = "Attach to Test (Neotest)" })
 vim.keymap.set("n", "<leader>tt", function() require("neotest").run.run(vim.fn.expand("%")) end,
     { desc = "Run File (Neotest)" })
-vim.keymap.set("n", "<leader>tT", function() require("neotest").run.run(vim.uv.cwd()) end,
+vim.keymap.set("n", "<leader>tT", function()
+        local cwd = vim.fn.getcwd()
+        -- if cwd:find("^/var/home") then
+        --     cwd = cwd:gsub("^/var/home", "/home")
+        -- end
+        require("neotest").run.run(cwd)
+    end,
     { desc = "Run All Test Files (Neotest)" })
 vim.keymap.set("n", "<leader>tr", function() require("neotest").run.run() end, { desc = "Run Nearest (Neotest)" })
 vim.keymap.set("n", "<leader>tl", function() require("neotest").run.run_last() end, { desc = "Run Last (Neotest)" })

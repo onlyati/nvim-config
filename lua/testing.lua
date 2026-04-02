@@ -52,6 +52,7 @@ function M.setup()
                 return message
             end,
         },
+
     }, neotest_ns)
 
     require("neotest").setup({
@@ -61,11 +62,10 @@ function M.setup()
                 go_test_args = {
                     "-v",
                     "-race",
-                    "-count=1",
                     "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
                 },
                 runner = "gotestsum",
-            })
+            }),
         },
         status = { virtual_text = true },
         output = { open_on_run = true },

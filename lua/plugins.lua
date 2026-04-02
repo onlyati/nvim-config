@@ -89,6 +89,7 @@ function M.setup()
             { mode = "n", keys = "<leader>d",  desc = "+Debug" },
             { mode = "n", keys = "<leader>f",  desc = "+Finders" },
             { mode = "n", keys = "<leader>g",  desc = "+Go to" },
+            { mode = "n", keys = "<leader>h",  desc = "+Harpoon" },
             { mode = "n", keys = "<leader>s",  desc = "+Search" },
             { mode = "n", keys = "<leader>t",  desc = "+Testing" },
             { mode = "n", keys = "<leader>q",  desc = "+Session" },
