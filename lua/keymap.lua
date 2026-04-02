@@ -4,10 +4,14 @@ vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 local harpoon = require("harpoon")
 
 -- Harpoon keymaps
+vim.keymap.set("n", "<C-l>", function() harpoon:list():next() end, { desc = "Next pin" })
+vim.keymap.set("n", "<C-h>", function() harpoon:list():prev() end, { desc = "Previous pin" })
 vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Select Pin #1" })
 vim.keymap.set("n", "<leader>h2", function() harpoon:list():select(2) end, { desc = "Select Pin #2" })
 vim.keymap.set("n", "<leader>h3", function() harpoon:list():select(3) end, { desc = "Select Pin #3" })
 vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end, { desc = "Select Pin #4" })
+vim.keymap.set("n", "<leader>h5", function() harpoon:list():select(5) end, { desc = "Select Pin #5" })
+vim.keymap.set("n", "<leader>h6", function() harpoon:list():select(6) end, { desc = "Select Pin #6" })
 vim.keymap.set("n", "<leader>ho", function()
     harpoon.ui:toggle_quick_menu(harpoon:list(), {
         border = "rounded",
@@ -113,9 +117,10 @@ vim.keymap.set("n", "<leader>tt", function() require("neotest").run.run(vim.fn.e
     { desc = "Run File (Neotest)" })
 vim.keymap.set("n", "<leader>tT", function()
         local cwd = vim.fn.getcwd()
-        -- if cwd:find("^/var/home") then
-        --     cwd = cwd:gsub("^/var/home", "/home")
-        -- end
+        -- workaround
+        if cwd:find("^/var/home") then
+            cwd = cwd:gsub("^/var/home", "/home")
+        end
         require("neotest").run.run(cwd)
     end,
     { desc = "Run All Test Files (Neotest)" })
