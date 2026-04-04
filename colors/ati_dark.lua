@@ -4,7 +4,6 @@ local c = {
     bg2 = "#21262d",
     fg0 = "#c9d1d9",
     fg1 = "#8b949e",
-
     red = "#ff7b72",
     orange = "#ffa657",
     yellow = "#f2cc60",
@@ -21,12 +20,74 @@ end
 vim.o.termguicolors = true
 vim.g.colors_name = "ati_dark"
 
+-- Plugin related
+hi("OilDir", { fg = c.blue })
+hi("tomlTable", { fg = c.cyan })
+hi("tomlTableArray", { link = "tomlTable" })
+hi("markdownH1", { fg = c.cyan })
+hi("markdownH2", { link = "markdownH1" })
+hi("markdownH3", { link = "markdownH1" })
+hi("markdownH4", { link = "markdownH1" })
+hi("markdownH5", { link = "markdownH1" })
+hi("markdownH6", { link = "markdownH1" })
+hi("RenderMarkdownCode", { bg = c.bg0 })
+hi("@markup.heading", { link = "markdownH1" })
+hi("NeotestPassed", { fg = c.green })
+hi("NeotestRunning", { fg = c.yellow })
+hi("NeotestFile", { fg = c.cyan })
+hi("NeotestDir", { link = "NeotestFile" })
+hi("Added", { fg = c.green })
+
+hi("MiniTablineCurrent", { fg = c.cyan, bold = true, reverse = true })
+hi("MiniTablineHidden", { bg = c.bg2 })
+hi("MiniTablineModifiedCurrent", { link = "MiniTablineCurrent" })
+hi("MiniTablineFill", { bg = c.fg0 })
+
+hi("MiniClueNormal", { bg = c.bg0 })
+hi("MiniClueBorder", { fg = c.fg1 })
+hi("MiniClueSeparator", { fg = c.fg1 })
+hi("MiniClueTitle", { fg = c.cyan, bold = true })
+hi("MiniClueDescSingle", { fg = c.fg0 })
+hi("MiniClueDescGroup", { fg = c.fg0 })
+
+hi("MiniPickNormal", { link = "MiniPickNormal" })
+hi("MiniPickBorder", { link = "MiniClueBorder" })
+hi("MiniPickBorderText", { link = "MiniClueTitle" })
+hi("MiniPickMatchCurrent", { fg = c.blue, bg = c.bg2, reverse = true })
+
+hi("MiniNotifyTitle", { link = "MiniClueTitle" })
+hi("MiniNotifyBorder", { link = "MiniClueBorder" })
+
+hi("MiniFilesNormal", { link = "MiniPickNormal" })
+hi("MiniFilesBorder", { link = "MiniClueBorder" })
+hi("MiniFilesDirectory", { fg = c.cyan })
+hi("MiniFilesTitle", { fg = c.fg1 })
+hi("MiniFilesTitleFocused", { link = "MiniClueTitle" })
+
+hi("MiniCompletionInfo", { link = "MiniPickNormal" })
+hi("MiniCompletionInfoBorder", { link = "MiniClueBorder" })
+
+hi("MiniIndentscopeSymbol", { fg = c.red })
+hi("MiniIndentscopeSymbolOff", { fg = c.green })
+
+hi("IblIndent", { fg = c.bg2 })
+
+hi("MiniIconsAzure", { fg = c.cyan })
+hi("MiniIconsBlue", { fg = c.blue })
+hi("MiniIconsCyan", { fg = c.cyan })
+hi("MiniIconsGreen", { fg = c.green })
+hi("MiniIconsGrey", { fg = c.fg1 })
+hi("MiniIconsOrange", { fg = c.orange })
+hi("MiniIconsPurple", { fg = c.purple })
+hi("MiniIconsRed", { fg = c.red })
+hi("MiniIconsYellow", { fg = c.yellow })
+
 -- UI
 hi("Normal", { fg = c.fg0, bg = c.bg0 })
-hi("NormalFloat", { fg = c.fg0, bg = c.bg1 })
-hi("FloatBorder", { fg = c.bg2, bg = c.bg1 })
+hi("NormalFloat", { fg = c.fg0, bg = c.bg0 })
+hi("FloatBorder", { fg = c.fg2, bg = c.bg0 })
 
-hi("CursorLine", { bg = c.bg1 })
+hi("CursorLine", { bg = c.cursor_line })
 hi("CursorColumn", { bg = c.bg1 })
 hi("ColorColumn", { bg = c.bg1 })
 
@@ -34,17 +95,23 @@ hi("LineNr", { fg = c.bg2 })
 hi("CursorLineNr", { fg = c.fg0, bg = c.bg1 })
 
 hi("Visual", { bg = c.bg2 })
-hi("Search", { fg = c.bg0, bg = c.yellow })
-hi("IncSearch", { fg = c.bg0, bg = c.orange })
+hi("Search", { fg = c.fg0, bg = c.search_yellow })
+hi("IncSearch", { fg = c.fg0, bg = c.search_orange })
 
-hi("Pmenu", { fg = c.fg0, bg = c.bg1 })
-hi("PmenuSel", { fg = c.fg0, bg = c.bg2 })
+hi("Pmenu", { fg = c.fg0, bg = c.bg0 })
+hi("PmenuSel", { fg = c.purple, bg = c.bg2 })
 hi("PmenuSbar", { bg = c.bg2 })
 hi("PmenuThumb", { bg = c.fg1 })
+hi("PmenuExtra", { fg = c.green })
+hi("PmenuBorder", { fg = c.fg0 })
 
 hi("StatusLine", { fg = c.fg0, bg = c.bg1 })
 hi("StatusLineNC", { fg = c.fg1, bg = c.bg1 })
 hi("WinSeparator", { fg = c.bg2 })
+
+-- Punctuation/delimiters: make brackets/colons obvious
+hi("Delimiter", { fg = c.fg0 })
+hi("Operator", { fg = c.fg0 })
 
 -- Basic syntax
 hi("Comment", { fg = c.fg1, italic = true })
@@ -57,18 +124,23 @@ hi("Identifier", { fg = c.cyan })
 hi("Function", { fg = c.blue })
 hi("Statement", { fg = c.purple })
 hi("Keyword", { fg = c.purple })
-hi("Operator", { fg = c.fg0 })
 hi("PreProc", { fg = c.orange })
 hi("Type", { fg = c.yellow })
 hi("Special", { fg = c.orange })
 hi("Macro", { fg = c.orange })
 hi("ModeMsg", { fg = c.orange, bold = true })
+hi("Folded", { bg = c.bg2 })
 
 -- Diagnostics
 hi("DiagnosticError", { fg = c.red })
 hi("DiagnosticWarn", { fg = c.yellow })
 hi("DiagnosticInfo", { fg = c.blue })
 hi("DiagnosticHint", { fg = c.cyan })
+
+hi("ErrorMsg", { fg = c.red })
+hi("WarningMsg", { fg = c.yellow })
+hi("Question", { fg = c.blue })
+hi("MoreMsg", { fg = c.cyan })
 
 hi("DiagnosticUnderlineError", { undercurl = true, sp = c.red })
 hi("DiagnosticUnderlineWarn", { undercurl = true, sp = c.yellow })
@@ -84,11 +156,18 @@ hi("@type", { link = "Type" })
 hi("@constant", { link = "Constant" })
 hi("@number", { link = "Number" })
 hi("@variable", { link = "Identifier" })
+
+-- Treesitter punctuation
+hi("@punctuation.delimiter", { link = "Delimiter" })
+hi("@punctuation.bracket", { link = "Delimiter" })
+hi("@punctuation.special", { link = "Delimiter" })
+hi("@operator", { link = "Operator" })
+
 hi("@variable.builtin", { fg = c.cyan })
 hi("@function.builtin", { fg = c.blue })
 hi("@type.builtin", { fg = c.yellow })
 hi("@parameter", { fg = c.blue })
-hi("@property", { fg = c.fg0 })
+hi("@property", { fg = c.blue })
 hi("@namespace", { fg = c.orange })
 
 -- GitSigns
@@ -97,7 +176,6 @@ hi("GitSignsChange", { fg = c.yellow })
 hi("GitSignsDelete", { fg = c.red })
 
 -- LSP semantic tokens
--- Base types
 hi("@lsp.type.namespace", { link = "@namespace" })
 hi("@lsp.type.type", { link = "Type" })
 hi("@lsp.type.class", { link = "Type" })
@@ -121,7 +199,6 @@ hi("@lsp.type.string", { link = "String" })
 hi("@lsp.type.number", { link = "Number" })
 hi("@lsp.type.operator", { link = "Operator" })
 
--- Common “mods” (typemod = type + modifier)
 hi("@lsp.typemod.variable.readonly", { link = "@constant" })
 hi("@lsp.typemod.property.readonly", { link = "@constant" })
 hi("@lsp.typemod.parameter.readonly", { link = "@constant" })
