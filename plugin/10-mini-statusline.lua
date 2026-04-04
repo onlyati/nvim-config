@@ -19,8 +19,6 @@ require('mini.statusline').setup({
             local filename      = MiniStatusline.section_filename({ trunc_width = 140 })
             local fileinfo      = MiniStatusline.section_fileinfo({ trunc_width = 120 })
             local location      = MiniStatusline.section_location({ trunc_width = 75 })
-
-            -- Call our macro function
             local macro         = get_macro_status()
 
             return MiniStatusline.combine_groups({

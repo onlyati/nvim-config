@@ -95,3 +95,19 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end, opts)
     end,
 })
+
+-- Display help on vertical split buffer
+vim.api.nvim_create_autocmd("BufWinEnter", {
+    pattern = "*",
+    callback = function()
+        if vim.bo.filetype == "help" then
+            -- Check if the window is already at the far right.
+            -- If not, move it there.
+            if vim.fn.winlayout()[1] == "col" then
+                vim.cmd("wincmd L")
+                -- Optional: Set a comfortable width for reading
+                vim.cmd("vertical resize 90")
+            end
+        end
+    end,
+})

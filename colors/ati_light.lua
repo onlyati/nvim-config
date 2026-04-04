@@ -74,6 +74,7 @@ hi("MiniIndentscopeSymbol", { fg = c.red })
 hi("MiniIndentscopeSymbolOff", { fg = c.green })
 
 hi("IblIndent", { fg = c.bg2 })
+hi("IblScope", { fg = c.fg0 })
 
 hi("MiniIconsAzure", { fg = c.cyan })
 hi("MiniIconsBlue", { fg = c.blue })
