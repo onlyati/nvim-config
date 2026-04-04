@@ -1,0 +1,1716 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.081  000.079: event init
+000.143  000.063: early init
+000.186  000.043: locale set
+000.212  000.026: init first window
+000.531  000.319: inits 1
+000.544  000.014: window checked
+000.548  000.004: parsing arguments
+000.937  000.023  000.023: require('vim._core.shared')
+000.978  000.002  000.002: require('string.buffer')
+000.995  000.027  000.025: require('vim.inspect')
+001.022  000.022  000.022: require('vim._core.options')
+001.023  000.084  000.034: require('vim._core.editor')
+001.043  000.019  000.019: require('vim._core.system')
+001.044  000.146  000.020: require('vim._init_packages')
+001.045  000.351: init lua interpreter
+001.514  000.469: nvim_ui_attach
+001.660  000.147: nvim_set_client_info
+001.661  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.056  000.055: event init
+000.093  000.037: early init
+000.126  000.034: locale set
+000.145  000.019: init first window
+000.324  000.179: inits 1
+000.329  000.005: window checked
+000.331  000.002: parsing arguments
+000.624  000.025  000.025: require('vim._core.shared')
+000.663  000.003  000.003: require('string.buffer')
+000.679  000.027  000.024: require('vim.inspect')
+000.706  000.022  000.022: require('vim._core.options')
+000.707  000.081  000.031: require('vim._core.editor')
+000.724  000.016  000.016: require('vim._core.system')
+000.724  000.139  000.018: require('vim._init_packages')
+000.725  000.255: init lua interpreter
+000.772  000.047: expanding arguments
+000.780  000.008: inits 2
+000.976  000.196: init highlight
+000.978  000.002: waiting for UI
+001.051  000.073: done waiting for UI
+001.056  000.005: clear screen
+001.142  000.008  000.008: require('vim.keymap')
+001.633  000.065  000.065: sourcing nvim_exec2()
+001.653  000.004  000.004: require('vim._core.log')
+002.053  000.995  000.918: require('vim._core.defaults')
+002.054  000.003: init default mappings & autocommands
+002.277  000.032  000.032: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/ftplugin.vim
+002.311  000.011  000.011: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/indent.vim
+002.643  000.251  000.251: sourcing /home/ati/.config/nvim/colors/ati_light.lua
+002.645  000.281  000.031: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/init.lua:0
+003.613  000.444  000.444: require('vim.lsp.protocol')
+003.633  000.013  000.013: require('vim.fs')
+003.647  000.552  000.094: require('vim.lsp.log')
+004.459  000.810  000.810: require('vim.lsp.util')
+004.804  000.195  000.195: require('vim.lsp.sync')
+004.810  000.350  000.154: require('vim.lsp._changetracking')
+005.194  000.072  000.072: require('vim.lsp._transport')
+005.199  000.003  000.003: require('vim._core.stringbuffer')
+005.237  000.425  000.349: require('vim.lsp.rpc')
+005.257  002.591  000.454: require('vim.lsp')
+005.264  002.618  000.027: require('local_dev')
+006.183  000.003  000.003: require('vim.F')
+006.229  000.877  000.873: require('vim.diagnostic')
+006.233  000.932  000.056: require('utils')
+007.303  000.066  000.066: require('vim.treesitter.language')
+007.323  000.017  000.017: require('vim.func')
+007.391  000.067  000.067: require('vim.treesitter._range')
+007.482  000.089  000.089: require('vim.func._memoize')
+007.503  000.594  000.355: require('vim.treesitter.query')
+007.510  001.008  000.414: require('vim.treesitter.languagetree')
+007.514  001.226  000.218: require('vim.treesitter')
+007.669  000.153  000.153: require('vim.treesitter._fold')
+007.685  002.421  000.109: require('options')
+008.297  000.555  000.555: require('vim.lsp.buf')
+008.368  000.682  000.127: require('keymap')
+008.439  000.070  000.070: require('commands')
+008.440  006.096  000.025: sourcing /home/ati/.config/nvim/init.lua
+008.444  000.250: sourcing vimrc file(s)
+008.658  000.097  000.097: sourcing /home/ati/.config/nvim/after/ftdetect/vue.lua
+008.661  000.150  000.053: sourcing nvim_exec2() called at /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua:0
+008.663  000.188  000.038: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua
+008.771  000.045  000.045: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/synload.vim
+008.820  000.128  000.083: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/syntax.vim
+009.764  000.066  000.066: require('vim._async')
+009.996  000.230  000.230: require('vim.version')
+010.319  001.160  000.863: require('vim.pack')
+010.704  000.016  000.016: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/plenary.nvim/plugin/plenary.vim
+010.964  000.018  000.018: require('harpoon.utils')
+010.966  000.051  000.033: require('harpoon.logger')
+011.120  000.011  000.011: require('harpoon.autocmd')
+011.122  000.057  000.046: require('harpoon.buffer')
+011.159  000.037  000.037: require('harpoon.extensions')
+011.161  000.195  000.102: require('harpoon.ui')
+011.611  000.101  000.101: require('plenary.bit')
+011.647  000.035  000.035: require('plenary.functional')
+011.659  000.007  000.007: require('ffi')
+011.673  000.463  000.321: require('plenary.path')
+011.677  000.515  000.052: require('harpoon.data')
+011.753  000.076  000.076: require('harpoon.config')
+011.869  000.114  000.114: require('harpoon.list')
+013.805  002.975  002.024: require('harpoon')
+013.902  004.797  000.646: sourcing /home/ati/.config/nvim/plugin/10-harpoon.lua
+014.208  000.023  000.023: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-web-devicons/plugin/nvim-web-devicons.vim
+015.856  000.458  000.458: require('mini.cmdline')
+016.640  000.716  000.716: require('mini.surround')
+018.930  000.382  000.382: require('mini.hipatterns')
+020.402  001.386  001.386: require('mini.pick')
+020.602  000.157  000.157: require('vim.ui')
+021.482  000.879  000.879: require('mini.extra')
+022.463  000.976  000.976: require('mini.files')
+022.522  000.029  000.029: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+022.527  000.002  000.002: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+024.028  001.489  001.489: require('mini.icons')
+024.599  000.374  000.374: require('mini.notify')
+025.482  000.832  000.832: require('mini.snippets')
+025.741  000.208  000.208: require('mini.statusline')
+026.477  000.714  000.714: require('mini.completion')
+027.226  000.652  000.652: require('mini.clue')
+027.396  013.481  004.204: sourcing /home/ati/.config/nvim/plugin/10-mini.lua
+027.693  000.094  000.094: require('gitsigns')
+028.001  000.216  000.216: require('gitsigns.highlight')
+028.122  000.115  000.115: require('gitsigns.debug.log')
+028.256  000.133  000.133: require('gitsigns.config')
+028.488  000.042  000.042: require('gitsigns.debounce')
+028.495  000.902  000.300: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/gitsigns.nvim/plugin/gitsigns.lua
+029.082  000.015  000.015: require('nvim-ts-autotag._log')
+029.110  000.027  000.027: require('nvim-ts-autotag.config.init')
+029.292  000.070  000.070: require('nvim-ts-autotag.utils')
+029.293  000.097  000.027: require('nvim-ts-autotag.config.ft')
+029.295  000.184  000.087: require('nvim-ts-autotag.config.plugin')
+029.299  000.402  000.176: require('nvim-ts-autotag.internal')
+029.300  000.429  000.027: require('nvim-ts-autotag')
+029.413  000.548  000.119: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-ts-autotag/plugin/nvim-ts-autotag.lua
+029.940  000.175  000.175: require('ibl.utils')
+029.943  000.278  000.103: require('ibl.config')
+030.084  000.049  000.049: require('ibl.indent')
+030.087  000.143  000.094: require('ibl.hooks')
+030.088  000.469  000.049: require('ibl.highlights')
+030.120  000.031  000.031: require('ibl.autocmds')
+030.171  000.051  000.051: require('ibl.inlay_hints')
+030.227  000.055  000.055: require('ibl.virt_text')
+030.424  000.157  000.157: require('ibl.scope_languages')
+030.426  000.198  000.042: require('ibl.scope')
+030.429  000.983  000.179: require('ibl')
+030.762  000.266  000.266: require('vim.iter')
+031.512  000.465  000.465: require('vim.lsp.completion')
+031.540  000.767  000.303: require('vim.lsp.handlers')
+032.450  000.265  000.265: require('inc_rename')
+032.495  000.040  000.040: require('inc_rename.utils')
+032.514  005.101  001.330: sourcing /home/ati/.config/nvim/plugin/10-others.lua
+033.696  001.015  001.015: require('vim.filetype')
+033.699  001.026  000.012: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/quadlet-lsp.nvim/ftdetect/quadlet.lua
+033.772  000.032  000.032: require('quadlet-lsp')
+033.796  000.021  000.021: require('quadlet-lsp.lsp')
+033.931  000.021  000.021: require('quadlet-lsp.commands')
+033.954  001.428  000.328: sourcing /home/ati/.config/nvim/plugin/10-quadlet-lsp.lua
+034.221  000.034  000.034: require('mason-core.path')
+034.429  000.021  000.021: require('mason-core.functional.data')
+034.493  000.062  000.062: require('mason-core.functional.function')
+034.595  000.099  000.099: require('mason-core.functional.list')
+034.641  000.025  000.025: require('mason-core.functional.relation')
+034.690  000.047  000.047: require('mason-core.functional.logic')
+034.713  000.021  000.021: require('mason-core.functional.number')
+034.774  000.056  000.056: require('mason-core.functional.string')
+034.819  000.043  000.043: require('mason-core.functional.table')
+034.838  000.017  000.017: require('mason-core.functional.type')
+034.839  000.503  000.111: require('mason-core.functional')
+034.876  000.654  000.151: require('mason-core.platform')
+034.935  000.058  000.058: require('mason.settings')
+034.937  000.802  000.056: require('mason-core.installer.InstallLocation')
+035.220  000.151  000.151: require('mason-core.log')
+035.221  000.186  000.036: require('mason-core.EventEmitter')
+035.316  000.094  000.094: require('mason-registry.sources')
+035.320  000.382  000.102: require('mason-registry')
+035.322  001.221  000.037: require('mason')
+035.526  000.162  000.162: require('mason.api.command')
+035.530  001.566  000.182: sourcing /home/ati/.config/nvim/plugin/20-mason.lua
+035.888  000.167  000.167: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/filetypes.lua
+035.942  000.043  000.043: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/nvim-treesitter.lua
+036.012  000.059  000.059: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/query_predicates.lua
+036.370  000.046  000.046: require('treesitter-context.config')
+036.377  000.182  000.137: require('treesitter-context')
+036.408  000.231  000.048: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter-context/plugin/treesitter-context.lua
+036.475  000.028  000.028: require('nvim-treesitter')
+036.558  000.082  000.082: require('nvim-treesitter.config')
+037.058  000.276  000.276: require('vim.treesitter.highlighter')
+037.097  000.038  000.038: require('treesitter-context.util')
+037.101  000.532  000.219: require('treesitter-context.render')
+037.119  001.578  000.436: sourcing /home/ati/.config/nvim/plugin/20-treesitter.lua
+037.510  000.067  000.067: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-dap/plugin/dap.lua
+038.000  000.092  000.092: require('nio.tasks')
+038.085  000.084  000.084: require('nio.control')
+038.297  000.211  000.211: require('nio.uv')
+038.377  000.079  000.079: require('nio.tests')
+038.413  000.035  000.035: require('nio.ui')
+038.592  000.139  000.139: require('nio.streams')
+038.593  000.180  000.041: require('nio.file')
+038.815  000.017  000.017: require('nio.util')
+038.859  000.159  000.143: require('nio.logger')
+038.863  000.269  000.110: require('nio.lsp')
+038.973  000.110  000.110: require('nio.process')
+038.978  001.149  000.089: require('nio')
+039.802  000.138  000.138: require('dap.utils')
+039.832  000.853  000.715: require('dap')
+040.198  000.009  000.009: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+040.199  000.046  000.037: require('dapui.config.highlights')
+040.223  000.021  000.021: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+040.290  000.231  000.164: require('dapui.config')
+040.293  000.368  000.136: require('dapui.util')
+040.371  000.077  000.077: require('dapui.windows.layout')
+040.374  000.541  000.096: require('dapui.windows')
+040.436  000.061  000.061: require('dapui.controls')
+040.439  002.759  000.155: require('dapui')
+040.492  000.016  000.016: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+040.715  000.126  000.126: require('dapui.client.types')
+040.718  000.210  000.084: require('dapui.client')
+040.808  000.089  000.089: require('dap.breakpoints')
+040.866  000.053  000.053: require('dapui.client.lib')
+040.978  000.087  000.087: require('dapui.render.canvas')
+040.979  000.108  000.021: require('dapui.elements.breakpoints')
+041.059  000.071  000.071: require('dapui.components.breakpoints')
+041.093  000.023  000.023: require('dapui.elements.repl')
+041.124  000.018  000.018: require('dapui.elements.scopes')
+041.163  000.032  000.032: require('dapui.components.scopes')
+041.217  000.053  000.053: require('dapui.components.variables')
+041.240  000.017  000.017: require('dapui.elements.stacks')
+041.317  000.035  000.035: require('dapui.components.frames')
+041.318  000.067  000.032: require('dapui.components.threads')
+041.350  000.025  000.025: require('dapui.elements.watches')
+041.417  000.058  000.058: require('dapui.components.watches')
+041.442  000.018  000.018: require('dapui.elements.hover')
+041.485  000.038  000.038: require('dapui.components.hover')
+041.521  000.033  000.033: require('dapui.elements.console')
+041.603  004.475  000.718: sourcing /home/ati/.config/nvim/plugin/30-dap.lua
+041.786  000.009  000.009: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/conform.nvim/plugin/conform.lua
+042.267  000.324  000.324: require('conform')
+042.282  000.665  000.332: sourcing /home/ati/.config/nvim/plugin/30-formatters.lua
+042.542  000.039  000.039: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/FixCursorHold.nvim/plugin/fix_cursorhold_nvim.vim
+042.776  000.099  000.099: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/neotest/plugin/neotest.lua
+042.989  000.020  000.020: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-neotest.lua:0
+042.993  000.134  000.114: require('neotest.config')
+042.995  000.185  000.051: require('neotest')
+043.396  000.015  000.015: require('neotest.utils')
+043.435  000.145  000.130: require('neotest.logging')
+043.522  000.015  000.015: require('neotest.lib.require')
+043.525  000.041  000.026: require('neotest.lib')
+043.527  000.089  000.049: require('neotest.adapters')
+043.804  000.026  000.026: require('neotest.client.events')
+043.806  000.075  000.049: require('neotest.client.state')
+043.927  000.120  000.120: require('neotest.client.runner')
+043.972  000.044  000.044: require('neotest.client.strategies')
+043.975  000.447  000.208: require('neotest.client')
+044.065  000.070  000.070: require('neotest.consumers.run')
+044.165  000.099  000.099: require('neotest.consumers.diagnostic')
+044.226  000.061  000.061: require('neotest.consumers.status')
+044.302  000.075  000.075: require('neotest.consumers.output')
+044.364  000.016  000.016: require('neotest.consumers.output_panel.panel')
+044.366  000.064  000.048: require('neotest.consumers.output_panel')
+044.663  000.028  000.028: require('neotest.lib.func_util.memoize')
+044.664  000.065  000.037: require('neotest.lib.func_util')
+044.666  000.138  000.073: require('neotest.types.tree')
+044.692  000.025  000.025: require('neotest.types.fanout_accum')
+044.693  000.181  000.017: require('neotest.types')
+044.771  000.078  000.078: require('neotest.consumers.summary.canvas')
+044.924  000.152  000.152: require('neotest.consumers.summary.component')
+044.925  000.494  000.083: require('neotest.consumers.summary.summary')
+044.929  000.563  000.069: require('neotest.consumers.summary')
+044.987  000.057  000.057: require('neotest.consumers.jump')
+045.293  000.001  000.001: require('jit.profile')
+045.423  000.129  000.129: require('jit.vmdef')
+045.426  000.318  000.188: require('plenary.profile.p')
+045.427  000.405  000.088: require('plenary.profile')
+045.428  000.441  000.035: require('neotest.consumers.benchmark')
+045.471  000.042  000.042: require('neotest.consumers.quickfix')
+045.585  000.069  000.069: require('neotest.consumers.state.tracker')
+045.586  000.115  000.046: require('neotest.consumers.state')
+045.747  000.089  000.089: require('neotest.consumers.watch.watcher')
+045.750  000.163  000.074: require('neotest.consumers.watch')
+045.751  001.774  000.025: require('neotest.consumers')
+045.817  000.043  000.043: require('neotest.lib.window')
+045.926  003.633  000.812: sourcing /home/ati/.config/nvim/plugin/30-neotest.lua
+046.245  000.053  000.053: require('coverage.config')
+046.306  000.060  000.060: require('coverage.signs')
+046.333  000.026  000.026: require('coverage.highlight')
+046.488  000.015  000.015: require('coverage.report')
+046.947  000.160  000.160: require('plenary.strings')
+046.948  000.325  000.165: require('plenary.window.border')
+047.031  000.082  000.082: require('plenary.tbl')
+047.032  000.544  000.136: require('plenary.window.float')
+047.036  000.702  000.144: require('coverage.summary')
+047.069  000.032  000.032: require('coverage.watch')
+047.123  000.030  000.030: require('coverage.languages.common')
+047.185  000.061  000.061: require('coverage.util')
+047.186  000.117  000.026: require('coverage.lcov')
+047.188  001.045  000.055: require('coverage')
+047.242  000.004  000.004: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.245  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.248  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.250  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.252  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.254  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.255  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.257  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.259  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.260  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.262  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.263  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.265  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.269  000.003  000.003: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.283  000.009  000.009: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.290  001.334  000.263: sourcing /home/ati/.config/nvim/plugin/31-coverage.lua
+047.462  000.150  000.150: require('lint')
+047.479  000.016  000.016: require('mason_list')
+047.491  000.011  000.011: require('treesitter_list')
+047.492  000.190  000.013: sourcing /home/ati/.config/nvim/plugin/40-dockerfile.lua
+047.943  000.026  000.026: require('neotest-golang.options')
+047.944  000.054  000.027: require('neotest-golang.lib.colorize')
+048.394  000.083  000.083: require('plenary.compat')
+049.283  001.243  001.161: require('plenary.scandir')
+049.366  000.080  000.080: require('neotest-golang.lib.logging')
+049.425  000.058  000.058: require('neotest-golang.lib.path')
+049.427  001.424  000.043: require('neotest-golang.lib.find')
+049.439  000.011  000.011: require('neotest-golang.lib.types')
+049.442  001.497  000.062: require('neotest-golang.lib.convert')
+049.533  000.017  000.017: require('neotest.async')
+049.795  000.262  000.262: require('neotest-golang.lib.cgo')
+049.811  000.015  000.015: require('neotest-golang.lib.extra_args')
+049.898  000.035  000.035: require('neotest-golang.lib.sanitize')
+049.899  000.087  000.052: require('neotest-golang.lib.json')
+049.902  000.460  000.078: require('neotest-golang.lib.cmd')
+049.952  000.049  000.049: require('neotest-golang.lib.diagnostics')
+049.982  000.030  000.030: require('neotest-golang.lib.discovery_cache')
+050.021  000.038  000.038: require('neotest-golang.lib.dupe')
+050.057  000.035  000.035: require('neotest-golang.lib.goenv')
+050.166  000.054  000.054: require('neotest-golang.lib.metrics')
+050.168  000.110  000.056: require('neotest-golang.lib.mapping')
+050.279  000.065  000.065: require('neotest-golang.results_stream')
+050.281  000.112  000.047: require('neotest-golang.lib.stream')
+050.282  002.410  000.025: require('neotest-golang.lib')
+050.333  000.019  000.019: require('neotest-golang.lib.query_loader')
+050.466  000.079  000.079: require('neotest-golang.features.testify.query')
+050.519  000.173  000.094: require('neotest-golang.features.testify.lookup')
+050.599  000.079  000.079: require('neotest-golang.features.testify.tree_modification')
+050.599  000.266  000.014: require('neotest-golang.features.testify')
+050.699  000.417  000.132: require('neotest-golang.query')
+050.779  000.079  000.079: require('neotest-golang.results_finalize')
+050.842  000.049  000.049: require('neotest-golang.runspec.dir')
+050.916  000.024  000.024: require('neotest-golang.features.dap')
+050.917  000.074  000.050: require('neotest-golang.runspec.file')
+050.946  000.028  000.028: require('neotest-golang.runspec.test')
+050.946  000.167  000.016: require('neotest-golang.runspec')
+050.949  003.151  000.079: require('neotest-golang')
+051.545  004.046  000.895: sourcing /home/ati/.config/nvim/plugin/40-go.lua
+051.569  000.010  000.010: sourcing /home/ati/.config/nvim/plugin/40-json.lua
+051.638  000.062  000.062: sourcing /home/ati/.config/nvim/plugin/40-lua.lua
+052.247  000.357  000.357: require('render-markdown.settings')
+052.251  000.421  000.064: require('render-markdown')
+052.310  000.058  000.058: require('render-markdown.lib.presets')
+052.398  000.035  000.035: require('render-markdown.lib.compat')
+052.504  000.017  000.017: require('render-markdown.lib.list')
+052.508  000.109  000.092: require('render-markdown.lib.env')
+052.661  000.027  000.027: require('render-markdown.lib.interval')
+052.693  000.031  000.031: require('render-markdown.lib.str')
+052.694  000.093  000.035: require('render-markdown.lib.line')
+052.719  000.024  000.024: require('render-markdown.lib.resolved')
+052.737  000.017  000.017: require('render-markdown.lib.iter')
+052.738  000.185  000.051: require('render-markdown.lib.config')
+052.739  000.230  000.045: require('render-markdown.state')
+052.783  000.042  000.042: require('render-markdown.core.ts')
+052.910  000.028  000.028: require('render-markdown.request.context')
+052.973  000.062  000.062: require('render-markdown.core.log')
+052.976  000.192  000.102: require('render-markdown.core.ui')
+053.028  000.050  000.050: require('render-markdown.core.colors')
+053.165  000.033  000.033: require('render-markdown.api')
+053.167  000.077  000.044: require('render-markdown.core.command')
+053.249  000.069  000.069: require('render-markdown.core.manager')
+053.266  001.445  000.162: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/render-markdown.nvim/plugin/render-markdown.lua
+053.370  001.724  000.278: sourcing /home/ati/.config/nvim/plugin/40-markdown.lua
+053.409  000.028  000.028: sourcing /home/ati/.config/nvim/plugin/40-python.lua
+053.423  000.007  000.007: sourcing /home/ati/.config/nvim/plugin/40-sql.lua
+053.444  000.014  000.014: sourcing /home/ati/.config/nvim/plugin/40-vue.lua
+053.466  000.016  000.016: sourcing /home/ati/.config/nvim/plugin/40-yaml.lua
+053.734  000.110  000.110: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-lspconfig/plugin/lspconfig.lua
+054.012  000.023  000.023: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/mason-tool-installer.nvim/plugin/mason-tool-installer.lua
+054.042  000.569  000.436: sourcing /home/ati/.config/nvim/plugin/99-mason-install.lua
+054.063  000.014  000.014: sourcing /home/ati/.config/nvim/plugin/99-treesitter-install.lua
+054.348  000.250  000.250: sourcing /usr/share/nvim/site/plugin/fzf.vim
+054.573  000.075  000.075: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/gzip.vim
+055.016  000.078  000.078: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+055.036  000.451  000.373: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchit.vim
+055.120  000.056  000.056: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchparen.vim
+055.564  000.093  000.093: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+055.583  000.451  000.359: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/netrwPlugin.vim
+055.663  000.066  000.066: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/rplugin.vim
+055.717  000.040  000.040: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tarPlugin.vim
+055.737  000.007  000.007: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tutor.vim
+055.798  000.049  000.049: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/zipPlugin.vim
+055.832  000.021  000.021: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/editorconfig.lua
+055.882  000.032  000.032: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/man.lua
+055.933  000.039  000.039: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/net.lua
+055.988  000.043  000.043: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/osc52.lua
+056.058  000.052  000.052: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/shada.lua
+056.097  000.023  000.023: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/spellfile.lua
+056.104  000.952: loading rtp plugins
+056.162  000.058: loading packages
+056.237  000.028  000.028: sourcing /home/ati/.local/share/nvim/site/pack/core/opt/indent-blankline.nvim/after/plugin/commands.lua
+056.242  000.052: loading after plugins
+056.247  000.005: inits 3
+057.012  000.765: reading ShaDa
+057.093  000.081: opening buffers
+057.123  000.030: BufEnter autocommands
+057.125  000.001: editing files in windows
+057.739  000.265  000.265: require('dap.ui')
+057.748  000.608  000.343: require('dap.repl')
+057.751  000.019: --- NVIM STARTED ---
+
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.088  000.087: event init
+000.154  000.066: early init
+000.210  000.056: locale set
+000.237  000.027: init first window
+000.489  000.252: inits 1
+000.495  000.006: window checked
+000.497  000.002: parsing arguments
+000.818  000.024  000.024: require('vim._core.shared')
+000.868  000.010  000.010: require('string.buffer')
+000.885  000.035  000.025: require('vim.inspect')
+000.917  000.026  000.026: require('vim._core.options')
+000.918  000.098  000.036: require('vim._core.editor')
+000.940  000.021  000.021: require('vim._core.system')
+000.940  000.163  000.020: require('vim._init_packages')
+000.941  000.281: init lua interpreter
+001.483  000.541: nvim_ui_attach
+001.689  000.206: nvim_set_client_info
+001.691  000.002: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.058  000.058: event init
+000.099  000.040: early init
+000.133  000.034: locale set
+000.162  000.028: init first window
+000.342  000.181: inits 1
+000.347  000.005: window checked
+000.349  000.002: parsing arguments
+000.638  000.023  000.023: require('vim._core.shared')
+000.677  000.002  000.002: require('string.buffer')
+000.692  000.026  000.024: require('vim.inspect')
+000.718  000.022  000.022: require('vim._core.options')
+000.720  000.079  000.032: require('vim._core.editor')
+000.736  000.015  000.015: require('vim._core.system')
+000.736  000.137  000.019: require('vim._init_packages')
+000.737  000.251: init lua interpreter
+000.785  000.048: expanding arguments
+000.791  000.006: inits 2
+000.939  000.147: init highlight
+000.939  000.000: waiting for UI
+001.015  000.076: done waiting for UI
+001.020  000.005: clear screen
+001.097  000.006  000.006: require('vim.keymap')
+001.562  000.063  000.063: sourcing nvim_exec2()
+001.580  000.003  000.003: require('vim._core.log')
+001.907  000.886  000.814: require('vim._core.defaults')
+001.908  000.002: init default mappings & autocommands
+002.139  000.036  000.036: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/ftplugin.vim
+002.173  000.011  000.011: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/indent.vim
+002.504  000.251  000.251: sourcing /home/ati/.config/nvim/colors/ati_light.lua
+002.507  000.281  000.030: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/init.lua:0
+003.535  000.508  000.508: require('vim.lsp.protocol')
+003.560  000.016  000.016: require('vim.fs')
+003.581  000.623  000.100: require('vim.lsp.log')
+004.424  000.841  000.841: require('vim.lsp.util')
+004.709  000.153  000.153: require('vim.lsp.sync')
+004.711  000.285  000.133: require('vim.lsp._changetracking')
+005.029  000.066  000.066: require('vim.lsp._transport')
+005.033  000.003  000.003: require('vim._core.stringbuffer')
+005.065  000.352  000.283: require('vim.lsp.rpc')
+005.084  002.556  000.453: require('vim.lsp')
+005.100  002.591  000.035: require('local_dev')
+005.964  000.003  000.003: require('vim.F')
+005.990  000.801  000.798: require('vim.diagnostic')
+005.992  000.857  000.056: require('utils')
+006.822  000.053  000.053: require('vim.treesitter.language')
+006.835  000.012  000.012: require('vim.func')
+006.897  000.061  000.061: require('vim.treesitter._range')
+006.981  000.082  000.082: require('vim.func._memoize')
+006.994  000.501  000.292: require('vim.treesitter.query')
+007.014  000.854  000.353: require('vim.treesitter.languagetree')
+007.018  000.991  000.137: require('vim.treesitter')
+007.169  000.149  000.149: require('vim.treesitter._fold')
+007.205  002.105  000.107: require('options')
+007.785  000.536  000.536: require('vim.lsp.buf')
+007.861  000.655  000.119: require('keymap')
+007.927  000.065  000.065: require('commands')
+007.928  005.724  000.025: sourcing /home/ati/.config/nvim/init.lua
+007.932  000.253: sourcing vimrc file(s)
+008.118  000.067  000.067: sourcing /home/ati/.config/nvim/after/ftdetect/vue.lua
+008.121  000.122  000.055: sourcing nvim_exec2() called at /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua:0
+008.123  000.161  000.039: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua
+008.231  000.044  000.044: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/synload.vim
+008.280  000.127  000.082: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/syntax.vim
+009.206  000.065  000.065: require('vim._async')
+009.437  000.230  000.230: require('vim.version')
+009.771  001.174  000.879: require('vim.pack')
+010.163  000.016  000.016: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/plenary.nvim/plugin/plenary.vim
+010.419  000.017  000.017: require('harpoon.utils')
+010.421  000.050  000.032: require('harpoon.logger')
+010.562  000.015  000.015: require('harpoon.autocmd')
+010.565  000.073  000.058: require('harpoon.buffer')
+010.614  000.049  000.049: require('harpoon.extensions')
+010.617  000.196  000.074: require('harpoon.ui')
+011.188  000.165  000.165: require('plenary.bit')
+011.264  000.072  000.072: require('plenary.functional')
+011.288  000.011  000.011: require('ffi')
+011.304  000.625  000.377: require('plenary.path')
+011.311  000.694  000.069: require('harpoon.data')
+011.417  000.105  000.105: require('harpoon.config')
+011.535  000.117  000.117: require('harpoon.list')
+013.410  003.119  001.958: require('harpoon')
+013.457  004.909  000.600: sourcing /home/ati/.config/nvim/plugin/10-harpoon.lua
+013.891  000.024  000.024: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-web-devicons/plugin/nvim-web-devicons.vim
+015.600  000.473  000.473: require('mini.cmdline')
+016.468  000.775  000.775: require('mini.surround')
+018.605  000.325  000.325: require('mini.hipatterns')
+019.968  001.307  001.307: require('mini.pick')
+020.192  000.157  000.157: require('vim.ui')
+021.062  000.868  000.868: require('mini.extra')
+022.123  001.056  001.056: require('mini.files')
+022.179  000.030  000.030: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+022.208  000.027  000.027: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+023.920  001.697  001.697: require('mini.icons')
+024.660  000.309  000.309: require('mini.notify')
+025.619  000.877  000.877: require('mini.snippets')
+025.879  000.223  000.223: require('mini.statusline')
+026.660  000.722  000.722: require('mini.completion')
+027.416  000.689  000.689: require('mini.clue')
+027.663  014.194  004.634: sourcing /home/ati/.config/nvim/plugin/10-mini.lua
+027.969  000.095  000.095: require('gitsigns')
+028.256  000.205  000.205: require('gitsigns.highlight')
+028.385  000.124  000.124: require('gitsigns.debug.log')
+028.560  000.174  000.174: require('gitsigns.config')
+028.841  000.060  000.060: require('gitsigns.debounce')
+028.860  000.992  000.334: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/gitsigns.nvim/plugin/gitsigns.lua
+029.509  000.017  000.017: require('nvim-ts-autotag._log')
+029.537  000.027  000.027: require('nvim-ts-autotag.config.init')
+029.711  000.069  000.069: require('nvim-ts-autotag.utils')
+029.713  000.095  000.026: require('nvim-ts-autotag.config.ft')
+029.715  000.177  000.082: require('nvim-ts-autotag.config.plugin')
+029.719  000.412  000.192: require('nvim-ts-autotag.internal')
+029.720  000.445  000.033: require('nvim-ts-autotag')
+029.835  000.570  000.125: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-ts-autotag/plugin/nvim-ts-autotag.lua
+030.364  000.169  000.169: require('ibl.utils')
+030.367  000.277  000.108: require('ibl.config')
+030.502  000.048  000.048: require('ibl.indent')
+030.505  000.137  000.090: require('ibl.hooks')
+030.506  000.463  000.048: require('ibl.highlights')
+030.538  000.032  000.032: require('ibl.autocmds')
+030.590  000.051  000.051: require('ibl.inlay_hints')
+030.645  000.055  000.055: require('ibl.virt_text')
+030.848  000.162  000.162: require('ibl.scope_languages')
+030.850  000.204  000.041: require('ibl.scope')
+030.853  000.982  000.179: require('ibl')
+031.264  000.317  000.317: require('vim.iter')
+032.007  000.433  000.433: require('vim.lsp.completion')
+032.050  000.772  000.339: require('vim.lsp.handlers')
+032.808  000.242  000.242: require('inc_rename')
+032.853  000.042  000.042: require('inc_rename.utils')
+032.893  005.213  001.297: sourcing /home/ati/.config/nvim/plugin/10-others.lua
+034.113  001.048  001.048: require('vim.filetype')
+034.132  001.075  000.027: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/quadlet-lsp.nvim/ftdetect/quadlet.lua
+034.201  000.029  000.029: require('quadlet-lsp')
+034.226  000.022  000.022: require('quadlet-lsp.lsp')
+034.356  000.020  000.020: require('quadlet-lsp.commands')
+034.381  001.474  000.328: sourcing /home/ati/.config/nvim/plugin/10-quadlet-lsp.lua
+034.677  000.030  000.030: require('mason-core.path')
+034.860  000.020  000.020: require('mason-core.functional.data')
+034.924  000.062  000.062: require('mason-core.functional.function')
+035.046  000.117  000.117: require('mason-core.functional.list')
+035.076  000.026  000.026: require('mason-core.functional.relation')
+035.109  000.031  000.031: require('mason-core.functional.logic')
+035.136  000.025  000.025: require('mason-core.functional.number')
+035.236  000.079  000.079: require('mason-core.functional.string')
+035.326  000.069  000.069: require('mason-core.functional.table')
+035.348  000.020  000.020: require('mason-core.functional.type')
+035.350  000.570  000.122: require('mason-core.functional')
+035.377  000.699  000.129: require('mason-core.platform')
+035.429  000.051  000.051: require('mason.settings')
+035.432  000.837  000.057: require('mason-core.installer.InstallLocation')
+035.718  000.149  000.149: require('mason-core.log')
+035.720  000.185  000.036: require('mason-core.EventEmitter')
+035.835  000.114  000.114: require('mason-registry.sources')
+035.840  000.407  000.108: require('mason-registry')
+035.841  001.279  000.035: require('mason')
+036.047  000.175  000.175: require('mason.api.command')
+036.053  001.662  000.208: sourcing /home/ati/.config/nvim/plugin/20-mason.lua
+036.425  000.160  000.160: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/filetypes.lua
+036.485  000.047  000.047: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/nvim-treesitter.lua
+036.517  000.022  000.022: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/query_predicates.lua
+036.828  000.023  000.023: require('treesitter-context.config')
+036.837  000.154  000.131: require('treesitter-context')
+036.866  000.200  000.046: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter-context/plugin/treesitter-context.lua
+036.927  000.027  000.027: require('nvim-treesitter')
+037.003  000.075  000.075: require('nvim-treesitter.config')
+037.504  000.275  000.275: require('vim.treesitter.highlighter')
+037.518  000.013  000.013: require('treesitter-context.util')
+037.522  000.509  000.220: require('treesitter-context.render')
+037.540  001.474  000.435: sourcing /home/ati/.config/nvim/plugin/20-treesitter.lua
+037.943  000.071  000.071: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-dap/plugin/dap.lua
+038.428  000.099  000.099: require('nio.tasks')
+038.506  000.077  000.077: require('nio.control')
+038.672  000.165  000.165: require('nio.uv')
+038.751  000.078  000.078: require('nio.tests')
+038.783  000.031  000.031: require('nio.ui')
+038.942  000.119  000.119: require('nio.streams')
+038.943  000.160  000.040: require('nio.file')
+039.170  000.017  000.017: require('nio.util')
+039.232  000.182  000.165: require('nio.logger')
+039.239  000.295  000.112: require('nio.lsp')
+039.335  000.096  000.096: require('nio.process')
+039.339  001.082  000.081: require('nio')
+040.214  000.142  000.142: require('dap.utils')
+040.254  000.914  000.772: require('dap')
+040.635  000.009  000.009: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+040.637  000.047  000.038: require('dapui.config.highlights')
+040.661  000.022  000.022: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+040.683  000.204  000.135: require('dapui.config')
+040.686  000.338  000.134: require('dapui.util')
+040.758  000.072  000.072: require('dapui.windows.layout')
+040.760  000.505  000.094: require('dapui.windows')
+040.821  000.060  000.060: require('dapui.controls')
+040.824  002.715  000.154: require('dapui')
+040.877  000.014  000.014: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+041.102  000.127  000.127: require('dapui.client.types')
+041.104  000.213  000.086: require('dapui.client')
+041.200  000.095  000.095: require('dap.breakpoints')
+041.250  000.044  000.044: require('dapui.client.lib')
+041.360  000.086  000.086: require('dapui.render.canvas')
+041.361  000.106  000.020: require('dapui.elements.breakpoints')
+041.440  000.070  000.070: require('dapui.components.breakpoints')
+041.482  000.023  000.023: require('dapui.elements.repl')
+041.501  000.018  000.018: require('dapui.elements.scopes')
+041.538  000.030  000.030: require('dapui.components.scopes')
+041.590  000.051  000.051: require('dapui.components.variables')
+041.612  000.016  000.016: require('dapui.elements.stacks')
+041.682  000.034  000.034: require('dapui.components.frames')
+041.683  000.065  000.031: require('dapui.components.threads')
+041.725  000.025  000.025: require('dapui.elements.watches')
+041.788  000.057  000.057: require('dapui.components.watches')
+041.812  000.018  000.018: require('dapui.elements.hover')
+041.856  000.037  000.037: require('dapui.components.hover')
+041.892  000.034  000.034: require('dapui.elements.console')
+041.949  004.400  000.696: sourcing /home/ati/.config/nvim/plugin/30-dap.lua
+042.122  000.009  000.009: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/conform.nvim/plugin/conform.lua
+042.632  000.331  000.331: require('conform')
+042.654  000.691  000.352: sourcing /home/ati/.config/nvim/plugin/30-formatters.lua
+042.905  000.040  000.040: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/FixCursorHold.nvim/plugin/fix_cursorhold_nvim.vim
+043.148  000.105  000.105: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/neotest/plugin/neotest.lua
+043.377  000.020  000.020: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-neotest.lua:0
+043.382  000.154  000.134: require('neotest.config')
+043.384  000.200  000.046: require('neotest')
+043.768  000.015  000.015: require('neotest.utils')
+043.790  000.103  000.088: require('neotest.logging')
+043.877  000.014  000.014: require('neotest.lib.require')
+043.886  000.047  000.033: require('neotest.lib')
+043.888  000.096  000.048: require('neotest.adapters')
+044.173  000.027  000.027: require('neotest.client.events')
+044.175  000.083  000.056: require('neotest.client.state')
+044.289  000.113  000.113: require('neotest.client.runner')
+044.333  000.043  000.043: require('neotest.client.strategies')
+044.336  000.447  000.209: require('neotest.client')
+044.423  000.067  000.067: require('neotest.consumers.run')
+044.521  000.098  000.098: require('neotest.consumers.diagnostic')
+044.582  000.060  000.060: require('neotest.consumers.status')
+044.658  000.075  000.075: require('neotest.consumers.output')
+044.720  000.016  000.016: require('neotest.consumers.output_panel.panel')
+044.722  000.064  000.048: require('neotest.consumers.output_panel')
+045.016  000.027  000.027: require('neotest.lib.func_util.memoize')
+045.017  000.064  000.037: require('neotest.lib.func_util')
+045.020  000.138  000.074: require('neotest.types.tree')
+045.046  000.026  000.026: require('neotest.types.fanout_accum')
+045.047  000.181  000.017: require('neotest.types')
+045.124  000.076  000.076: require('neotest.consumers.summary.canvas')
+045.292  000.168  000.168: require('neotest.consumers.summary.component')
+045.294  000.507  000.082: require('neotest.consumers.summary.summary')
+045.298  000.575  000.068: require('neotest.consumers.summary')
+045.354  000.055  000.055: require('neotest.consumers.jump')
+045.659  000.001  000.001: require('jit.profile')
+045.788  000.129  000.129: require('jit.vmdef')
+045.791  000.317  000.188: require('plenary.profile.p')
+045.792  000.404  000.086: require('plenary.profile')
+045.793  000.439  000.035: require('neotest.consumers.benchmark')
+045.834  000.040  000.040: require('neotest.consumers.quickfix')
+045.947  000.067  000.067: require('neotest.consumers.state.tracker')
+045.949  000.114  000.046: require('neotest.consumers.state')
+046.116  000.095  000.095: require('neotest.consumers.watch.watcher')
+046.119  000.170  000.075: require('neotest.consumers.watch')
+046.120  001.782  000.025: require('neotest.consumers')
+046.252  000.060  000.060: require('neotest.lib.window')
+046.331  003.659  000.826: sourcing /home/ati/.config/nvim/plugin/30-neotest.lua
+046.654  000.052  000.052: require('coverage.config')
+046.717  000.061  000.061: require('coverage.signs')
+046.744  000.026  000.026: require('coverage.highlight')
+046.897  000.015  000.015: require('coverage.report')
+047.361  000.153  000.153: require('plenary.strings')
+047.362  000.331  000.178: require('plenary.window.border')
+047.444  000.082  000.082: require('plenary.tbl')
+047.446  000.548  000.136: require('plenary.window.float')
+047.449  000.705  000.142: require('coverage.summary')
+047.483  000.033  000.033: require('coverage.watch')
+047.538  000.031  000.031: require('coverage.languages.common')
+047.598  000.059  000.059: require('coverage.util')
+047.599  000.116  000.026: require('coverage.lcov')
+047.601  001.051  000.058: require('coverage')
+047.690  000.004  000.004: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.693  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.695  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.697  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.699  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.701  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.703  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.705  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.707  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.708  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.710  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.711  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.713  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.717  000.003  000.003: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.731  000.009  000.009: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.738  001.371  000.294: sourcing /home/ati/.config/nvim/plugin/31-coverage.lua
+047.909  000.147  000.147: require('lint')
+047.926  000.016  000.016: require('mason_list')
+047.938  000.011  000.011: require('treesitter_list')
+047.939  000.188  000.014: sourcing /home/ati/.config/nvim/plugin/40-dockerfile.lua
+048.395  000.025  000.025: require('neotest-golang.options')
+048.396  000.051  000.026: require('neotest-golang.lib.colorize')
+048.846  000.082  000.082: require('plenary.compat')
+049.644  001.155  001.073: require('plenary.scandir')
+049.712  000.066  000.066: require('neotest-golang.lib.logging')
+049.770  000.056  000.056: require('neotest-golang.lib.path')
+049.771  001.318  000.041: require('neotest-golang.lib.find')
+049.783  000.011  000.011: require('neotest-golang.lib.types')
+049.784  001.387  000.058: require('neotest-golang.lib.convert')
+049.872  000.017  000.017: require('neotest.async')
+050.140  000.268  000.268: require('neotest-golang.lib.cgo')
+050.157  000.016  000.016: require('neotest-golang.lib.extra_args')
+050.218  000.034  000.034: require('neotest-golang.lib.sanitize')
+050.219  000.061  000.028: require('neotest-golang.lib.json')
+050.221  000.436  000.075: require('neotest-golang.lib.cmd')
+050.274  000.052  000.052: require('neotest-golang.lib.diagnostics')
+050.304  000.030  000.030: require('neotest-golang.lib.discovery_cache')
+050.342  000.036  000.036: require('neotest-golang.lib.dupe')
+050.377  000.035  000.035: require('neotest-golang.lib.goenv')
+050.481  000.052  000.052: require('neotest-golang.lib.metrics')
+050.482  000.104  000.052: require('neotest-golang.lib.mapping')
+050.590  000.062  000.062: require('neotest-golang.results_stream')
+050.591  000.108  000.046: require('neotest-golang.lib.stream')
+050.592  002.264  000.024: require('neotest-golang.lib')
+050.642  000.018  000.018: require('neotest-golang.lib.query_loader')
+050.777  000.082  000.082: require('neotest-golang.features.testify.query')
+050.827  000.172  000.090: require('neotest-golang.features.testify.lookup')
+050.906  000.078  000.078: require('neotest-golang.features.testify.tree_modification')
+050.907  000.264  000.014: require('neotest-golang.features.testify')
+051.007  000.414  000.132: require('neotest-golang.query')
+051.085  000.077  000.077: require('neotest-golang.results_finalize')
+051.145  000.047  000.047: require('neotest-golang.runspec.dir')
+051.217  000.023  000.023: require('neotest-golang.features.dap')
+051.219  000.073  000.050: require('neotest-golang.runspec.file')
+051.259  000.040  000.040: require('neotest-golang.runspec.test')
+051.260  000.175  000.015: require('neotest-golang.runspec')
+051.262  002.999  000.069: require('neotest-golang')
+051.822  003.875  000.876: sourcing /home/ati/.config/nvim/plugin/40-go.lua
+051.847  000.013  000.013: sourcing /home/ati/.config/nvim/plugin/40-json.lua
+051.874  000.019  000.019: sourcing /home/ati/.config/nvim/plugin/40-lua.lua
+052.519  000.366  000.366: require('render-markdown.settings')
+052.523  000.429  000.063: require('render-markdown')
+052.583  000.058  000.058: require('render-markdown.lib.presets')
+052.669  000.035  000.035: require('render-markdown.lib.compat')
+052.773  000.017  000.017: require('render-markdown.lib.list')
+052.777  000.107  000.090: require('render-markdown.lib.env')
+052.929  000.026  000.026: require('render-markdown.lib.interval')
+052.963  000.033  000.033: require('render-markdown.lib.str')
+052.965  000.094  000.035: require('render-markdown.lib.line')
+052.989  000.024  000.024: require('render-markdown.lib.resolved')
+053.007  000.018  000.018: require('render-markdown.lib.iter')
+053.009  000.187  000.051: require('render-markdown.lib.config')
+053.010  000.232  000.045: require('render-markdown.state')
+053.055  000.043  000.043: require('render-markdown.core.ts')
+053.174  000.027  000.027: require('render-markdown.request.context')
+053.234  000.059  000.059: require('render-markdown.core.log')
+053.238  000.182  000.096: require('render-markdown.core.ui')
+053.291  000.052  000.052: require('render-markdown.core.colors')
+053.435  000.037  000.037: require('render-markdown.api')
+053.436  000.083  000.046: require('render-markdown.core.command')
+053.521  000.071  000.071: require('render-markdown.core.manager')
+053.546  001.461  000.169: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/render-markdown.nvim/plugin/render-markdown.lua
+053.692  001.812  000.352: sourcing /home/ati/.config/nvim/plugin/40-markdown.lua
+053.714  000.010  000.010: sourcing /home/ati/.config/nvim/plugin/40-python.lua
+053.729  000.007  000.007: sourcing /home/ati/.config/nvim/plugin/40-sql.lua
+053.742  000.006  000.006: sourcing /home/ati/.config/nvim/plugin/40-vue.lua
+053.762  000.014  000.014: sourcing /home/ati/.config/nvim/plugin/40-yaml.lua
+054.032  000.109  000.109: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-lspconfig/plugin/lspconfig.lua
+054.333  000.023  000.023: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/mason-tool-installer.nvim/plugin/mason-tool-installer.lua
+054.363  000.594  000.462: sourcing /home/ati/.config/nvim/plugin/99-mason-install.lua
+054.386  000.015  000.015: sourcing /home/ati/.config/nvim/plugin/99-treesitter-install.lua
+054.668  000.247  000.247: sourcing /usr/share/nvim/site/plugin/fzf.vim
+054.893  000.074  000.074: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/gzip.vim
+055.334  000.079  000.079: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+055.355  000.450  000.371: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchit.vim
+055.438  000.055  000.055: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchparen.vim
+055.879  000.090  000.090: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+055.899  000.449  000.358: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/netrwPlugin.vim
+055.978  000.066  000.066: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/rplugin.vim
+056.030  000.039  000.039: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tarPlugin.vim
+056.050  000.007  000.007: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tutor.vim
+056.110  000.048  000.048: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/zipPlugin.vim
+056.151  000.028  000.028: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/editorconfig.lua
+056.192  000.028  000.028: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/man.lua
+056.257  000.053  000.053: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/net.lua
+056.318  000.049  000.049: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/osc52.lua
+056.387  000.054  000.054: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/shada.lua
+056.414  000.011  000.011: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/spellfile.lua
+056.422  000.942: loading rtp plugins
+056.478  000.056: loading packages
+056.553  000.028  000.028: sourcing /home/ati/.local/share/nvim/site/pack/core/opt/indent-blankline.nvim/after/plugin/commands.lua
+056.557  000.052: loading after plugins
+056.562  000.005: inits 3
+057.313  000.750: reading ShaDa
+057.393  000.080: opening buffers
+057.422  000.029: BufEnter autocommands
+057.423  000.001: editing files in windows
+058.010  000.253  000.253: require('dap.ui')
+058.019  000.581  000.328: require('dap.repl')
+058.022  000.018: --- NVIM STARTED ---
+
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.085  000.084: event init
+000.142  000.057: early init
+000.185  000.043: locale set
+000.216  000.030: init first window
+000.447  000.232: inits 1
+000.453  000.006: window checked
+000.456  000.002: parsing arguments
+000.771  000.027  000.027: require('vim._core.shared')
+000.811  000.002  000.002: require('string.buffer')
+000.827  000.028  000.025: require('vim.inspect')
+000.855  000.023  000.023: require('vim._core.options')
+000.857  000.083  000.032: require('vim._core.editor')
+000.877  000.019  000.019: require('vim._core.system')
+000.877  000.149  000.020: require('vim._init_packages')
+000.878  000.273: init lua interpreter
+001.400  000.522: nvim_ui_attach
+001.548  000.148: nvim_set_client_info
+001.549  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.099  000.098: event init
+000.170  000.071: early init
+000.229  000.059: locale set
+000.258  000.029: init first window
+000.547  000.290: inits 1
+000.553  000.005: window checked
+000.555  000.002: parsing arguments
+000.850  000.032  000.032: require('vim._core.shared')
+000.891  000.002  000.002: require('string.buffer')
+000.907  000.027  000.025: require('vim.inspect')
+000.935  000.023  000.023: require('vim._core.options')
+000.936  000.083  000.034: require('vim._core.editor')
+000.953  000.016  000.016: require('vim._core.system')
+000.953  000.156  000.024: require('vim._init_packages')
+000.954  000.244: init lua interpreter
+001.001  000.047: expanding arguments
+001.011  000.009: inits 2
+001.163  000.153: init highlight
+001.164  000.000: waiting for UI
+001.232  000.068: done waiting for UI
+001.239  000.007: clear screen
+001.314  000.006  000.006: require('vim.keymap')
+001.756  000.067  000.067: sourcing nvim_exec2()
+001.775  000.003  000.003: require('vim._core.log')
+002.168  000.927  000.851: require('vim._core.defaults')
+002.169  000.002: init default mappings & autocommands
+002.397  000.032  000.032: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/ftplugin.vim
+002.431  000.011  000.011: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/indent.vim
+002.855  000.347  000.347: sourcing /home/ati/.config/nvim/colors/ati_light.lua
+002.859  000.379  000.032: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/init.lua:0
+003.866  000.474  000.474: require('vim.lsp.protocol')
+003.891  000.019  000.019: require('vim.fs')
+003.908  000.586  000.094: require('vim.lsp.log')
+004.729  000.819  000.819: require('vim.lsp.util')
+005.063  000.118  000.118: require('vim.lsp.sync')
+005.066  000.335  000.217: require('vim.lsp._changetracking')
+005.302  000.064  000.064: require('vim.lsp._transport')
+005.306  000.003  000.003: require('vim._core.stringbuffer')
+005.329  000.262  000.195: require('vim.lsp.rpc')
+005.347  002.466  000.463: require('vim.lsp')
+005.363  002.503  000.036: require('local_dev')
+006.230  000.003  000.003: require('vim.F')
+006.256  000.812  000.808: require('vim.diagnostic')
+006.258  000.862  000.051: require('utils')
+007.100  000.055  000.055: require('vim.treesitter.language')
+007.160  000.058  000.058: require('vim.func')
+007.222  000.062  000.062: require('vim.treesitter._range')
+007.257  000.033  000.033: require('vim.func._memoize')
+007.270  000.505  000.298: require('vim.treesitter.query')
+007.291  000.870  000.365: require('vim.treesitter.languagetree')
+007.295  001.004  000.134: require('vim.treesitter')
+007.447  000.151  000.151: require('vim.treesitter._fold')
+007.483  002.119  000.102: require('options')
+008.065  000.539  000.539: require('vim.lsp.buf')
+008.119  000.635  000.096: require('keymap')
+008.186  000.067  000.067: require('commands')
+008.187  005.725  000.022: sourcing /home/ati/.config/nvim/init.lua
+008.191  000.254: sourcing vimrc file(s)
+008.369  000.064  000.064: sourcing /home/ati/.config/nvim/after/ftdetect/vue.lua
+008.372  000.117  000.054: sourcing nvim_exec2() called at /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua:0
+008.374  000.154  000.037: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua
+008.477  000.043  000.043: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/synload.vim
+008.525  000.122  000.080: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/syntax.vim
+009.425  000.050  000.050: require('vim._async')
+009.611  000.185  000.185: require('vim.version')
+009.980  001.136  000.900: require('vim.pack')
+010.467  000.018  000.018: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/plenary.nvim/plugin/plenary.vim
+010.734  000.018  000.018: require('harpoon.utils')
+010.736  000.052  000.034: require('harpoon.logger')
+010.862  000.011  000.011: require('harpoon.autocmd')
+010.863  000.062  000.051: require('harpoon.buffer')
+010.901  000.037  000.037: require('harpoon.extensions')
+010.903  000.166  000.066: require('harpoon.ui')
+011.347  000.104  000.104: require('plenary.bit')
+011.384  000.036  000.036: require('plenary.functional')
+011.396  000.007  000.007: require('ffi')
+011.412  000.463  000.316: require('plenary.path')
+011.416  000.512  000.049: require('harpoon.data')
+011.494  000.077  000.077: require('harpoon.config')
+011.601  000.106  000.106: require('harpoon.list')
+013.487  002.891  001.977: require('harpoon')
+013.533  004.743  000.698: sourcing /home/ati/.config/nvim/plugin/10-harpoon.lua
+013.963  000.025  000.025: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-web-devicons/plugin/nvim-web-devicons.vim
+015.686  000.479  000.479: require('mini.cmdline')
+016.470  000.697  000.697: require('mini.surround')
+018.707  000.336  000.336: require('mini.hipatterns')
+020.092  001.323  001.323: require('mini.pick')
+020.301  000.161  000.161: require('vim.ui')
+021.147  000.845  000.845: require('mini.extra')
+022.081  000.922  000.922: require('mini.files')
+022.133  000.028  000.028: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+022.137  000.002  000.002: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+023.425  001.276  001.276: require('mini.icons')
+024.436  000.413  000.413: require('mini.notify')
+025.681  001.125  001.125: require('mini.snippets')
+025.911  000.203  000.203: require('mini.statusline')
+026.669  000.710  000.710: require('mini.completion')
+027.381  000.649  000.649: require('mini.clue')
+027.548  014.005  004.809: sourcing /home/ati/.config/nvim/plugin/10-mini.lua
+027.857  000.102  000.102: require('gitsigns')
+028.181  000.229  000.229: require('gitsigns.highlight')
+028.300  000.114  000.114: require('gitsigns.debug.log')
+028.435  000.134  000.134: require('gitsigns.config')
+028.662  000.041  000.041: require('gitsigns.debounce')
+028.668  000.918  000.298: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/gitsigns.nvim/plugin/gitsigns.lua
+029.235  000.015  000.015: require('nvim-ts-autotag._log')
+029.261  000.025  000.025: require('nvim-ts-autotag.config.init')
+029.422  000.064  000.064: require('nvim-ts-autotag.utils')
+029.423  000.089  000.025: require('nvim-ts-autotag.config.ft')
+029.425  000.163  000.074: require('nvim-ts-autotag.config.plugin')
+029.428  000.367  000.164: require('nvim-ts-autotag.internal')
+029.429  000.391  000.025: require('nvim-ts-autotag')
+029.543  000.511  000.119: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-ts-autotag/plugin/nvim-ts-autotag.lua
+030.058  000.167  000.167: require('ibl.utils')
+030.062  000.270  000.104: require('ibl.config')
+030.200  000.051  000.051: require('ibl.indent')
+030.202  000.140  000.089: require('ibl.hooks')
+030.204  000.457  000.047: require('ibl.highlights')
+030.235  000.030  000.030: require('ibl.autocmds')
+030.287  000.051  000.051: require('ibl.inlay_hints')
+030.353  000.065  000.065: require('ibl.virt_text')
+030.574  000.167  000.167: require('ibl.scope_languages')
+030.575  000.221  000.054: require('ibl.scope')
+030.578  001.003  000.177: require('ibl')
+030.939  000.276  000.276: require('vim.iter')
+031.645  000.419  000.419: require('vim.lsp.completion')
+031.685  000.735  000.316: require('vim.lsp.handlers')
+032.449  000.248  000.248: require('inc_rename')
+032.492  000.040  000.040: require('inc_rename.utils')
+032.508  004.945  001.214: sourcing /home/ati/.config/nvim/plugin/10-others.lua
+033.480  000.810  000.810: require('vim.filetype')
+033.484  000.822  000.012: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/quadlet-lsp.nvim/ftdetect/quadlet.lua
+033.557  000.032  000.032: require('quadlet-lsp')
+033.581  000.021  000.021: require('quadlet-lsp.lsp')
+033.708  000.018  000.018: require('quadlet-lsp.commands')
+033.731  001.211  000.317: sourcing /home/ati/.config/nvim/plugin/10-quadlet-lsp.lua
+034.035  000.033  000.033: require('mason-core.path')
+034.231  000.019  000.019: require('mason-core.functional.data')
+034.292  000.059  000.059: require('mason-core.functional.function')
+034.406  000.109  000.109: require('mason-core.functional.list')
+034.437  000.025  000.025: require('mason-core.functional.relation')
+034.469  000.030  000.030: require('mason-core.functional.logic')
+034.491  000.021  000.021: require('mason-core.functional.number')
+034.546  000.051  000.051: require('mason-core.functional.string')
+034.595  000.047  000.047: require('mason-core.functional.table')
+034.611  000.015  000.015: require('mason-core.functional.type')
+034.628  000.482  000.106: require('mason-core.functional')
+034.650  000.614  000.132: require('mason-core.platform')
+034.696  000.045  000.045: require('mason.settings')
+034.698  000.748  000.056: require('mason-core.installer.InstallLocation')
+034.936  000.108  000.108: require('mason-core.log')
+034.937  000.146  000.037: require('mason-core.EventEmitter')
+035.029  000.091  000.091: require('mason-registry.sources')
+035.032  000.333  000.097: require('mason-registry')
+035.033  001.116  000.035: require('mason')
+035.227  000.150  000.150: require('mason.api.command')
+035.234  001.492  000.226: sourcing /home/ati/.config/nvim/plugin/20-mason.lua
+035.567  000.146  000.146: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/filetypes.lua
+035.625  000.046  000.046: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/nvim-treesitter.lua
+035.664  000.029  000.029: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/query_predicates.lua
+035.978  000.024  000.024: require('treesitter-context.config')
+035.986  000.151  000.128: require('treesitter-context')
+036.014  000.203  000.051: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter-context/plugin/treesitter-context.lua
+036.076  000.028  000.028: require('nvim-treesitter')
+036.155  000.078  000.078: require('nvim-treesitter.config')
+036.636  000.263  000.263: require('vim.treesitter.highlighter')
+036.650  000.013  000.013: require('treesitter-context.util')
+036.654  000.488  000.213: require('treesitter-context.render')
+036.671  001.427  000.409: sourcing /home/ati/.config/nvim/plugin/20-treesitter.lua
+037.219  000.150  000.150: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-dap/plugin/dap.lua
+037.735  000.094  000.094: require('nio.tasks')
+037.834  000.097  000.097: require('nio.control')
+037.934  000.099  000.099: require('nio.uv')
+037.976  000.041  000.041: require('nio.tests')
+037.997  000.020  000.020: require('nio.ui')
+038.096  000.072  000.072: require('nio.streams')
+038.097  000.099  000.027: require('nio.file')
+038.242  000.017  000.017: require('nio.util')
+038.268  000.105  000.088: require('nio.logger')
+038.270  000.173  000.069: require('nio.lsp')
+038.324  000.052  000.052: require('nio.process')
+038.346  000.778  000.101: require('nio')
+039.072  000.181  000.181: require('dap.utils')
+039.113  000.766  000.586: require('dap')
+039.531  000.010  000.010: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+039.533  000.059  000.048: require('dapui.config.highlights')
+039.556  000.021  000.021: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+039.580  000.202  000.122: require('dapui.config')
+039.586  000.358  000.156: require('dapui.util')
+039.675  000.088  000.088: require('dapui.windows.layout')
+039.676  000.562  000.116: require('dapui.windows')
+039.753  000.076  000.076: require('dapui.controls')
+039.756  002.344  000.161: require('dapui')
+039.870  000.016  000.016: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+040.237  000.238  000.238: require('dapui.client.types')
+040.243  000.354  000.116: require('dapui.client')
+040.428  000.184  000.184: require('dap.breakpoints')
+040.528  000.088  000.088: require('dapui.client.lib')
+040.741  000.168  000.168: require('dapui.render.canvas')
+040.742  000.206  000.038: require('dapui.elements.breakpoints')
+040.922  000.157  000.157: require('dapui.components.breakpoints')
+041.003  000.040  000.040: require('dapui.elements.repl')
+041.026  000.022  000.022: require('dapui.elements.scopes')
+041.109  000.069  000.069: require('dapui.components.scopes')
+041.232  000.122  000.122: require('dapui.components.variables')
+041.288  000.039  000.039: require('dapui.elements.stacks')
+041.402  000.054  000.054: require('dapui.components.frames')
+041.403  000.104  000.050: require('dapui.components.threads')
+041.467  000.043  000.043: require('dapui.elements.watches')
+041.549  000.070  000.070: require('dapui.components.watches')
+041.573  000.018  000.018: require('dapui.elements.hover')
+041.637  000.038  000.038: require('dapui.components.hover')
+041.673  000.033  000.033: require('dapui.elements.console')
+041.730  005.050  000.954: sourcing /home/ati/.config/nvim/plugin/30-dap.lua
+041.921  000.009  000.009: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/conform.nvim/plugin/conform.lua
+042.345  000.284  000.284: require('conform')
+042.355  000.611  000.318: sourcing /home/ati/.config/nvim/plugin/30-formatters.lua
+042.604  000.037  000.037: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/FixCursorHold.nvim/plugin/fix_cursorhold_nvim.vim
+042.841  000.100  000.100: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/neotest/plugin/neotest.lua
+043.044  000.020  000.020: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-neotest.lua:0
+043.048  000.130  000.110: require('neotest.config')
+043.050  000.173  000.043: require('neotest')
+043.401  000.015  000.015: require('neotest.utils')
+043.423  000.100  000.085: require('neotest.logging')
+043.505  000.014  000.014: require('neotest.lib.require')
+043.508  000.038  000.025: require('neotest.lib')
+043.510  000.084  000.046: require('neotest.adapters')
+043.776  000.025  000.025: require('neotest.client.events')
+043.778  000.071  000.046: require('neotest.client.state')
+043.898  000.119  000.119: require('neotest.client.runner')
+043.940  000.041  000.041: require('neotest.client.strategies')
+043.943  000.432  000.201: require('neotest.client')
+044.024  000.063  000.063: require('neotest.consumers.run')
+044.118  000.094  000.094: require('neotest.consumers.diagnostic')
+044.176  000.057  000.057: require('neotest.consumers.status')
+044.249  000.072  000.072: require('neotest.consumers.output')
+044.310  000.016  000.016: require('neotest.consumers.output_panel.panel')
+044.312  000.062  000.047: require('neotest.consumers.output_panel')
+044.598  000.027  000.027: require('neotest.lib.func_util.memoize')
+044.599  000.062  000.035: require('neotest.lib.func_util')
+044.601  000.134  000.072: require('neotest.types.tree')
+044.626  000.025  000.025: require('neotest.types.fanout_accum')
+044.627  000.177  000.018: require('neotest.types')
+044.703  000.076  000.076: require('neotest.consumers.summary.canvas')
+044.853  000.149  000.149: require('neotest.consumers.summary.component')
+044.855  000.482  000.081: require('neotest.consumers.summary.summary')
+044.860  000.547  000.065: require('neotest.consumers.summary')
+044.914  000.054  000.054: require('neotest.consumers.jump')
+045.229  000.001  000.001: require('jit.profile')
+045.364  000.134  000.134: require('jit.vmdef')
+045.367  000.331  000.196: require('plenary.profile.p')
+045.368  000.420  000.089: require('plenary.profile')
+045.369  000.454  000.035: require('neotest.consumers.benchmark')
+045.412  000.042  000.042: require('neotest.consumers.quickfix')
+045.527  000.069  000.069: require('neotest.consumers.state.tracker')
+045.529  000.116  000.047: require('neotest.consumers.state')
+045.690  000.089  000.089: require('neotest.consumers.watch.watcher')
+045.693  000.164  000.074: require('neotest.consumers.watch')
+045.694  001.749  000.024: require('neotest.consumers')
+045.793  000.065  000.065: require('neotest.lib.window')
+045.919  003.554  000.812: sourcing /home/ati/.config/nvim/plugin/30-neotest.lua
+046.227  000.053  000.053: require('coverage.config')
+046.291  000.063  000.063: require('coverage.signs')
+046.320  000.029  000.029: require('coverage.highlight')
+046.481  000.015  000.015: require('coverage.report')
+046.944  000.161  000.161: require('plenary.strings')
+046.946  000.328  000.167: require('plenary.window.border')
+047.030  000.083  000.083: require('plenary.tbl')
+047.031  000.550  000.139: require('plenary.window.float')
+047.035  000.714  000.149: require('coverage.summary')
+047.069  000.033  000.033: require('coverage.watch')
+047.125  000.031  000.031: require('coverage.languages.common')
+047.187  000.061  000.061: require('coverage.util')
+047.188  000.118  000.026: require('coverage.lcov')
+047.190  001.064  000.054: require('coverage')
+047.282  000.004  000.004: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.287  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.290  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.293  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.296  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.298  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.300  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.302  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.304  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.305  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.307  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.309  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.310  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.316  000.003  000.003: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.332  000.011  000.011: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+047.340  001.384  000.290: sourcing /home/ati/.config/nvim/plugin/31-coverage.lua
+047.519  000.155  000.155: require('lint')
+047.536  000.016  000.016: require('mason_list')
+047.550  000.012  000.012: require('treesitter_list')
+047.551  000.197  000.014: sourcing /home/ati/.config/nvim/plugin/40-dockerfile.lua
+048.059  000.026  000.026: require('neotest-golang.options')
+048.061  000.054  000.028: require('neotest-golang.lib.colorize')
+048.515  000.084  000.084: require('plenary.compat')
+049.371  001.212  001.128: require('plenary.scandir')
+049.447  000.073  000.073: require('neotest-golang.lib.logging')
+049.507  000.059  000.059: require('neotest-golang.lib.path')
+049.509  001.388  000.044: require('neotest-golang.lib.find')
+049.521  000.011  000.011: require('neotest-golang.lib.types')
+049.523  001.462  000.062: require('neotest-golang.lib.convert')
+049.612  000.017  000.017: require('neotest.async')
+049.648  000.036  000.036: require('neotest-golang.lib.cgo')
+049.661  000.012  000.012: require('neotest-golang.lib.extra_args')
+049.723  000.034  000.034: require('neotest-golang.lib.sanitize')
+049.724  000.062  000.028: require('neotest-golang.lib.json')
+049.726  000.203  000.075: require('neotest-golang.lib.cmd')
+049.776  000.049  000.049: require('neotest-golang.lib.diagnostics')
+049.806  000.030  000.030: require('neotest-golang.lib.discovery_cache')
+049.853  000.046  000.046: require('neotest-golang.lib.dupe')
+049.889  000.035  000.035: require('neotest-golang.lib.goenv')
+049.996  000.055  000.055: require('neotest-golang.lib.metrics')
+049.997  000.107  000.052: require('neotest-golang.lib.mapping')
+050.107  000.064  000.064: require('neotest-golang.results_stream')
+050.109  000.111  000.047: require('neotest-golang.lib.stream')
+050.110  002.121  000.025: require('neotest-golang.lib')
+050.385  000.243  000.243: require('neotest-golang.lib.query_loader')
+050.522  000.079  000.079: require('neotest-golang.features.testify.query')
+050.573  000.171  000.092: require('neotest-golang.features.testify.lookup')
+050.651  000.077  000.077: require('neotest-golang.features.testify.tree_modification')
+050.652  000.265  000.018: require('neotest-golang.features.testify')
+050.748  000.638  000.129: require('neotest-golang.query')
+050.862  000.113  000.113: require('neotest-golang.results_finalize')
+050.945  000.048  000.048: require('neotest-golang.runspec.dir')
+051.021  000.024  000.024: require('neotest-golang.features.dap')
+051.023  000.077  000.053: require('neotest-golang.runspec.file')
+051.051  000.028  000.028: require('neotest-golang.runspec.test')
+051.052  000.187  000.035: require('neotest-golang.runspec')
+051.054  003.135  000.077: require('neotest-golang')
+051.646  004.088  000.953: sourcing /home/ati/.config/nvim/plugin/40-go.lua
+051.669  000.010  000.010: sourcing /home/ati/.config/nvim/plugin/40-json.lua
+051.696  000.018  000.018: sourcing /home/ati/.config/nvim/plugin/40-lua.lua
+052.316  000.341  000.341: require('render-markdown.settings')
+052.319  000.396  000.056: require('render-markdown')
+052.380  000.059  000.059: require('render-markdown.lib.presets')
+052.456  000.035  000.035: require('render-markdown.lib.compat')
+052.564  000.018  000.018: require('render-markdown.lib.list')
+052.566  000.109  000.092: require('render-markdown.lib.env')
+052.723  000.031  000.031: require('render-markdown.lib.interval')
+052.755  000.032  000.032: require('render-markdown.lib.str')
+052.757  000.098  000.036: require('render-markdown.lib.line')
+052.782  000.024  000.024: require('render-markdown.lib.resolved')
+052.801  000.018  000.018: require('render-markdown.lib.iter')
+052.802  000.191  000.051: require('render-markdown.lib.config')
+052.804  000.236  000.045: require('render-markdown.state')
+052.860  000.055  000.055: require('render-markdown.core.ts')
+052.981  000.028  000.028: require('render-markdown.request.context')
+053.044  000.062  000.062: require('render-markdown.core.log')
+053.047  000.186  000.096: require('render-markdown.core.ui')
+053.100  000.050  000.050: require('render-markdown.core.colors')
+053.217  000.036  000.036: require('render-markdown.api')
+053.218  000.078  000.042: require('render-markdown.core.command')
+053.300  000.069  000.069: require('render-markdown.core.manager')
+053.325  001.412  000.139: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/render-markdown.nvim/plugin/render-markdown.lua
+053.418  001.715  000.303: sourcing /home/ati/.config/nvim/plugin/40-markdown.lua
+053.439  000.010  000.010: sourcing /home/ati/.config/nvim/plugin/40-python.lua
+053.455  000.009  000.009: sourcing /home/ati/.config/nvim/plugin/40-sql.lua
+053.468  000.006  000.006: sourcing /home/ati/.config/nvim/plugin/40-vue.lua
+053.488  000.014  000.014: sourcing /home/ati/.config/nvim/plugin/40-yaml.lua
+053.753  000.111  000.111: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-lspconfig/plugin/lspconfig.lua
+054.087  000.024  000.024: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/mason-tool-installer.nvim/plugin/mason-tool-installer.lua
+054.119  000.624  000.489: sourcing /home/ati/.config/nvim/plugin/99-mason-install.lua
+054.142  000.016  000.016: sourcing /home/ati/.config/nvim/plugin/99-treesitter-install.lua
+054.430  000.252  000.252: sourcing /usr/share/nvim/site/plugin/fzf.vim
+054.655  000.072  000.072: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/gzip.vim
+055.100  000.077  000.077: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+055.120  000.453  000.376: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchit.vim
+055.207  000.055  000.055: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchparen.vim
+055.650  000.091  000.091: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+055.669  000.451  000.360: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/netrwPlugin.vim
+055.749  000.066  000.066: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/rplugin.vim
+055.801  000.039  000.039: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tarPlugin.vim
+055.820  000.007  000.007: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tutor.vim
+055.888  000.047  000.047: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/zipPlugin.vim
+055.925  000.024  000.024: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/editorconfig.lua
+055.967  000.029  000.029: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/man.lua
+056.020  000.041  000.041: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/net.lua
+056.079  000.047  000.047: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/osc52.lua
+056.147  000.054  000.054: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/shada.lua
+056.174  000.012  000.012: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/spellfile.lua
+056.182  000.940: loading rtp plugins
+056.238  000.056: loading packages
+056.312  000.027  000.027: sourcing /home/ati/.local/share/nvim/site/pack/core/opt/indent-blankline.nvim/after/plugin/commands.lua
+056.317  000.052: loading after plugins
+056.322  000.005: inits 3
+057.076  000.754: reading ShaDa
+057.174  000.098: opening buffers
+057.203  000.029: BufEnter autocommands
+057.204  000.001: editing files in windows
+057.815  000.257  000.257: require('dap.ui')
+057.828  000.607  000.350: require('dap.repl')
+057.832  000.021: --- NVIM STARTED ---
+
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.002  000.002: --- NVIM STARTING ---
+000.127  000.126: event init
+000.209  000.082: early init
+000.260  000.051: locale set
+000.286  000.027: init first window
+000.522  000.236: inits 1
+000.528  000.006: window checked
+000.530  000.002: parsing arguments
+000.837  000.024  000.024: require('vim._core.shared')
+000.879  000.002  000.002: require('string.buffer')
+000.895  000.027  000.025: require('vim.inspect')
+000.921  000.022  000.022: require('vim._core.options')
+000.923  000.084  000.035: require('vim._core.editor')
+000.943  000.019  000.019: require('vim._core.system')
+000.943  000.147  000.020: require('vim._init_packages')
+000.944  000.267: init lua interpreter
+001.467  000.523: nvim_ui_attach
+001.630  000.164: nvim_set_client_info
+001.631  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.066  000.066: event init
+000.106  000.040: early init
+000.141  000.035: locale set
+000.160  000.019: init first window
+000.350  000.190: inits 1
+000.355  000.005: window checked
+000.357  000.002: parsing arguments
+000.639  000.023  000.023: require('vim._core.shared')
+000.680  000.002  000.002: require('string.buffer')
+000.694  000.026  000.023: require('vim.inspect')
+000.721  000.022  000.022: require('vim._core.options')
+000.722  000.081  000.033: require('vim._core.editor')
+000.738  000.015  000.015: require('vim._core.system')
+000.738  000.136  000.017: require('vim._init_packages')
+000.739  000.246: init lua interpreter
+000.790  000.051: expanding arguments
+000.796  000.007: inits 2
+000.972  000.176: init highlight
+000.973  000.000: waiting for UI
+001.050  000.077: done waiting for UI
+001.055  000.005: clear screen
+001.143  000.009  000.009: require('vim.keymap')
+001.716  000.090  000.090: sourcing nvim_exec2()
+001.746  000.007  000.007: require('vim._core.log')
+002.202  001.146  001.039: require('vim._core.defaults')
+002.203  000.003: init default mappings & autocommands
+002.443  000.034  000.034: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/ftplugin.vim
+002.483  000.011  000.011: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/indent.vim
+002.836  000.272  000.272: sourcing /home/ati/.config/nvim/colors/ati_light.lua
+002.838  000.302  000.030: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/init.lua:0
+003.980  000.601  000.601: require('vim.lsp.protocol')
+004.000  000.015  000.015: require('vim.fs')
+004.015  000.711  000.095: require('vim.lsp.log')
+004.840  000.823  000.823: require('vim.lsp.util')
+005.137  000.147  000.147: require('vim.lsp.sync')
+005.139  000.298  000.152: require('vim.lsp._changetracking')
+005.463  000.065  000.065: require('vim.lsp._transport')
+005.473  000.009  000.009: require('vim._core.stringbuffer')
+005.494  000.353  000.280: require('vim.lsp.rpc')
+005.512  002.651  000.465: require('vim.lsp')
+005.518  002.679  000.028: require('local_dev')
+006.428  000.004  000.004: require('vim.F')
+006.456  000.853  000.849: require('vim.diagnostic')
+006.458  000.905  000.052: require('utils')
+007.331  000.052  000.052: require('vim.treesitter.language')
+007.344  000.012  000.012: require('vim.func')
+007.408  000.063  000.063: require('vim.treesitter._range')
+007.496  000.085  000.085: require('vim.func._memoize')
+007.512  000.537  000.325: require('vim.treesitter.query')
+007.519  000.886  000.349: require('vim.treesitter.languagetree')
+007.522  001.023  000.137: require('vim.treesitter')
+007.724  000.200  000.200: require('vim.treesitter._fold')
+007.743  002.224  000.096: require('options')
+008.353  000.560  000.560: require('vim.lsp.buf')
+008.478  000.734  000.174: require('keymap')
+008.557  000.078  000.078: require('commands')
+008.558  006.042  000.026: sourcing /home/ati/.config/nvim/init.lua
+008.562  000.272: sourcing vimrc file(s)
+008.716  000.032  000.032: sourcing /home/ati/.config/nvim/after/ftdetect/vue.lua
+008.718  000.083  000.052: sourcing nvim_exec2() called at /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua:0
+008.720  000.123  000.040: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/filetype.lua
+008.824  000.046  000.046: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/synload.vim
+008.872  000.127  000.082: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/syntax/syntax.vim
+009.786  000.051  000.051: require('vim._async')
+009.938  000.150  000.150: require('vim.version')
+010.220  001.032  000.831: require('vim.pack')
+010.546  000.015  000.015: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/plenary.nvim/plugin/plenary.vim
+010.891  000.028  000.028: require('harpoon.utils')
+010.899  000.090  000.062: require('harpoon.logger')
+011.092  000.011  000.011: require('harpoon.autocmd')
+011.094  000.064  000.054: require('harpoon.buffer')
+011.131  000.036  000.036: require('harpoon.extensions')
+011.133  000.233  000.132: require('harpoon.ui')
+011.579  000.103  000.103: require('plenary.bit')
+011.617  000.037  000.037: require('plenary.functional')
+011.629  000.007  000.007: require('ffi')
+011.644  000.466  000.319: require('plenary.path')
+011.648  000.515  000.048: require('harpoon.data')
+011.724  000.075  000.075: require('harpoon.config')
+011.833  000.108  000.108: require('harpoon.list')
+013.819  003.146  002.125: require('harpoon')
+013.946  004.804  000.611: sourcing /home/ati/.config/nvim/plugin/10-harpoon.lua
+014.290  000.024  000.024: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-web-devicons/plugin/nvim-web-devicons.vim
+016.143  000.502  000.502: require('mini.cmdline')
+016.960  000.714  000.714: require('mini.surround')
+019.189  000.334  000.334: require('mini.hipatterns')
+020.750  001.505  001.505: require('mini.pick')
+021.032  000.184  000.184: require('vim.ui')
+021.929  000.895  000.895: require('mini.extra')
+022.817  000.883  000.883: require('mini.files')
+022.881  000.030  000.030: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+022.886  000.002  000.002: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/10-mini.lua:0
+024.197  001.298  001.298: require('mini.icons')
+024.632  000.332  000.332: require('mini.notify')
+025.914  001.241  001.241: require('mini.snippets')
+026.174  000.204  000.204: require('mini.statusline')
+026.985  000.788  000.788: require('mini.completion')
+027.812  000.712  000.712: require('mini.clue')
+028.008  014.045  004.397: sourcing /home/ati/.config/nvim/plugin/10-mini.lua
+028.310  000.097  000.097: require('gitsigns')
+028.924  000.504  000.504: require('gitsigns.highlight')
+029.210  000.271  000.271: require('gitsigns.debug.log')
+029.500  000.286  000.286: require('gitsigns.config')
+029.796  000.044  000.044: require('gitsigns.debounce')
+029.804  001.596  000.393: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/gitsigns.nvim/plugin/gitsigns.lua
+030.386  000.016  000.016: require('nvim-ts-autotag._log')
+030.413  000.025  000.025: require('nvim-ts-autotag.config.init')
+030.580  000.064  000.064: require('nvim-ts-autotag.utils')
+030.582  000.090  000.026: require('nvim-ts-autotag.config.ft')
+030.583  000.170  000.080: require('nvim-ts-autotag.config.plugin')
+030.587  000.378  000.167: require('nvim-ts-autotag.internal')
+030.588  000.403  000.025: require('nvim-ts-autotag')
+030.702  000.524  000.120: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-ts-autotag/plugin/nvim-ts-autotag.lua
+031.266  000.217  000.217: require('ibl.utils')
+031.272  000.319  000.102: require('ibl.config')
+031.440  000.052  000.052: require('ibl.indent')
+031.443  000.169  000.117: require('ibl.hooks')
+031.444  000.538  000.050: require('ibl.highlights')
+031.483  000.038  000.038: require('ibl.autocmds')
+031.537  000.054  000.054: require('ibl.inlay_hints')
+031.593  000.055  000.055: require('ibl.virt_text')
+031.797  000.163  000.163: require('ibl.scope_languages')
+031.798  000.205  000.042: require('ibl.scope')
+031.802  001.067  000.177: require('ibl')
+032.157  000.267  000.267: require('vim.iter')
+033.001  000.495  000.495: require('vim.lsp.completion')
+033.052  000.832  000.337: require('vim.lsp.handlers')
+033.800  000.250  000.250: require('inc_rename')
+033.844  000.040  000.040: require('inc_rename.utils')
+033.862  005.837  001.261: sourcing /home/ati/.config/nvim/plugin/10-others.lua
+034.838  000.785  000.785: require('vim.filetype')
+034.841  000.797  000.012: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/quadlet-lsp.nvim/ftdetect/quadlet.lua
+034.910  000.030  000.030: require('quadlet-lsp')
+034.933  000.021  000.021: require('quadlet-lsp.lsp')
+035.063  000.020  000.020: require('quadlet-lsp.commands')
+035.086  001.212  000.344: sourcing /home/ati/.config/nvim/plugin/10-quadlet-lsp.lua
+035.348  000.032  000.032: require('mason-core.path')
+035.549  000.019  000.019: require('mason-core.functional.data')
+035.614  000.063  000.063: require('mason-core.functional.function')
+035.717  000.101  000.101: require('mason-core.functional.list')
+035.748  000.024  000.024: require('mason-core.functional.relation')
+035.779  000.029  000.029: require('mason-core.functional.logic')
+035.804  000.023  000.023: require('mason-core.functional.number')
+035.861  000.052  000.052: require('mason-core.functional.string')
+035.905  000.042  000.042: require('mason-core.functional.table')
+035.923  000.016  000.016: require('mason-core.functional.type')
+035.924  000.466  000.097: require('mason-core.functional')
+035.949  000.599  000.134: require('mason-core.platform')
+036.009  000.060  000.060: require('mason.settings')
+036.012  000.747  000.055: require('mason-core.installer.InstallLocation')
+036.328  000.189  000.189: require('mason-core.log')
+036.330  000.224  000.035: require('mason-core.EventEmitter')
+036.429  000.098  000.098: require('mason-registry.sources')
+036.433  000.420  000.098: require('mason-registry')
+036.435  001.204  000.037: require('mason')
+036.633  000.152  000.152: require('mason.api.command')
+036.637  001.541  000.185: sourcing /home/ati/.config/nvim/plugin/20-mason.lua
+037.006  000.145  000.145: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/filetypes.lua
+037.058  000.040  000.040: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/nvim-treesitter.lua
+037.090  000.022  000.022: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/query_predicates.lua
+037.411  000.044  000.044: require('treesitter-context.config')
+037.424  000.175  000.131: require('treesitter-context')
+037.477  000.244  000.068: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-treesitter-context/plugin/treesitter-context.lua
+037.583  000.046  000.046: require('nvim-treesitter')
+037.682  000.097  000.097: require('nvim-treesitter.config')
+038.192  000.281  000.281: require('vim.treesitter.highlighter')
+038.205  000.012  000.012: require('treesitter-context.util')
+038.211  000.518  000.225: require('treesitter-context.render')
+038.230  001.582  000.470: sourcing /home/ati/.config/nvim/plugin/20-treesitter.lua
+038.759  000.098  000.098: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-dap/plugin/dap.lua
+039.444  000.142  000.142: require('nio.tasks')
+039.560  000.114  000.114: require('nio.control')
+039.655  000.092  000.092: require('nio.uv')
+039.718  000.062  000.062: require('nio.tests')
+039.742  000.023  000.023: require('nio.ui')
+039.847  000.078  000.078: require('nio.streams')
+039.847  000.105  000.027: require('nio.file')
+040.014  000.018  000.018: require('nio.util')
+040.043  000.122  000.104: require('nio.logger')
+040.067  000.219  000.097: require('nio.lsp')
+040.122  000.054  000.054: require('nio.process')
+040.136  000.934  000.122: require('nio')
+040.818  000.168  000.168: require('dap.utils')
+040.852  000.716  000.548: require('dap')
+041.269  000.011  000.011: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+041.271  000.055  000.044: require('dapui.config.highlights')
+041.294  000.021  000.021: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+041.356  000.238  000.162: require('dapui.config')
+041.361  000.400  000.162: require('dapui.util')
+041.458  000.097  000.097: require('dapui.windows.layout')
+041.460  000.607  000.110: require('dapui.windows')
+041.548  000.087  000.087: require('dapui.controls')
+041.552  002.547  000.203: require('dapui')
+041.631  000.016  000.016: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-dap.lua:0
+041.912  000.157  000.157: require('dapui.client.types')
+041.919  000.268  000.112: require('dapui.client')
+042.030  000.111  000.111: require('dap.breakpoints')
+042.169  000.132  000.132: require('dapui.client.lib')
+042.431  000.214  000.214: require('dapui.render.canvas')
+042.434  000.257  000.043: require('dapui.elements.breakpoints')
+042.665  000.178  000.178: require('dapui.components.breakpoints')
+042.763  000.051  000.051: require('dapui.elements.repl')
+042.803  000.038  000.038: require('dapui.elements.scopes')
+042.911  000.070  000.070: require('dapui.components.scopes')
+043.044  000.132  000.132: require('dapui.components.variables')
+043.089  000.028  000.028: require('dapui.elements.stacks')
+043.248  000.091  000.091: require('dapui.components.frames')
+043.248  000.147  000.056: require('dapui.components.threads')
+043.349  000.059  000.059: require('dapui.elements.watches')
+043.465  000.095  000.095: require('dapui.components.watches')
+043.513  000.033  000.033: require('dapui.elements.hover')
+043.594  000.065  000.065: require('dapui.components.hover')
+043.677  000.080  000.080: require('dapui.elements.console')
+043.790  005.548  001.141: sourcing /home/ati/.config/nvim/plugin/30-dap.lua
+043.978  000.010  000.010: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/conform.nvim/plugin/conform.lua
+044.423  000.294  000.294: require('conform')
+044.434  000.629  000.326: sourcing /home/ati/.config/nvim/plugin/30-formatters.lua
+044.730  000.064  000.064: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/FixCursorHold.nvim/plugin/fix_cursorhold_nvim.vim
+044.991  000.099  000.099: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/neotest/plugin/neotest.lua
+045.287  000.024  000.024: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/30-neotest.lua:0
+045.296  000.207  000.183: require('neotest.config')
+045.297  000.271  000.064: require('neotest')
+045.696  000.016  000.016: require('neotest.utils')
+045.721  000.109  000.094: require('neotest.logging')
+045.808  000.015  000.015: require('neotest.lib.require')
+045.818  000.047  000.032: require('neotest.lib')
+045.822  000.098  000.051: require('neotest.adapters')
+046.147  000.027  000.027: require('neotest.client.events')
+046.149  000.078  000.051: require('neotest.client.state')
+046.266  000.117  000.117: require('neotest.client.runner')
+046.311  000.043  000.043: require('neotest.client.strategies')
+046.314  000.490  000.252: require('neotest.client')
+046.398  000.064  000.064: require('neotest.consumers.run')
+046.499  000.101  000.101: require('neotest.consumers.diagnostic')
+046.569  000.069  000.069: require('neotest.consumers.status')
+046.642  000.073  000.073: require('neotest.consumers.output')
+046.704  000.016  000.016: require('neotest.consumers.output_panel.panel')
+046.706  000.063  000.048: require('neotest.consumers.output_panel')
+046.990  000.027  000.027: require('neotest.lib.func_util.memoize')
+046.991  000.062  000.035: require('neotest.lib.func_util')
+046.993  000.132  000.070: require('neotest.types.tree')
+047.019  000.025  000.025: require('neotest.types.fanout_accum')
+047.019  000.174  000.017: require('neotest.types')
+047.094  000.074  000.074: require('neotest.consumers.summary.canvas')
+047.234  000.139  000.139: require('neotest.consumers.summary.component')
+047.236  000.468  000.080: require('neotest.consumers.summary.summary')
+047.240  000.533  000.066: require('neotest.consumers.summary')
+047.293  000.053  000.053: require('neotest.consumers.jump')
+047.607  000.001  000.001: require('jit.profile')
+047.738  000.129  000.129: require('jit.vmdef')
+047.741  000.328  000.198: require('plenary.profile.p')
+047.742  000.415  000.086: require('plenary.profile')
+047.743  000.449  000.034: require('neotest.consumers.benchmark')
+047.785  000.041  000.041: require('neotest.consumers.quickfix')
+047.896  000.066  000.066: require('neotest.consumers.state.tracker')
+047.898  000.112  000.046: require('neotest.consumers.state')
+048.058  000.089  000.089: require('neotest.consumers.watch.watcher')
+048.061  000.163  000.074: require('neotest.consumers.watch')
+048.062  001.746  000.024: require('neotest.consumers')
+048.141  000.044  000.044: require('neotest.lib.window')
+048.288  003.845  000.924: sourcing /home/ati/.config/nvim/plugin/30-neotest.lua
+048.603  000.057  000.057: require('coverage.config')
+048.668  000.064  000.064: require('coverage.signs')
+048.696  000.028  000.028: require('coverage.highlight')
+048.859  000.015  000.015: require('coverage.report')
+049.370  000.168  000.168: require('plenary.strings')
+049.374  000.378  000.211: require('plenary.window.border')
+049.459  000.084  000.084: require('plenary.tbl')
+049.461  000.601  000.139: require('plenary.window.float')
+049.465  000.768  000.152: require('coverage.summary')
+049.512  000.040  000.040: require('coverage.watch')
+049.571  000.033  000.033: require('coverage.languages.common')
+049.635  000.063  000.063: require('coverage.util')
+049.636  000.124  000.028: require('coverage.lcov')
+049.638  001.142  000.061: require('coverage')
+049.756  000.005  000.005: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.759  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.762  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.764  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.766  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.768  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.770  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.772  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.774  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.775  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.777  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.779  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.780  000.001  000.001: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.784  000.003  000.003: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.801  000.010  000.010: sourcing nvim_exec2() called at /var/home/ati/.config/nvim/plugin/31-coverage.lua:0
+049.813  001.490  000.319: sourcing /home/ati/.config/nvim/plugin/31-coverage.lua
+049.997  000.158  000.158: require('lint')
+050.014  000.017  000.017: require('mason_list')
+050.027  000.011  000.011: require('treesitter_list')
+050.028  000.200  000.014: sourcing /home/ati/.config/nvim/plugin/40-dockerfile.lua
+050.479  000.033  000.033: require('neotest-golang.options')
+050.480  000.061  000.028: require('neotest-golang.lib.colorize')
+050.931  000.083  000.083: require('plenary.compat')
+051.880  001.304  001.221: require('plenary.scandir')
+051.983  000.099  000.099: require('neotest-golang.lib.logging')
+052.062  000.077  000.077: require('neotest-golang.lib.path')
+052.064  001.526  000.046: require('neotest-golang.lib.find')
+052.078  000.012  000.012: require('neotest-golang.lib.types')
+052.079  001.598  000.060: require('neotest-golang.lib.convert')
+052.175  000.019  000.019: require('neotest.async')
+052.216  000.040  000.040: require('neotest-golang.lib.cgo')
+052.229  000.013  000.013: require('neotest-golang.lib.extra_args')
+052.293  000.036  000.036: require('neotest-golang.lib.sanitize')
+052.295  000.064  000.029: require('neotest-golang.lib.json')
+052.297  000.217  000.081: require('neotest-golang.lib.cmd')
+052.348  000.050  000.050: require('neotest-golang.lib.diagnostics')
+052.378  000.030  000.030: require('neotest-golang.lib.discovery_cache')
+052.420  000.041  000.041: require('neotest-golang.lib.dupe')
+052.458  000.036  000.036: require('neotest-golang.lib.goenv')
+052.581  000.058  000.058: require('neotest-golang.lib.metrics')
+052.583  000.124  000.067: require('neotest-golang.lib.mapping')
+052.701  000.067  000.067: require('neotest-golang.results_stream')
+052.702  000.119  000.052: require('neotest-golang.lib.stream')
+052.703  002.301  000.025: require('neotest-golang.lib')
+052.754  000.018  000.018: require('neotest-golang.lib.query_loader')
+053.125  000.083  000.083: require('neotest-golang.features.testify.query')
+053.178  000.410  000.326: require('neotest-golang.features.testify.lookup')
+053.256  000.077  000.077: require('neotest-golang.features.testify.tree_modification')
+053.257  000.502  000.015: require('neotest-golang.features.testify')
+053.354  000.650  000.130: require('neotest-golang.query')
+053.433  000.078  000.078: require('neotest-golang.results_finalize')
+053.499  000.052  000.052: require('neotest-golang.runspec.dir')
+053.575  000.026  000.026: require('neotest-golang.features.dap')
+053.576  000.077  000.051: require('neotest-golang.runspec.file')
+053.603  000.027  000.027: require('neotest-golang.runspec.test')
+053.604  000.171  000.015: require('neotest-golang.runspec')
+053.607  003.270  000.070: require('neotest-golang')
+054.150  004.114  000.843: sourcing /home/ati/.config/nvim/plugin/40-go.lua
+054.173  000.010  000.010: sourcing /home/ati/.config/nvim/plugin/40-json.lua
+054.222  000.041  000.041: sourcing /home/ati/.config/nvim/plugin/40-lua.lua
+054.805  000.342  000.342: require('render-markdown.settings')
+054.808  000.397  000.055: require('render-markdown')
+054.864  000.055  000.055: require('render-markdown.lib.presets')
+054.927  000.033  000.033: require('render-markdown.lib.compat')
+055.037  000.016  000.016: require('render-markdown.lib.list')
+055.040  000.113  000.096: require('render-markdown.lib.env')
+055.196  000.028  000.028: require('render-markdown.lib.interval')
+055.228  000.031  000.031: require('render-markdown.lib.str')
+055.230  000.094  000.035: require('render-markdown.lib.line')
+055.254  000.024  000.024: require('render-markdown.lib.resolved')
+055.272  000.017  000.017: require('render-markdown.lib.iter')
+055.274  000.188  000.052: require('render-markdown.lib.config')
+055.275  000.233  000.045: require('render-markdown.state')
+055.319  000.042  000.042: require('render-markdown.core.ts')
+055.437  000.028  000.028: require('render-markdown.request.context')
+055.505  000.068  000.068: require('render-markdown.core.log')
+055.510  000.190  000.094: require('render-markdown.core.ui')
+055.564  000.052  000.052: require('render-markdown.core.colors')
+055.681  000.034  000.034: require('render-markdown.api')
+055.682  000.078  000.044: require('render-markdown.core.command')
+055.762  000.067  000.067: require('render-markdown.core.manager')
+055.779  001.377  000.117: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/render-markdown.nvim/plugin/render-markdown.lua
+055.912  001.683  000.305: sourcing /home/ati/.config/nvim/plugin/40-markdown.lua
+055.940  000.017  000.017: sourcing /home/ati/.config/nvim/plugin/40-python.lua
+055.956  000.009  000.009: sourcing /home/ati/.config/nvim/plugin/40-sql.lua
+055.969  000.006  000.006: sourcing /home/ati/.config/nvim/plugin/40-vue.lua
+055.991  000.015  000.015: sourcing /home/ati/.config/nvim/plugin/40-yaml.lua
+056.304  000.120  000.120: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/nvim-lspconfig/plugin/lspconfig.lua
+056.590  000.026  000.026: sourcing /var/home/ati/.local/share/nvim/site/pack/core/opt/mason-tool-installer.nvim/plugin/mason-tool-installer.lua
+056.620  000.623  000.477: sourcing /home/ati/.config/nvim/plugin/99-mason-install.lua
+056.643  000.016  000.016: sourcing /home/ati/.config/nvim/plugin/99-treesitter-install.lua
+056.927  000.249  000.249: sourcing /usr/share/nvim/site/plugin/fzf.vim
+057.150  000.073  000.073: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/gzip.vim
+057.618  000.082  000.082: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+057.638  000.477  000.395: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchit.vim
+057.724  000.056  000.056: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/matchparen.vim
+058.160  000.090  000.090: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+058.179  000.444  000.354: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/netrwPlugin.vim
+058.260  000.067  000.067: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/rplugin.vim
+058.311  000.038  000.038: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tarPlugin.vim
+058.329  000.006  000.006: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/tutor.vim
+058.388  000.047  000.047: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/zipPlugin.vim
+058.423  000.022  000.022: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/editorconfig.lua
+058.464  000.029  000.029: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/man.lua
+058.524  000.041  000.041: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/net.lua
+058.577  000.041  000.041: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/osc52.lua
+058.642  000.051  000.051: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/shada.lua
+058.669  000.011  000.011: sourcing /var/home/ati/.local/share/mise/installs/neovim/0.12.0/nvim-linux-x86_64/share/nvim/runtime/plugin/spellfile.lua
+058.676  000.943: loading rtp plugins
+058.730  000.054: loading packages
+058.805  000.027  000.027: sourcing /home/ati/.local/share/nvim/site/pack/core/opt/indent-blankline.nvim/after/plugin/commands.lua
+058.809  000.052: loading after plugins
+058.814  000.005: inits 3
+059.573  000.758: reading ShaDa
+059.655  000.082: opening buffers
+059.684  000.029: BufEnter autocommands
+059.685  000.001: editing files in windows
+060.457  000.347  000.347: require('dap.ui')
+060.473  000.773  000.426: require('dap.repl')
+060.477  000.019: --- NVIM STARTED ---
+

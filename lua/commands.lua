@@ -1,3 +1,4 @@
+-- Open command output in a float window
 vim.api.nvim_create_user_command('W', function(ctx)
     local lines = vim.fn.split(vim.api.nvim_exec2(ctx.args, { output = true }).output, '\n')
 
@@ -29,6 +30,7 @@ end, { nargs = '+', complete = 'command' })
 vim.api.nvim_create_user_command("LspInfo", function() vim.cmd(":checkhealth vim.lsp") end, {})
 vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
 
+-- Override harpoon, open file with <s-L> instead of enter
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "harpoon",
     callback = function(opts)
@@ -41,6 +43,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- Open harpoon if no file specified as parameter
 vim.api.nvim_create_autocmd("VimEnter", {
     desc = "Open harpoon if no file specified as parameter",
     callback = function()
@@ -58,6 +61,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
 })
 
+-- Show nice progress
 vim.api.nvim_create_autocmd('LspProgress', {
     callback = function(ev)
         local value = ev.data.params.value
@@ -69,5 +73,20 @@ vim.api.nvim_create_autocmd('LspProgress', {
             status = value.kind ~= 'end' and 'running' or 'success',
             percent = value.percentage,
         })
+    end,
+})
+
+-- Set width for hover text
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(args)
+        local opts = { buffer = args.buf }
+
+        vim.keymap.set('n', 'K', function()
+            vim.lsp.buf.hover({
+                border = 'rounded',
+                max_width = 100,
+                focusable = true,
+            })
+        end, opts)
     end,
 })

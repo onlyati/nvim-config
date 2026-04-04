@@ -1,5 +1,9 @@
----@type vim.lsp.Config
-return {
+local registry = require("mason_list")
+registry.add_lsp({
+    "yamlls", -- For YAML
+})
+
+vim.lsp.config("yamlls", {
     settings = {
         yaml = {
             schemas = {
@@ -11,4 +15,9 @@ return {
             format = true,
         }
     }
-}
+})
+
+local syntax = require("treesitter_list")
+syntax.add({
+    "yaml",
+})
