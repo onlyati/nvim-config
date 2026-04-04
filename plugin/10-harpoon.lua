@@ -6,10 +6,12 @@ vim.pack.add({
     },
 })
 
-require("harpoon").setup({})
 local harpoon = require("harpoon")
+harpoon.setup({})
 
--- Harpoon keymaps
+-- Keymaps
+-- =======
+
 vim.keymap.set("n", "<C-l>", function() harpoon:list():next() end, { desc = "Next pin" })
 vim.keymap.set("n", "<C-h>", function() harpoon:list():prev() end, { desc = "Previous pin" })
 vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Select Pin #1" })
@@ -55,3 +57,44 @@ vim.keymap.set("n", "<leader>ht", function()
 
     vim.cmd("startinsert")
 end, { desc = "Open terminal" })
+
+-- Commands
+-- ========
+
+-- Override harpoon Enter to L and add news ones
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "harpoon",
+    callback = function(opts)
+        -- Map Shift+L ('L') to act exactly like the Enter key (<CR>)
+        vim.keymap.set("n", "L", "<CR>", {
+            buffer = opts.buf,
+            remap = true,
+            desc = "Open Harpoon File"
+        })
+
+        -- Open the buffer when type number from 1-6
+        vim.keymap.set("n", "1", function() harpoon:list():select(1) end, { buffer = opts.buf, desc = "Select Pin #1" })
+        vim.keymap.set("n", "2", function() harpoon:list():select(2) end, { buffer = opts.buf, desc = "Select Pin #2" })
+        vim.keymap.set("n", "3", function() harpoon:list():select(3) end, { buffer = opts.buf, desc = "Select Pin #3" })
+        vim.keymap.set("n", "4", function() harpoon:list():select(4) end, { buffer = opts.buf, desc = "Select Pin #4" })
+        vim.keymap.set("n", "5", function() harpoon:list():select(5) end, { buffer = opts.buf, desc = "Select Pin #5" })
+        vim.keymap.set("n", "6", function() harpoon:list():select(6) end, { buffer = opts.buf, desc = "Select Pin #6" })
+    end,
+})
+
+-- Open harpoon if no file specified as parameter
+vim.api.nvim_create_autocmd("VimEnter", {
+    desc = "Open harpoon if no file specified as parameter",
+    callback = function()
+        vim.schedule(function()
+            if vim.fn.argc() == 0 then
+                if #harpoon:list():display() > 0 then
+                    harpoon.ui:toggle_quick_menu(harpoon:list(), {
+                        border = "rounded",
+                        title = "",
+                    })
+                end
+            end
+        end)
+    end
+})

@@ -35,37 +35,6 @@ vim.api.nvim_create_user_command("LspLog", function(_)
 end, {})
 vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
 
--- Override harpoon, open file with <s-L> instead of enter
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "harpoon",
-    callback = function(opts)
-        -- Map Shift+L ('L') to act exactly like the Enter key (<CR>)
-        vim.keymap.set("n", "L", "<CR>", {
-            buffer = opts.buf,
-            remap = true,
-            desc = "Open Harpoon File"
-        })
-    end,
-})
-
--- Open harpoon if no file specified as parameter
-vim.api.nvim_create_autocmd("VimEnter", {
-    desc = "Open harpoon if no file specified as parameter",
-    callback = function()
-        vim.schedule(function()
-            if vim.fn.argc() == 0 then
-                local harpoon = require("harpoon")
-                if #harpoon:list():display() > 0 then
-                    harpoon.ui:toggle_quick_menu(harpoon:list(), {
-                        border = "rounded",
-                        title = "",
-                    })
-                end
-            end
-        end)
-    end
-})
-
 -- Show nice progress
 vim.api.nvim_create_autocmd('LspProgress', {
     callback = function(ev)
