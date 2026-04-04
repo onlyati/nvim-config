@@ -47,6 +47,7 @@ vim.o.pumheight = 15
 vim.o.pumborder = "rounded"
 vim.o.winborder = "rounded"
 vim.o.shell = "/bin/env zsh"
+vim.o.cmdheight = 0
 
 -- Fold settings
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"

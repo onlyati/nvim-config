@@ -19,3 +19,4 @@ vim.pack.add {
 
 require("nvim-treesitter").setup()
 require('treesitter-context').setup()
+vim.lsp.inlay_hint.enable(true)
