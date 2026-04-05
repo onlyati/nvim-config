@@ -123,7 +123,6 @@ vim.lsp.config("gopls", {
             directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
             semanticTokens = true,
             linksInHover = true,
-            importShortcut = "Both",
         },
     },
 })
