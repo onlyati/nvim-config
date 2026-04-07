@@ -13,7 +13,7 @@ local c = {
     purple        = "#6f42c1",
     search_yellow = "#ffe8a3",
     search_orange = "#ffd1a6",
-    cursor_line   = "#e5f1ff",
+    cursor_line   = "#f0e4d2",
 }
 
 require("colors").set_colors("ati_light", c)
