@@ -32,36 +32,6 @@ end, { nargs = '+', complete = 'command' })
 
 vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
 
--- Show nice progress
-vim.api.nvim_create_autocmd('LspProgress', {
-    callback = function(ev)
-        local value = ev.data.params.value
-        vim.api.nvim_echo({ { value.message or 'done' } }, false, {
-            id = 'lsp.' .. ev.data.client_id,
-            kind = 'progress',
-            source = 'vim.lsp',
-            title = value.title,
-            status = value.kind ~= 'end' and 'running' or 'success',
-            percent = value.percentage,
-        })
-    end,
-})
-
--- Set width for hover text
-vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(args)
-        local opts = { buffer = args.buf }
-
-        vim.keymap.set('n', 'K', function()
-            vim.lsp.buf.hover({
-                border = 'rounded',
-                max_width = 100,
-                focusable = true,
-            })
-        end, opts)
-    end,
-})
-
 -- Display help on vertical split buffer
 vim.api.nvim_create_autocmd("BufWinEnter", {
     pattern = "*",
