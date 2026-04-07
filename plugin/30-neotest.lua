@@ -5,6 +5,9 @@ vim.pack.add({
 
     -- Neotest
     { src = "https://github.com/nvim-neotest/neotest" },
+
+    -- Neotest for Go
+    { src = "https://github.com/fredrikaverpil/neotest-golang" }
 })
 
 
@@ -21,6 +24,17 @@ vim.diagnostic.config({
 }, neotest_ns)
 
 require("neotest").setup({
+    adapters = {
+        require("neotest-golang")({
+            testify_enabled = true,
+            go_test_args = {
+                "-v",
+                "-race",
+                "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
+            },
+            runner = "gotestsum",
+        }),
+    },
     status = { virtual_text = true },
     output = { open_on_run = true },
 })

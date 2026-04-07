@@ -1,11 +1,3 @@
-vim.pack.add({
-    -- DAP for Go
-    { src = "https://github.com/leoluz/nvim-dap-go" },
-
-    -- Neotest for Go
-    { src = "https://github.com/fredrikaverpil/neotest-golang" }
-})
-
 -- Mason installer
 local registry = require("mason_list")
 registry.add_lsp({
@@ -32,23 +24,6 @@ syntax.add({
     "gowork",
     "gosum",
     "templ",
-})
-
--- Initialize neotest-golang
-require("neotest").setup({
-    adapters = {
-        require("neotest-golang")({
-            testify_enabled = true,
-            go_test_args = {
-                "-v",
-                "-race",
-                "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
-            },
-            runner = "gotestsum",
-        }),
-    },
-    status = { virtual_text = true },
-    output = { open_on_run = true },
 })
 
 -- Keymaps

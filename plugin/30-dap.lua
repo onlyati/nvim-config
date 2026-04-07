@@ -5,6 +5,9 @@ vim.pack.add({
     -- DAP
     { src = "https://github.com/mfussenegger/nvim-dap" },
     { src = "https://github.com/rcarriga/nvim-dap-ui" },
+
+    -- DAP for Go
+    { src = "https://github.com/leoluz/nvim-dap-go" },
 })
 
 require("dapui").setup()
