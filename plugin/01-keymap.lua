@@ -1,3 +1,6 @@
+-- Basic keymap settings
+-- =====================
+
 -- Terminal remap
 vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 

@@ -1,3 +1,6 @@
+-- Commands
+-- ========
+
 -- Open command output in a float window
 vim.api.nvim_create_user_command('W', function(ctx)
     local lines = vim.fn.split(vim.api.nvim_exec2(ctx.args, { output = true }).output, '\n')

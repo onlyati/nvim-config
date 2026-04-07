@@ -1,7 +1,25 @@
-vim.cmd("colorscheme ati_light")
-
--- Regular settings
-pcall(require, "local_dev")
-require("options")
-require("keymap")
-require("commands")
+-- Neovim config
+--
+-- The configuration is read from the /plugin directory. In that directory
+-- files are prefixed with number because read happen in order of ABC.
+-- Directory is read after the init.lua has run.
+--
+-- The /lua directory only contains utilities that are called in the /plugin.
+--
+-- Files in /plugin
+-- ================
+--
+-- 0x - Basic native neovim settings.
+-- 1x - Basic QoL plugins.
+-- 2x - Language server, Treesitter and Mason initializtation.
+-- 3x - Test and debug plugins.
+-- 4x - Language related settings (not buffer related they are in /after/ftplugin).
+-- 98 - Last functions, havily depends what the 4x set as requirement for Mason and Treesitter install.
+-- 99 - Not part of normal config, part of gitignore. Any file here meant for local only.
+--
+-- Special member is the 99-z-local.lua file which is in gitingore and does not
+-- uploaded into the normal config. This contains any config that must be override
+-- the normal config. I use it for local testing if I have to override something.
+--
+-- Language related settings are setup in after/ftdetect and after/ftplugin directories.
+-- The /after/ftplugin directory contains buffer scoped settings.

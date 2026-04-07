@@ -1,3 +1,5 @@
+-- Options
+-- =======
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
@@ -16,15 +18,6 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.autoindent = true
 
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "vue", "js", "ts" },
-    callback = function(_)
-        vim.o.tabstop = 2
-        vim.o.softtabstop = 2
-        vim.o.shiftwidth = 2
-    end,
-})
-
 -- Make easier replace some character totally
 vim.o.langmap = "é$"
 
@@ -42,7 +35,6 @@ vim.o.colorcolumn = "+2"
 vim.o.list = true
 vim.o.complete = ".,o,w,b,u"
 vim.o.completeopt = "fuzzy,menuone,noselect"
--- vim.o.autocomplete = true
 vim.o.pumheight = 15
 vim.o.pumborder = "rounded"
 vim.o.winborder = "rounded"
